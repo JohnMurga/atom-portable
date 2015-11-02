@@ -10,7 +10,7 @@ rmdir /s /q .\packages\Atom\Data\AtomProfile\compile-cache 2> nul
 dir /b /s .\packages\Atom\Data\AtomProfile | cscript /nologo .\tools\maxLen.js
 
 echo Creating .\packages\AtomPortable.7z ...
-%~dp0\tools\7Zip\7za.exe a -t7z -m0=lzma -mx=9 -mfb=256 -md=64m -ms=on -r .\packages\AtomPortable.7z .\packages\Atom\* > nul
+%~dp0\tools\7Zip\7za.exe a -t7z -m0=lzma -mx=9 -mfb=256 -md=64m -ms=on -r .\packages\AtomPortable-Windows.7z .\packages\Atom\* > nul
 
 echo Creating .\packages\AtomPortable.zip ...
-%~dp0\tools\7Zip\7za.exe a -mm=Deflate -mfb=256 -mpass=15 -r .\packages\AtomPortable.zip .\packages\Atom\* > nul
+%~dp0\tools\7Zip\7za.exe a -mm=Deflate -mfb=256 -mpass=15 -r .\packages\AtomPortable-Windows.zip .\packages\Atom\* > nul
