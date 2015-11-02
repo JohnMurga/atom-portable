@@ -1,0 +1,71 @@
+atom-workspace {
+    text-rendering: optimizeLegibility;
+}
+
+atom-text-editor {
+    text-rendering: optimizeSpeed;
+}
+
+atom-text-editor::shadow  {
+    .selection .region {
+        background: rgba(0, 128, 128, 0.3);
+    }
+    .cursor {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    .bracket-matcher {
+        border-bottom: 0;
+        opacity: 0.5;
+        background-color: #ff6000;
+    }
+}
+
+atom-text-editor::shadow, .tree-view-resizer {
+    ::-webkit-scrollbar {
+        width: 10px !important;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: rgba(255,255,255,.1);
+
+        &:hover {
+            background: rgba(255,255,255,.3);
+        }
+    }
+}
+
+.tab-bar {
+    .tab {
+        &.modified {
+            font-weight: bold;
+            -webkit-text-stroke: 0.5px rgba(256, 0, 0,0.6);
+        }
+    }
+}
+
+// Stop the cursor from blinking
+atom-text-editor::shadow .cursors .cursor {
+//   opacity: 1;
+    background: rgba(0, 255, 0, 0.12) !important;
+}
+
+atom-text-editor::shadow {
+  // The cursor line important to use rgba for opacity, also requires !important
+  // to override any theme.
+  .line.highlight-line {
+    background: rgba(128, 128, 128, 0.08) !important;
+  }
+}
+
+atom-text-editor::shadow .gutter .foldable .icon-right {
+    color: rgb(255,255, 255);
+}
+
+
+.ft-item {
+  font-size: 14px;
+  line-height: 1;
+}
+.ft-item-content {
+  line-height: 1;
+}

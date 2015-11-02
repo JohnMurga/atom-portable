@@ -1,0 +1,91 @@
+"*":
+  editor:
+    lineHeight: 1.2
+    tabLength: 4
+    invisibles: {}
+    fontFamily: "roboto-light"
+    fontSize: 12
+    backUpBeforeSaving: true
+  core:
+    disabledPackages: [
+      "metrics"
+    ]
+    themes: [
+      "atom-material-ui"
+      "noj-syntax"
+    ]
+    autoHideMenuBar: true
+  "highlight-line":
+    hideHighlightOnSelect: true
+    enableSelectionBorder: true
+  Zen:
+    width: 160
+    fullscreen: true
+  "autocomplete-plus":
+    fileBlacklist: [
+      "*.txt"
+      "*.md"
+    ]
+    enableBuiltinProvider: false
+  "linter-jscs":
+    preset: "crockford"
+    displayAs: "warning"
+  minimap:
+    plugins:
+      "find-and-replace": true
+      "highlight-selected": true
+      selection: true
+      bookmarks: true
+      "color-highlight": true
+      pigments: true
+      "git-diff": true
+      linter: true
+      "split-diff": true
+    absoluteMode: false
+  tabs:
+    showIcons: true
+    usePreviewTabs: true
+  pigments:
+    excludedGrammars: [
+      "text.plain source.gfm"
+    ]
+    ignoreVcsIgnoredPaths: false
+  "highlight-column":
+    opacity: 0.03
+  linter:
+    gutterEnabled: true
+    showErrorTabLine: true
+    gutterPosition: "Left"
+    underlineIssues: false
+  "atom-beautify":
+    analytics: false
+  "atom-material-ui":
+    compactTreeView: true
+    depth: true
+    showTabIcons: "Show on all tabs"
+    tabSize: "Small"
+    fontSize: "Big"
+    rippleAccentColor: true
+    panelContrast: true
+    accentColor: "Purple"
+  "terminal-panel":
+    overrideLs: false
+  "terminal-plus":
+    core:
+      scrollback: 5000
+      autoRunCommand: "if (Get-Command bash -errorAction SilentlyContinue) { bash --login -i -s } else { clear }"
+    style:
+      fontFamily: "roboto-normal"
+    toggles:
+      cursorBlink: false
+  "autocomplete-emojis":
+    enableUnicodeEmojis: false
+  welcome:
+    showOnStartup: false
+  "open-recent":
+    maxRecentDirectories: 8
+    maxRecentFiles: 16
+    recentDirectories: [
+    ]
+    recentFiles: [
+    ]
