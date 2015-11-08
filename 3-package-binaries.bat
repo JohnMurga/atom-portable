@@ -7,7 +7,8 @@ rmdir /s /q .\packages\Atom\Data\AtomProfile\.apm 2> nul
 rmdir /s /q .\packages\Atom\Data\AtomProfile\.node-gyp 2> nul
 rmdir /s /q .\packages\Atom\Data\AtomProfile\compile-cache 2> nul
 
-dir /b /s .\packages\Atom\Data\AtomProfile | cscript /nologo .\tools\maxLen.js
+echo Calculating max path length from current ...
+dir /b /s .\packages\Atom | cscript /nologo .\tools\maxLen.js
 
 echo Creating .\packages\AtomPortable.7z ...
 %~dp0\tools\7Zip\7za.exe a -t7z -m0=lzma -mx=9 -mfb=256 -md=64m -ms=on -r .\packages\AtomPortable-Windows.7z .\packages\Atom\* > nul
