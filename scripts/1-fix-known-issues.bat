@@ -18,14 +18,35 @@ set npm_config_loglevel=verbose
 
 set REPLACE=cscript /nologo %~dp0\..\tools\replace.js
 
+REM ## linter-eslint is known to not work
+REM ## So we force the version we know works
+
 call apm install linter-eslint@3.1.1
+
+REM ## Make it think linter-eslint is at 4.0.0, to avoid update prompts
+REM ## Not an issue if other version 3.1.1 get changed in the package.json
+
+cd packages\linter-eslint
+
+set MYFILE=.\package.json
+set FIXSTR="\x22version\x22: \x223.1.1\x22" "\x22version\x22: \x224.0.0\x22"
+
+type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
+move %MYFILE%.tmp %MYFILE% > nul
+
+cd ..\..
+
+REM ## clipboard-plus has a GIT package reference
+REM ## This prevents package flattening, so we fix it
 
 cd packages\clipboard-plus
 
 move .\node_modules\@aki77\atom-select-action .\node_modules\atom-select-action
 
 set MYFILE=.\lib\clipboard-list-view.coffee
-set FIXSTR="require '@aki77/atom-select-action'" "require 'atom-select-action'"
+set FIXSTR="@aki77/atom-select-action" "atom-select-action"
 
 type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
-move %MYFILE%.tmp %MYFILE%
+move %MYFILE%.tmp %MYFILE% > nul
+
+cd ..\..
