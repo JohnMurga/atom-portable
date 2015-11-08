@@ -1,6 +1,8 @@
 @echo off
 REM Copyright 2014-2015 John de Murga - Licensed under the GPLv2
 
+echo Installing BASE set of packages
+
 if "%ATOM_HOME%" equ "" (
 	echo ERROR : The ATOM_HOME variable must be set
 	exit /b 1
@@ -19,5 +21,5 @@ set npm_config_loglevel=verbose
 
 <nul set /p hacktastic=call apm install > .tmp.bat
 type %~dp0\packages.txt >> .tmp.bat
-cmd /c  .tmp.bat
+cmd /c  .tmp.bat > nul
 del  .tmp.bat

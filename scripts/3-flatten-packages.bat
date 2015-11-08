@@ -1,6 +1,8 @@
 @echo off
 REM Copyright 2014-2015 John de Murga - Licensed under the GPLv2
 
+echo Using the flatten-packages utility to shorten package paths
+
 if "%ATOM_HOME%" equ "" (
 	echo ERROR : The ATOM_HOME variable must be set
 	exit /b 1
@@ -27,9 +29,9 @@ rmdir /s /q .bin 2> nul
 FOR /D %%G in ("*") DO (
 	cd "%%G"
 	echo * %%G *
-	call flatten-packages > nul
+	call flatten-packages
 	cd ..
 )
 
 cd ..
-rmdir /s /q node_modules
+rmdir /s /q node_modules 2> nul
