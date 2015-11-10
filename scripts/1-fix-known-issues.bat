@@ -41,7 +41,7 @@ REM ## This prevents package flattening, so we fix it
 
 cd packages\clipboard-plus
 
-move .\node_modules\@aki77\atom-select-action .\node_modules\atom-select-action
+move .\node_modules\@aki77\atom-select-action .\node_modules\atom-select-action > nul
 
 set MYFILE=.\lib\clipboard-list-view.coffee
 set FIXSTR="@aki77/atom-select-action" "atom-select-action"

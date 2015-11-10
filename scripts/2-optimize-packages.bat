@@ -1,7 +1,9 @@
 @echo off
+setlocal enabledelayedexpansion
+
 REM Copyright 2014-2015 John de Murga - Licensed under the GPLv2
 
-echo Running basic NPM optimization before we do anything else
+echo Running basic APM optimization before we do anything else
 
 if "%ATOM_HOME%" equ "" (
 	echo ERROR : The ATOM_HOME variable must be set
@@ -18,12 +20,22 @@ cd %ATOM_HOME%
 set PATH=%PATH%;%ATOM_HOME%\..\..\App\Atom\resources\app\apm\bin
 set npm_config_loglevel=verbose
 
+set LOG_FILE=%~dp0\..\dedupe-log.txt
+echo. > %LOG_FILE%
+echo See log file here : %LOG_FILE%
+
 cd packages
 rmdir /s /q .bin 2> nul
 
+<nul set /p hacktastic="Optimizing : "
+
 FOR /D %%G in ("*") DO (
 	cd "%%G"
-	echo * %%G *
-	call apm dedupe > nul
+	<nul set /p hacktastic="%%G "
+	call apm dedupe 1>> %LOG_FILE% 2>&1
+	if !ERRORLEVEL! NEQ 0 (
+		<nul set /p hacktastic=" *FAILED* "
+	)
 	cd ..
 )
+echo.

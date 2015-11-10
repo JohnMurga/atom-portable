@@ -1,4 +1,6 @@
 @echo off
+setlocal enabledelayedexpansion
+
 REM Copyright 2014-2015 John de Murga - Licensed under the GPLv2
 
 echo Using the flatten-packages utility to shorten package paths
@@ -19,19 +21,32 @@ set PATH=%PATH%;%ATOM_HOME%\..\..\App\Atom\resources\app\apm\bin
 set PATH=%PATH%;%ATOM_HOME%\..\..\App\Atom\resources\app\apm\node_modules\.bin
 
 set npm_config_loglevel=verbose
+set LOG_FILE=%~dp0\..\flatten-log.txt
+echo See log file here : %LOG_FILE%
 
-call npm install flatten-packages > nul
+call npm install flatten-packages 1>> %LOG_FILE% 2>&1
+if !ERRORLEVEL! NEQ 0 (
+  echo Install of flatten-packages FAILED !
+  exit /b 2
+)
+
 set PATH=%PATH%;%ATOM_HOME%\..\..\Data\AtomProfile\node_modules\.bin
 
 cd packages
 rmdir /s /q .bin 2> nul
 
+<nul set /p hacktastic="Flattening : "
+
 FOR /D %%G in ("*") DO (
 	cd "%%G"
-	echo * %%G *
-	call flatten-packages
+	<nul set /p hacktastic="%%G "
+	call flatten-packages 1>> %LOG_FILE% 2>&1
+	if !ERRORLEVEL! NEQ 0 (
+		<nul set /p hacktastic=" *FAILED* "
+	)
 	cd ..
 )
+echo.
 
 cd ..
 rmdir /s /q node_modules 2> nul
