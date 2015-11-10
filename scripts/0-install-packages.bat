@@ -1,7 +1,7 @@
 @echo off
 REM Copyright 2014-2015 John de Murga - Licensed under the GPLv2
 
-echo Installing BASE set of packages
+echo Installing BASE set of packages - THIS WILL TAKE SOME TIME
 
 if "%ATOM_HOME%" equ "" (
 	echo ERROR : The ATOM_HOME variable must be set
@@ -18,6 +18,10 @@ set PATH=%PATH%;%ATOM_HOME%\..\..\App\..\..\git\bin
 
 set ATOM_HOME=%ATOM_HOME%
 set npm_config_loglevel=verbose
+
+<nul set /p hacktastic="Installing : "
+
+type %~dp0\packages.txt
 
 <nul set /p hacktastic=call apm install > .tmp.bat
 type %~dp0\packages.txt >> .tmp.bat
