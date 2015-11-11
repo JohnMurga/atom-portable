@@ -82,6 +82,8 @@
     enableUnicodeEmojis: false
   welcome:
     showOnStartup: false
+  "open-terminal-here":
+    command: "where bash & if %ERRORLEVEL% NEQ 0 (start \"%CD%\" /D \"%CD%\" cmd) else (start \"\" /D \"%CD%\" bash)"
   "open-recent":
     maxRecentDirectories: 8
     maxRecentFiles: 16
