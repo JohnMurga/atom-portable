@@ -32,7 +32,7 @@ rmdir /s /q .bin 2> nul
 FOR /D %%G in ("*") DO (
 	cd "%%G"
 	<nul set /p hacktastic="%%G "
-	call apm dedupe 1>> %LOG_FILE% 2>&1
+	call apm --color false dedupe 1>> %LOG_FILE% 2>&1
 	if !ERRORLEVEL! NEQ 0 (
 		<nul set /p hacktastic=" *FAILED* "
 	)

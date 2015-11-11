@@ -24,7 +24,10 @@ set npm_config_loglevel=verbose
 type %~dp0\packages.txt
 echo.
 
-<nul set /p hacktastic=call apm install > .tmp.bat
+set LOG_FILE=%~dp0\..\install-log.txt
+echo See log file here : %LOG_FILE%
+
+<nul set /p hacktastic=call apm --color false install > .tmp.bat
 type %~dp0\packages.txt >> .tmp.bat
-cmd /c  .tmp.bat > nul
+cmd /c  .tmp.bat 1> %LOG_FILE% 2>&1
 del  .tmp.bat

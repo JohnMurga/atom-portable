@@ -24,7 +24,7 @@ set npm_config_loglevel=verbose
 set LOG_FILE=%~dp0\..\flatten-log.txt
 echo See log file here : %LOG_FILE%
 
-call npm install flatten-packages 1>> %LOG_FILE% 2>&1
+call npm --color false install flatten-packages 1>> %LOG_FILE% 2>&1
 if !ERRORLEVEL! NEQ 0 (
   echo Install of flatten-packages FAILED !
   exit /b 2
