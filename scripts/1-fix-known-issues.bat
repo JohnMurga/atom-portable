@@ -21,7 +21,7 @@ set REPLACE=cscript /nologo %~dp0\..\tools\replace.js
 REM ## linter-eslint is known to not work
 REM ## So we force the version we know works
 
-call apm install linter-eslint@3.1.1
+call apm install linter-eslint@3.1.1 > nul
 
 REM ## Make it think linter-eslint is at 4.0.0, to avoid update prompts
 REM ## Not an issue if other version 3.1.1 get changed in the package.json

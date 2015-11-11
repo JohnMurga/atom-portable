@@ -22,6 +22,7 @@ set npm_config_loglevel=verbose
 <nul set /p hacktastic="Installing : "
 
 type %~dp0\packages.txt
+echo.
 
 <nul set /p hacktastic=call apm install > .tmp.bat
 type %~dp0\packages.txt >> .tmp.bat
