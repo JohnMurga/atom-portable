@@ -60,14 +60,19 @@
   "atom-beautify":
     analytics: false
   "atom-material-ui":
-    compactTreeView: true
-    depth: true
-    showTabIcons: "Show on all tabs"
-    tabSize: "Small"
-    fontSize: "Big"
-    rippleAccentColor: true
-    panelContrast: true
-    accentColor: "Purple"
+    ui:
+      accentColor: "Purple"
+    tabs:
+      rippleAccentColor: true
+      tabSize: "Small"
+      showTabIcons: "Show on all tabs"
+    fonts:
+      fontSize: "Big"
+    panels:
+      depth: true
+      panelContrast: true
+    treeView:
+      compactTreeView: true
   "terminal-panel":
     overrideLs: false
   "terminal-plus":
