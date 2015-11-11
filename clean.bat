@@ -10,4 +10,5 @@ rmdir /s /q empty 2> nul
 
 rmdir /s /q .\tools\7Zip 2> nul
 
-del *-log.txt
+del *-log.txt 2> nul
+del .tmp.bat 2> nul
