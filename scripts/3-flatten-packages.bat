@@ -30,7 +30,7 @@ if !ERRORLEVEL! NEQ 0 (
   exit /b 2
 )
 
-set PATH=%PATH%;%ATOM_HOME%\..\..\Data\AtomProfile\node_modules\.bin
+set PATH=%PATH%;%ATOM_HOME%\node_modules\.bin
 
 cd packages
 rmdir /s /q .bin 2> nul

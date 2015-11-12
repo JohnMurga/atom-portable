@@ -1,7 +1,9 @@
 @echo off
 REM Copyright 2014-2015 John de Murga - Licensed under the GPLv2
 
-echo Setting Atom up with some cool default packages
+echo ------------------------------------------
+echo Setting up Atom with some default packages
+echo ------------------------------------------
 
 set ATOM_HOME=%~dp0\packages\Atom\Data\AtomProfile
 

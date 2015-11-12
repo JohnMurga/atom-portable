@@ -1,7 +1,9 @@
 @echo off
 REM Copyright 2014-2015 John de Murga - Licensed under the GPLv2
 
+echo ----------------------------------------
 echo Cleaning everything except the downloads
+echo ----------------------------------------
 
 rmdir /s /q empty 2> nul
 mkdir empty
