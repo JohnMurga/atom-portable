@@ -80,7 +80,7 @@
   "terminal-plus":
     core:
       scrollback: 5000
-      autoRunCommand: "if (Get-Command bash -errorAction SilentlyContinue) { bash --login -i -s } else { clear }"
+      autoRunCommand: "cmd /c Console"
     style:
       fontFamily: "roboto-normal"
     toggles:
@@ -90,7 +90,7 @@
   welcome:
     showOnStartup: false
   "open-terminal-here":
-    command: "where bash & if %ERRORLEVEL% NEQ 0 (start \"%CD%\" /D \"%CD%\" cmd) else (start \"\" /D \"%CD%\" bash)"
+    command: "ConEmu.bat"
   "open-recent":
     maxRecentDirectories: 8
     maxRecentFiles: 16
