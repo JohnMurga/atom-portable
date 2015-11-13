@@ -11,5 +11,5 @@ mkdir downloads 2> nul
 set WGET=cscript /nologo tools\wget.js
 
 %WGET% "http://www.7-zip.org/a/7za920.zip" ".\\downloads\\7za920.zip"
-%WGET% "https://github.com/atom/atom/releases/download/v1.2.0-beta3/atom-windows.zip" ".\\downloads\\atom-windows.zip"
+%WGET% "https://github.com/atom/atom/releases/download/v1.3.0-beta0/atom-windows.zip" ".\\downloads\\atom-windows.zip"
 %WGET% "https://github.com/git-for-windows/git/releases/download/v2.6.3.windows.1/PortableGit-2.6.3-32-bit.7z.exe" "downloads\\PortableGit.7z"
