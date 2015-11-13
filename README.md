@@ -17,11 +17,17 @@ Download the source ZIP file (*no Git required* :stuck_out_tongue_winking_eye:),
 Then open a CMD window, go to the directory you extracted to and try :
 
 - To download the packages   
-```0-download-archives.bat```
+```
+0-download-archives.bat
+```
 - To then create the portable package and install plugins to it  
-```1-extract-and-layout.bat & 2-install-atom-packages.bat```
+```
+1-extract-and-layout.bat & 2-install-atom-packages.bat
+```
 - And finally, if you want to create an archive  
-```3-package-binaries.bat```
+```
+3-package-binaries.bat
+```
 
 The build and package should work on Windows 7 and above (just like Atom itself)  
 *Although I have not tested on Windows 10 yet*
