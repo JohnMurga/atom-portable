@@ -338,7 +338,7 @@
 			<value name="HideCaption" type="hex" data="00"/>
 			<value name="HideChildCaption" type="hex" data="01"/>
 			<value name="FocusInChildWindows" type="hex" data="01"/>
-			<value name="HideCaptionAlways" type="hex" data="00"/>
+			<value name="HideCaptionAlways" type="hex" data="01"/>
 			<value name="HideCaptionAlwaysFrame" type="hex" data="ff"/>
 			<value name="HideCaptionAlwaysDelay" type="dword" data="000007d0"/>
 			<value name="HideCaptionAlwaysDisappear" type="dword" data="000007d0"/>
