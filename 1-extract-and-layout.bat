@@ -13,9 +13,9 @@ set UN7ZIP=%~dp0\tools\7Zip\7za.exe x -y
 rmdir /s /q .\packages\Atom 2> nul
 rmdir /s /q .\packages\Git 2> nul
 
-%UN7ZIP% %~dp0\downloads\ConEmu.7z -o.\packages\ConEmu > nul
+%UN7ZIP% %~dp0\downloads\ConEmu.7z -o.\packages\Atom\App\ConEmu > nul
 %UN7ZIP% %~dp0\downloads\atom-windows.zip -o.\packages\Atom\App > nul
 %UN7ZIP% %~dp0\downloads\PortableGit.7z -o.\packages\Git > nul
 
-move .\packages\Atom\App\Atom* .\packages\Atom\App\Atom > nul
+move .\packages\Atom\App\Atom* .\packages\Atom\App\Atom > nul 2> nul
 xcopy .\template\* .\packages\Atom /s /i > nul
