@@ -6,6 +6,8 @@
     fontFamily: "roboto-light"
     fontSize: 12
     backUpBeforeSaving: true
+    showIndentGuide: true
+    showInvisibles: true
   core:
     disabledPackages: [
       "metrics"
