@@ -75,12 +75,10 @@
       panelContrast: true
     treeView:
       compactTreeView: true
-  "terminal-panel":
-    overrideLs: false
   "terminal-plus":
     core:
       scrollback: 5000
-      autoRunCommand: "cmd /c Console"
+      autoRunCommand: "Console;exit"
     style:
       fontFamily: "roboto-normal"
     toggles:
@@ -91,6 +89,8 @@
     showOnStartup: false
   "open-terminal-here":
     command: "ConEmu.bat"
+  whitespace:
+    removeTrailingWhitespace: false
   "open-recent":
     maxRecentDirectories: 8
     maxRecentFiles: 16
