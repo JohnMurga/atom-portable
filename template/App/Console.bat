@@ -8,9 +8,12 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`where bash`) DO (
 cls
 
 if "%BASH_PATH%" EQU "" (
-    call start "" /B /W /D "%CD%" cmd /k "%~dp0\ConEmu\ConEmu\CmdInit.cmd"
+    if "%ConEmuANSI%" EQU "ON" (
+        call start "" /B /W /D "%CD%" cmd /k "%~dp0\ConEmu\ConEmu\CmdInit.cmd"
+    ) else (
+        set PROMPT=%username%@%computername% $p$_^> 
+        call start "" /B /W /D "%CD%" cmd
+    )
 ) else (
     call start "" /B /W /D "%CD%" "%BASH_PATH%" --login -i -s
 )
-
-exit
