@@ -35,6 +35,7 @@ FOR /D %%G in ("*") DO (
 	call apm --color false dedupe 1>> %LOG_FILE% 2>&1
 	if !ERRORLEVEL! NEQ 0 (
 		<nul set /p hacktastic=" *FAILED* "
+		exit /b 3
 	)
 	cd ..
 )

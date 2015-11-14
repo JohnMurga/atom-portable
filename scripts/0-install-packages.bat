@@ -19,15 +19,25 @@ set PATH=%PATH%;%ATOM_HOME%\..\..\App\..\..\git\bin
 set ATOM_HOME=%ATOM_HOME%
 set npm_config_loglevel=verbose
 
-<nul set /p hacktastic="Installing : "
-
-type %~dp0\packages.txt
-echo.
-
 set LOG_FILE=%~dp0\..\install-log.txt
+echo. > %LOG_FILE%
 echo See log file here : %LOG_FILE%
 
-<nul set /p hacktastic=call apm --color false install > .tmp.bat
-type %~dp0\packages.txt >> .tmp.bat
-cmd /c  .tmp.bat 1> %LOG_FILE% 2>&1
-del  .tmp.bat
+<nul set /p hacktastic="Installing : "
+
+setlocal enabledelayedexpansion
+
+for /F "tokens=* USEBACKQ" %%F in (`type %~dp0\packages.txt`) do (
+	SET PACKAGES=%%F
+)
+
+for %%a in (%PACKAGES%) do (
+    SET CURRENT_PACKAGE=%%a
+	<nul set /p hacktastic="!CURRENT_PACKAGE! "
+	call apm --color false install !CURRENT_PACKAGE! 1>> %LOG_FILE% 2>&1
+	if !ERRORLEVEL! NEQ 0 (
+		<nul set /p hacktastic=" *FAILED* "
+		exit /b 3
+	)
+)
+echo.
