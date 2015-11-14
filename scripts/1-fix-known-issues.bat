@@ -29,7 +29,7 @@ REM ## Not an issue if other version 3.1.1 get changed in the package.json
 cd packages\linter-eslint
 
 set MYFILE=.\package.json
-set FIXSTR="\x22version\x22: \x223.1.1\x22" "\x22version\x22: \x224.0.0\x22"
+set FIXSTR="\x22version\x22: \x223.1.1\x22" "\x22version\x22: \x225.0.0\x22"
 
 type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
 move %MYFILE%.tmp %MYFILE% > nul
