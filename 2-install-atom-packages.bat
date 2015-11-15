@@ -14,9 +14,14 @@ call scripts\free-drive FREE_DRIVE
 subst %FREE_DRIVE%: .\packages\Atom
 robocopy /e %FREE_DRIVE%: ..\dummy /MIR /FP /NC /NS /NDL /NJH /NJS /L | cscript /nologo .\tools\maxLen.js
 
+setlocal enabledelayedexpansion
+
 cmd /c scripts\1-fix-known-issues.bat
+if !ERRORLEVEL! NEQ 0 (exit)
 cmd /c scripts\2-optimize-packages.bat
+if !ERRORLEVEL! NEQ 0 (exit)
 cmd /c scripts\3-flatten-packages.bat
+if !ERRORLEVEL! NEQ 0 (exit)
 
 echo Calculating max path length from current after package flatten
 robocopy /e %FREE_DRIVE%: ..\dummy /MIR /FP /NC /NS /NDL /NJH /NJS /L | cscript /nologo .\tools\maxLen.js
