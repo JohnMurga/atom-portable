@@ -10,7 +10,7 @@ wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/scripts/pa
 apm install `cat packages.txt`
 echo "Downloading a version of linter-eslint which works"
 apm install linter-eslint@3.1.1
-sed -i -- 's/"version"\: "3.1.1"/"version"\: "5.0.1"/g' packages/linter-eslint/package.json
+sed -i -- 's/"version"\: "3.1.1"/"version"\: "5.1.0"/g' packages/linter-eslint/package.json
 echo "Downloading AtomPortable config"
 wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/template/Data/AtomProfile/config.cson
 wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/template/Data/AtomProfile/init.coffee

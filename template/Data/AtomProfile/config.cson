@@ -91,6 +91,8 @@
     command: "ConEmu.bat"
   whitespace:
     removeTrailingWhitespace: false
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: false
   "open-recent":
     maxRecentDirectories: 8
     maxRecentFiles: 16
