@@ -1,5 +1,6 @@
-downloads
-packages
-tools/7Zip
+/downloads
+/packages
+/node_modules
+/tools/7Zip
+/.tmp.bat
 *-log.txt
-.tmp.bat
