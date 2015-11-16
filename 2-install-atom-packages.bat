@@ -7,14 +7,15 @@ echo ------------------------------------------
 
 set ATOM_HOME=%~dp0\packages\Atom\Data\AtomProfile
 
+setlocal enabledelayedexpansion
+
 cmd /c scripts\0-install-packages.bat
+if !ERRORLEVEL! NEQ 0 (exit)
 
 echo Calculating max path length from current after package install
 call scripts\free-drive FREE_DRIVE
 subst %FREE_DRIVE%: .\packages\Atom
 robocopy /e %FREE_DRIVE%: ..\dummy /MIR /FP /NC /NS /NDL /NJH /NJS /L | cscript /nologo .\tools\maxLen.js
-
-setlocal enabledelayedexpansion
 
 cmd /c scripts\1-fix-known-issues.bat
 if !ERRORLEVEL! NEQ 0 (exit)
