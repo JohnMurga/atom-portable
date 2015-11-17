@@ -2,7 +2,7 @@
 ### Intro
 Atom is great :heart_eyes:, unfortunately it has always had issues under Windows. The most obvious is the classic long paths issues that come with NPM (*npm 3.0 will be better* :clap:). Another issue is that it needs a Git installation for many many of the packages to install. And finally ... Even though it's got a lot better (*when ATOM_HOME was fixed*), it is not very portable in the full sense of the word (%APPDATA% traces, etc).
 
-Do use Atom on many machines (some even Windows), and I wanted something more reliable than batch files and/or NTFS junction points.
+I do use Atom on many machines (some even Windows), and I wanted something more reliable than batch files and/or NTFS junction points.
 
 ### How it works
 - Firstly I created a fairly basic launcher using the [PortableApps](http://portableapps.com) launcher creator. Their launcher itself is well tested and deals with relocating the Atom profile as cleanly as possible (*but does not like long filenames*).
