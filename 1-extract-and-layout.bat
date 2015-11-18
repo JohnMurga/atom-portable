@@ -18,4 +18,13 @@ rmdir /s /q .\packages\Git 2> nul
 %UN7ZIP% %~dp0\downloads\PortableGit.7z -o.\packages\Git > nul
 
 move .\packages\Atom\App\Atom* .\packages\Atom\App\Atom > nul 2> nul
+
+set PATH=%PATH%;%~dp0\packages\Atom\App\Atom\resources\app\apm\bin
+set PATH=%PATH%;%~dp0\packages\Atom\App\Atom\resources\app\apm\node_modules\.bin
+
+call npm --color false install marked highlight.js > nul 2> nul
+call node scripts\renderMarkup.js
+
 xcopy .\template\* .\packages\Atom /s /i > nul
+
+rmdir /s /q node_modules 2> nul
