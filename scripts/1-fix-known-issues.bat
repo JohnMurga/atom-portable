@@ -18,23 +18,17 @@ set npm_config_loglevel=verbose
 
 set REPLACE=cscript /nologo %~dp0\..\tools\replace.js
 
-REM ## linter-eslint is known to not work
-REM ## So we force the version we know works
+REM ## Temporary code patch to EsLint
 
-call apm install linter-eslint@3.1.1 > nul
+cd packages\linter-eslint\lib
 
-REM ## Make it think linter-eslint is at 4.0.0, to avoid update prompts
-REM ## Not an issue if other version 3.1.1 get changed in the package.json
-
-cd packages\linter-eslint
-
-set MYFILE=.\package.json
-set FIXSTR="\x22version\x22: \x223.1.1\x22" "\x22version\x22: \x225.2.0\x22"
+set MYFILE=.\worker.js
+set FIXSTR="argv.push('--config', configFile)" "argv.push('--config', resolveEnv(configFile))"
 
 type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
 move %MYFILE%.tmp %MYFILE% > nul
 
-cd ..\..
+cd ..\..\..
 
 REM ## clipboard-plus has a GIT package reference
 REM ## This prevents package flattening, so we fix it
