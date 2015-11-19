@@ -92,6 +92,7 @@
   whitespace:
     removeTrailingWhitespace: false
   "linter-eslint":
+    eslintrcPath: "${ATOM_HOME}\\\\.eslintrc"
     disableWhenNoEslintrcFileInPath: false
   "open-recent":
     maxRecentDirectories: 8
