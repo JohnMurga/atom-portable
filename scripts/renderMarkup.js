@@ -32,10 +32,11 @@
 
     function renderMarkdown(baseFilename) {
         var emojiUrlPrefix = "http://www.emoji-cheat-sheet.com/graphics/emojis/";
-        var header = "<link rel='stylesheet' href='http://cdn.jsdelivr.net/highlight.js/8.9.1/styles/github.min.css'>\n" +
-                     "<link rel='stylesheet' href='https://sindresorhus.com/github-markdown-css/github-markdown.css'>\n" +
+        var header = "<!DOCTYPE html>\n" +
+                     "<link rel=\"stylesheet\" href=\"http://cdn.jsdelivr.net/highlight.js/8.9.1/styles/github.min.css\">\n" +
+                     "<link rel=\"stylesheet\" href=\"https://sindresorhus.com/github-markdown-css/github-markdown.css\">\n" +
                      "<style>.markdown-body {min-width: 200px; max-width: 790px; margin: 0 auto; padding: 30px;}</style>\n" +
-                     "<article class='markdown-body'>\n"
+                     "<article class=\"markdown-body\">\n";
 
         fs.readFile(baseFilename + ".md", "utf8", function (readError, data) {
 
@@ -49,9 +50,9 @@
 
             var finalHtml = htmlOutput.replace(/:[\w\-\+]+:/g, function myFunction(emoji) {
                 var emojiName = emoji.slice(1, -1);
-                return ("<img class='emoji' title=':" + emojiName + ":' alt='" +
-                    emojiName + "' src='" + emojiUrlPrefix +
-                    emojiName + ".png' height='20'>");
+                return ("<img class=\"emoji\" title=\":" + emojiName + ":\" alt=\"" +
+                    emojiName + "\" src=\"" + emojiUrlPrefix +
+                    emojiName + ".png\" height=\"20\">");
             });
 
             fs.writeFile(baseFilename + ".html", finalHtml, function (writeError) {
