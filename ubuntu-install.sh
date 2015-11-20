@@ -16,6 +16,7 @@ wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/template/D
 wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/template/Data/AtomProfile/init.coffee
 wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/template/Data/AtomProfile/keymap.cson
 wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/template/Data/AtomProfile/styles.less
+wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/template/Data/AtomProfile/.eslintrc
 echo "Tweaking settings for Ubuntu"
 sed -i -- 's/Console\;exit//g' config.cson
 sed -i -- 's/ConEmu.bat/gnome-terminal/g' config.cson
