@@ -43,4 +43,9 @@ And I have to document the hidden features :scream:
 
 As use this myself there is likely to be new features now and then.
 
+But a few things on the todo list :
+- Easier updating
+- A VS code sister to this project
+
+Anyway ... 
 Enjoy :thumbsup:
