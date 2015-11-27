@@ -18,18 +18,6 @@ set npm_config_loglevel=verbose
 
 set REPLACE=cscript /nologo %~dp0\..\tools\replace.js
 
-REM ## Temporary code patch to EsLint
-
-cd packages\linter-eslint\lib
-
-set MYFILE=.\worker.js
-set FIXSTR="argv.push('--config', configFile)" "argv.push('--config', resolveEnv(configFile))"
-
-type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
-move %MYFILE%.tmp %MYFILE% > nul
-
-cd ..\..\..
-
 REM ## clipboard-plus has a GIT package reference
 REM ## This prevents package flattening, so we fix it
 
