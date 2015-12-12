@@ -42,8 +42,7 @@ FOR /D %%G in ("*") DO (
 	<nul set /p hacktastic="%%G "
 	call flatten-packages 1>> %LOG_FILE% 2>&1
 	if !ERRORLEVEL! NEQ 0 (
-		<nul set /p hacktastic=" *FAILED* "
-		exit /b 3
+		<nul set /p hacktastic="-*FAILED* "
 	)
 	cd ..
 )
