@@ -17,7 +17,6 @@ REM rmdir /s /q .\packages\Atom\Data\AtomProfile\compile-cache 2> nul
 
 echo Creating .\packages\AtomPortable.7z ...
 %~dp0\tools\7Zip\7za.exe a -t7z -m0=lzma -mx=9 -mmc=512 -mfb=256 -md=80m -ms=on -r .\packages\AtomPortable-Windows.7z .\packages\Atom\* 
-:: %~dp0\tools\7Zip\7z.exe a -t7z -m0=lzma -mx=9 -myx=9 -mmc=256 -mfb=256 -md=80m -ms=on -r .\packages\AtomPortable-Windows.7z .\packages\Atom\* 
 
 :: echo Creating smallest possible .\packages\AtomPortable.zip ...
 :: %~dp0\tools\7Zip\7za.exe a -mm=Deflate -mfb=256 -mpass=15 -r .\packages\AtomPortable-Windows.zip .\packages\Atom\* > nul
