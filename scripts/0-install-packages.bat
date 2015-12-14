@@ -39,8 +39,12 @@ for %%a in (%PACKAGES%) do (
 		echo RETRYING !CURRENT_PACKAGE! >> %LOG_FILE%
 		call apm --color false install !CURRENT_PACKAGE! 1>> %LOG_FILE% 2>&1
 		if !ERRORLEVEL! NEQ 0 (
-			<nul set /p hacktastic=" *FAILED* "
-			exit /b 3
+			echo RETRYING !CURRENT_PACKAGE! >> %LOG_FILE%
+			call apm --color false install !CURRENT_PACKAGE! 1>> %LOG_FILE% 2>&1
+			if !ERRORLEVEL! NEQ 0 (
+				<nul set /p hacktastic=" *FAILED* "
+				exit /b 3
+			)
 		)
 	)
 )
