@@ -15,5 +15,6 @@ if "%BASH_PATH%" EQU "" (
         call start "" /B /W /D "%CD%" cmd
     )
 ) else (
+	set PROMPT=%username%@%computername% $p$_^> 
     call start "" /B /W /D "%CD%" "%BASH_PATH%" --login -i -s
 )
