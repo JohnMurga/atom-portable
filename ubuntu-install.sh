@@ -2,8 +2,8 @@ echo "Cleaning existing profile"
 rm -rf ~/.atom
 mkdir ~/.atom
 cd ~/.atom
-echo "Downloading and installing Atom 1.2.3"
-wget https://github.com/atom/atom/releases/download/v1.2.3/atom-amd64.deb
+echo "Downloading and installing Atom"
+wget https://github.com/atom/atom/releases/download/v1.5.0-beta0/atom-amd64.deb
 sudo dpkg -i ./atom-amd64.deb
 echo "Downloading and installing companion packages"
 wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/scripts/packages.txt
