@@ -29,6 +29,8 @@
       "*.md"
     ]
     enableBuiltinProvider: false
+  "linter-gcc":
+    execPath: "g++"
   "linter-jscs":
     preset: "crockford"
     displayAs: "warning"
