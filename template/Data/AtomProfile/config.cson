@@ -1,14 +1,33 @@
 "*":
-  editor:
-    lineHeight: 1.2
-    tabLength: 4
-    invisibles: {}
-    fontFamily: "roboto-light"
-    fontSize: 12
-    backUpBeforeSaving: true
-    showIndentGuide: true
-    showInvisibles: true
+  Zen:
+    fullscreen: true
+    width: 160
+  "atom-beautify":
+    analytics: false
+  "atom-material-ui":
+    fonts:
+      fontSize: "Big"
+    panels:
+      depth: true
+      panelContrast: true
+    tabs:
+      rippleAccentColor: true
+      showTabIcons: "Show on all tabs"
+      tabSize: "Small"
+    treeView:
+      compactTreeView: true
+    ui:
+      accentColor: "Purple"
+  "autocomplete-emojis":
+    enableUnicodeEmojis: false
+  "autocomplete-plus":
+    enableBuiltinProvider: false
+    fileBlacklist: [
+      "*.txt"
+      "*.md"
+    ]
   core:
+    autoHideMenuBar: true
     disabledPackages: [
       "metrics"
     ]
@@ -16,86 +35,46 @@
       "atom-material-ui"
       "noj-syntax"
     ]
-    autoHideMenuBar: true
+  editor:
+    backUpBeforeSaving: true
+    fontFamily: "roboto-light"
+    fontSize: 12
+    invisibles: {}
+    lineHeight: 1.2
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
+  "highlight-column":
+    opacity: 0.03
   "highlight-line":
-    hideHighlightOnSelect: true
     enableSelectionBorder: true
-  Zen:
-    width: 160
-    fullscreen: true
-  "autocomplete-plus":
-    fileBlacklist: [
-      "*.txt"
-      "*.md"
-    ]
-    enableBuiltinProvider: false
+    hideHighlightOnSelect: true
+  linter:
+    gutterEnabled: true
+    gutterPosition: "Left"
+    showErrorTabLine: true
+    underlineIssues: false
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+    eslintrcPath: "${ATOM_HOME}\\\\.eslintrc"
   "linter-gcc":
     execPath: "g++"
   "linter-jscs":
-    preset: "crockford"
     displayAs: "warning"
+    fixOnSave: true
+    preset: "idiomatic"
   minimap:
+    absoluteMode: false
     plugins:
-      "find-and-replace": true
-      "highlight-selected": true
-      selection: true
       bookmarks: true
       "color-highlight": true
-      pigments: true
+      "find-and-replace": true
       "git-diff": true
+      "highlight-selected": true
       linter: true
+      pigments: true
+      selection: true
       "split-diff": true
-    absoluteMode: false
-  tabs:
-    showIcons: true
-    usePreviewTabs: true
-  pigments:
-    excludedGrammars: [
-      "text.plain source.gfm"
-    ]
-    ignoreVcsIgnoredPaths: false
-  "highlight-column":
-    opacity: 0.03
-  linter:
-    gutterEnabled: true
-    showErrorTabLine: true
-    gutterPosition: "Left"
-    underlineIssues: false
-  "atom-beautify":
-    analytics: false
-  "atom-material-ui":
-    ui:
-      accentColor: "Purple"
-    tabs:
-      rippleAccentColor: true
-      tabSize: "Small"
-      showTabIcons: "Show on all tabs"
-    fonts:
-      fontSize: "Big"
-    panels:
-      depth: true
-      panelContrast: true
-    treeView:
-      compactTreeView: true
-  "terminal-plus":
-    core:
-      scrollback: 5000
-      autoRunCommand: "Console;exit"
-    style:
-      fontFamily: "roboto-normal"
-    toggles:
-      cursorBlink: false
-  "autocomplete-emojis":
-    enableUnicodeEmojis: false
-  welcome:
-    showOnStartup: false
-  "open-terminal-here":
-    command: "ConEmu.bat"
-  whitespace:
-    removeTrailingWhitespace: false
-  "linter-eslint":
-    eslintrcPath: "${ATOM_HOME}\\\\.eslintrc"
-    disableWhenNoEslintConfig: false
   "open-recent":
     maxRecentDirectories: 8
     maxRecentFiles: 16
@@ -103,3 +82,25 @@
     ]
     recentFiles: [
     ]
+  "open-terminal-here":
+    command: "ConEmu.bat"
+  pigments:
+    excludedGrammars: [
+      "text.plain source.gfm"
+    ]
+    ignoreVcsIgnoredPaths: false
+  tabs:
+    showIcons: true
+    usePreviewTabs: true
+  "terminal-plus":
+    core:
+      autoRunCommand: "Console;exit"
+      scrollback: 5000
+    style:
+      fontFamily: "roboto-normal"
+    toggles:
+      cursorBlink: false
+  welcome:
+    showOnStartup: false
+  whitespace:
+    removeTrailingWhitespace: false
