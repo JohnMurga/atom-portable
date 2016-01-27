@@ -26,6 +26,8 @@
       "*.txt"
       "*.md"
     ]
+  "clang-format":
+    style: "{IndentWidth: 4, ColumnLimit: 120}"
   core:
     autoHideMenuBar: true
     disabledPackages: [
