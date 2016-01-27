@@ -27,8 +27,13 @@ echo See log file here : %LOG_FILE%
 
 setlocal enabledelayedexpansion
 
-for /F "tokens=* USEBACKQ" %%F in (`type %~dp0\packages.txt`) do (
-	SET PACKAGES=%%F
+:: If all on one line
+::for /F "tokens=* USEBACKQ" %%F in (`type %~dp0\packages.txt`) do (
+::	SET PACKAGES=%%F
+::)
+
+for /F "tokens=*" %%F in (%~dp0\packages.txt) do (
+	SET PACKAGES=!PACKAGES! %%F
 )
 
 for %%a in (%PACKAGES%) do (

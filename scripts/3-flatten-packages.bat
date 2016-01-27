@@ -26,11 +26,6 @@ echo. > %LOG_FILE%
 echo See log file here : %LOG_FILE%
 
 set PATH=%PATH%;%ATOM_HOME%\..\..\App\..\..\git\bin
-echo * atom-ternjs is broken right now *
-call apm install atom-ternjs@0.12.2
-if !ERRORLEVEL! NEQ 0 (
-	call apm install atom-ternjs@0.12.2
-)
 
 call npm --color false install flatten-deps 1>> %LOG_FILE% 2>&1
 if !ERRORLEVEL! NEQ 0 (
