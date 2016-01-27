@@ -16,7 +16,7 @@ del   /f /q .\packages\Atom\Data\AtomProfile\config.cson.bak 2> nul
 REM rmdir /s /q .\packages\Atom\Data\AtomProfile\compile-cache 2> nul
 
 echo Creating .\packages\AtomPortable.7z ... PLEASE WAIT
-%~dp0\tools\7Zip\7za.exe a -t7z -mx -m0=lzma -mlc=8 -mmc=1000000 -mfb=273 -md=85m -ms=on -r .\packages\AtomPortable-Windows.7z .\packages\Atom\*  > nul
+%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on -r .\packages\AtomPortable-Windows.7z .\packages\Atom\*
 
 :: ** For use on 8GB+ machines with and recent versions of 64Bit 7Zip **
 :: %~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=580m -ms=on -r .\packages\AtomPortable-Windows.7z .\packages\Atom\*
