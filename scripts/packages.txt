@@ -13,7 +13,6 @@ cursor-history
 docblockr
 escape-utils
 expose
-failcoder-syntax
 figlet
 file-icons
 find-selection
@@ -52,6 +51,7 @@ mocha-test-runner
 monokai-dark
 monokai-extended
 neon-syntax
+noj-syntax
 open-recent
 open-terminal-here
 outlander-syntax
