@@ -63,6 +63,7 @@
     execPath: "g++"
   "linter-jscs":
     displayAs: "warning"
+    esnext: true
     fixOnSave: true
     preset: "idiomatic"
   minimap:
