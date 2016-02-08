@@ -3,6 +3,9 @@
 
 set START_DIR=%CD%
 
+:: Fix/hack for uname behavior affecting make/configure (MSYS vs MINGW)
+set MSYSTEM=MINGW-W32
+
 cd /d "%~dp0\..\..\git\usr\bin"
 
 FOR /F "tokens=* USEBACKQ" %%F IN (`.\which.exe bash`) DO (
