@@ -11,7 +11,7 @@ mkdir downloads 2> nul
 set WGET=cscript /nologo tools\wget.js
 
 %WGET% "http://www.7-zip.org/a/7z1514.msi" ".\\downloads\\7Zip.msi"
-%WGET% "https://github.com/Maximus5/ConEmu/releases/download/v16.01.24/ConEmuPack.160124.7z" ".\\downloads\\ConEmu.7z"
-%WGET% "https://github.com/atom/atom/releases/download/v1.5.0-beta1/atom-windows.zip" ".\\downloads\\atom-windows.zip"
-%WGET% "https://github.com/git-for-windows/git/releases/download/v2.7.0.windows.1/PortableGit-2.7.0-32-bit.7z.exe" "downloads\\PortableGit.7z"
+%WGET% "https://github.com/Maximus5/ConEmu/releases/download/v16.02.04/ConEmuPack.160204.7z" ".\\downloads\\ConEmu.7z"
+%WGET% "https://github.com/atom/atom/releases/download/v1.5.0-beta3/atom-windows.zip" ".\\downloads\\atom-windows.zip"
+%WGET% "https://github.com/git-for-windows/git/releases/download/v2.7.1.windows.1/PortableGit-2.7.1-32-bit.7z.exe" "downloads\\PortableGit.7z"
 %WGET% "http://llvm.org/releases/3.7.1/LLVM-3.7.1-win32.exe" ".\\downloads\\LLVM.7z"
