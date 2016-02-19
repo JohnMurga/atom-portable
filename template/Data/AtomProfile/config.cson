@@ -46,6 +46,8 @@
     showIndentGuide: true
     showInvisibles: true
     tabLength: 4
+  "grunt-runner":
+    panelStartsHidden: true
   "highlight-column":
     opacity: 0.03
   "highlight-line":
