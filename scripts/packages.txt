@@ -36,7 +36,6 @@ linter-eslint
 linter-gcc
 linter-htmlhint
 linter-jscs
-linter-jsxhint
 linter-luaparse
 linter-ruby
 linter-tslint
@@ -67,4 +66,5 @@ symbols-tree-view
 terminal-plus
 todo-show
 tortoise-svn
+turbo-javascript
 Zen
