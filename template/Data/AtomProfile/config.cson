@@ -5,19 +5,27 @@
   "atom-beautify":
     analytics: false
   "atom-material-ui":
+    colors:
+      abaseColor:
+        red: 126
+        green: 87
+        blue: 194
+        alpha: 1
+      accentColor:
+        red: 176
+        green: 228
+        blue: 87
+        alpha: 1
+      predefinedColor: "Purple"
     fonts:
-      fontSize: "Big"
-    panels:
-      depth: true
-      panelContrast: true
+      fontSize: 15.6
     tabs:
-      rippleAccentColor: true
-      showTabIcons: "Show on all tabs"
-      tabSize: "Small"
+      compactTabs: true
     treeView:
-      compactTreeView: true
+      compactList: true
     ui:
-      accentColor: "Purple"
+      panelContrast: true
+      panelShadows: true
   "autocomplete-emojis":
     enableUnicodeEmojis: false
   "autocomplete-plus":
