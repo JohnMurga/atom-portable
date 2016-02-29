@@ -32,3 +32,16 @@ type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
 move %MYFILE%.tmp %MYFILE% > nul
 
 cd ..\..
+
+REM ## Material plus package upgrade logic is a problem
+REM ## This short circuits it
+
+cd packages\atom-material-ui
+
+set MYFILE=.\lib\amu-settings.js
+set FIXSTR="!localStorage.getItem('atom-material-ui:configUpdated')" "false"
+
+type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
+move %MYFILE%.tmp %MYFILE% > nul
+
+cd ..\..
