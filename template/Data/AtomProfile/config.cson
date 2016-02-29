@@ -35,6 +35,7 @@
       "*.md"
     ]
   "clang-format":
+    executable: "clang-format.exe"
     style: "{IndentWidth: 4, ColumnLimit: 120}"
   core:
     autoHideMenuBar: true
