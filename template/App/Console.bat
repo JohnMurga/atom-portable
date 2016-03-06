@@ -17,17 +17,18 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`.\cygpath.exe -w "%BASH_PATH%"`) DO (
 )
 
 cd /d "%START_DIR%"
+set START_SHELL=call start "" /B /W /D "%START_DIR%"
 
 cls
 
 if "%BASH_PATH%" EQU "" (
     if "%ConEmuANSI%" EQU "ON" (
-        cmd /k "%~dp0\ConEmu\ConEmu\CmdInit.cmd"
+        %START_SHELL% cmd /k "%~dp0\ConEmu\ConEmu\CmdInit.cmd"
     ) else (
         set PROMPT=%username%@%computername% $p$_^> 
-        cmd
+        %START_SHELL% cmd
     )
 ) else (
     set PROMPT=%username%@%computername% $p$_^> 
-    "%BASH_PATH%" --login -i -s
+    %START_SHELL% "%BASH_PATH%" --login -i -s
 )
