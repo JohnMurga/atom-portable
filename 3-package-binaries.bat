@@ -12,8 +12,8 @@ rmdir /s /q .\packages\Atom\Data\AtomProfile\local-storage 2> nul
 rmdir /s /q .\packages\Atom\Data\AtomProfile\storage 2> nul
 del   /f /q .\packages\Atom\Data\AtomProfile\config.cson.bak 2> nul
 
-:: Keep the compile cache if present
-REM rmdir /s /q .\packages\Atom\Data\AtomProfile\compile-cache 2> nul
+echo Performing BASH fixups
+.\packages\Git\bin\bash.exe -e scripts\bash-fixups.sh
 
 echo Creating .\packages\AtomPortable.7z ... PLEASE WAIT
 %~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on -r .\packages\AtomPortable-Windows.7z .\packages\Atom\*
