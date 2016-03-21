@@ -63,7 +63,6 @@ Remote-FTP
 split-diff
 Sublime-Style-Column-Selection
 symbols-tree-view
-terminal-plus
 todo-show
 tortoise-svn
 turbo-javascript
