@@ -2,6 +2,7 @@ activate-power-mode
 an-old-hope-syntax
 atom-dark-fusion-syntax
 atom-material-ui
+atom-meld
 atom-runner
 atom-ternjs@0.12.2
 atom-typescript
