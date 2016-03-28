@@ -51,7 +51,7 @@
     fontFamily: "roboto-light"
     fontSize: 12
     invisibles: {}
-    lineHeight: 1.2
+    lineHeight: 1.24
     showIndentGuide: true
     showInvisibles: true
     softWrapAtPreferredLineLength: true
@@ -60,8 +60,6 @@
     panelStartsHidden: true
   "highlight-column":
     opacity: 0.03
-  "highlight-line":
-    hideHighlightOnSelect: true
   linter:
     gutterEnabled: true
     gutterPosition: "Left"
