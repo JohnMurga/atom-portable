@@ -54,13 +54,13 @@
     lineHeight: 1.2
     showIndentGuide: true
     showInvisibles: true
+    softWrapAtPreferredLineLength: true
     tabLength: 4
   "grunt-runner":
     panelStartsHidden: true
   "highlight-column":
     opacity: 0.03
   "highlight-line":
-    enableSelectionBorder: true
     hideHighlightOnSelect: true
   linter:
     gutterEnabled: true
