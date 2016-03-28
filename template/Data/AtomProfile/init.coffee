@@ -13,4 +13,5 @@
 #   if path.extname(editor.getPath()) is '.md'
 #     editor.setSoftWrap(true)
 
-require('web-frame').setZoomFactor(1.08);
+# No need to zoom anymore ?
+# require('web-frame').setZoomFactor(1.08);

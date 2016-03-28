@@ -17,8 +17,7 @@
         blue: 87
         alpha: 1
       predefinedColor: "Purple"
-    fonts:
-      fontSize: 15
+    fonts: {}
     tabs:
       compactTabs: true
     treeView:
