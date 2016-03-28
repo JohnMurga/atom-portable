@@ -7,9 +7,9 @@
   "atom-material-ui":
     colors:
       abaseColor:
-        red: 126
-        green: 87
-        blue: 194
+        red: 22
+        green: 66
+        blue: 99
         alpha: 1
       accentColor:
         red: 176
@@ -62,6 +62,7 @@
   linter:
     gutterEnabled: true
     gutterPosition: "Left"
+    showErrorInline: false
     showErrorTabLine: true
     underlineIssues: false
   "linter-eslint":
