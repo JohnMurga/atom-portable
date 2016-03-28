@@ -22,7 +22,6 @@ git-history
 git-plus
 grunt-runner
 highlight-column
-highlight-line
 highlight-selected
 johns-work-arounds
 jsdoc-generator
@@ -43,6 +42,7 @@ local-history
 markdown-writer
 minimap
 minimap-bookmarks
+minimap-cursorline
 minimap-find-and-replace
 minimap-highlight-selected
 minimap-pigments
