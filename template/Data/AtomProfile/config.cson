@@ -5,18 +5,7 @@
   "atom-beautify":
     analytics: false
   "atom-material-ui":
-    colors:
-      abaseColor:
-        red: 22
-        green: 66
-        blue: 99
-        alpha: 1
-      accentColor:
-        red: 176
-        green: 228
-        blue: 87
-        alpha: 1
-      predefinedColor: "Purple"
+    colors: {}
     fonts: {}
     tabs:
       compactTabs: true
