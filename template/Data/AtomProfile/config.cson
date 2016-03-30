@@ -27,6 +27,7 @@
     style: "{IndentWidth: 4, ColumnLimit: 120}"
   core:
     autoHideMenuBar: true
+    automaticallyUpdate: false
     disabledPackages: [
       "metrics"
     ]
@@ -36,7 +37,7 @@
     ]
   editor:
     backUpBeforeSaving: true
-    fontFamily: "roboto-light"
+    fontFamily: "ocp-light"
     fontSize: 12
     invisibles: {}
     lineHeight: 1.24
@@ -98,7 +99,7 @@
       autoRunCommand: "Console;exit"
       scrollback: 5000
     style:
-      fontFamily: "roboto-normal"
+      fontFamily: "roboto-regular"
     toggles:
       cursorBlink: false
   welcome:
