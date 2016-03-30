@@ -12,7 +12,7 @@ atom-text-editor::shadow  {
     }
     .bracket-matcher {
         border-bottom: 0;
-        opacity: 0.6;
+        opacity: 0.5;
         background-color: #ff2244;
     }
 }
@@ -20,9 +20,10 @@ atom-text-editor::shadow  {
 atom-text-editor::shadow, .tree-view-resizer {
     ::-webkit-scrollbar {
         width: 10px !important;
+        height: 10px !important;
     }
     ::-webkit-scrollbar-thumb {
-        border-radius: 8px;
+        border-radius: 5px;
         background-color: rgba(255,255,255,.1);
 
         &:hover {
