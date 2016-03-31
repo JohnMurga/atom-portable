@@ -36,6 +36,7 @@
       "noj-syntax"
     ]
   editor:
+    autoIndentOnPaste: false
     backUpBeforeSaving: true
     fontFamily: "ocp-light"
     fontSize: 12

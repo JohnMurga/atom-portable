@@ -35,8 +35,10 @@ atom-text-editor::shadow, .tree-view-resizer {
 .tab-bar {
     .tab {
         &.modified {
-            font-weight: bold;
-            -webkit-text-stroke: 0.5px rgba(256, 0, 0,0.6);
+            -webkit-text-stroke: 0.8px rgba(255, 0, 0, 0.5);
+        }
+        &.pending-tab {
+            -webkit-text-stroke: 0.8px rgba(0, 128, 0, 0.5);
         }
     }
 }
