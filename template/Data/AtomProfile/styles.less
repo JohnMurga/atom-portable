@@ -74,6 +74,21 @@ autocomplete-suggestion-list.select-list.popover-list {
     }
 }
 
+// Makes Clipboard plus usable
+atom-panel.clipboard-plus {
+  .select-list ol.list-group {
+    li {
+      pre {
+        color: inherit;
+        .character-match {
+          color: @text-color-error;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
 .ft-item {
   font-size: 14px;
   line-height: 1;
