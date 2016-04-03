@@ -39,7 +39,7 @@
     autoIndentOnPaste: false
     backUpBeforeSaving: true
     fontFamily: "ocp-light"
-    fontSize: 12
+    fontSize: 13
     invisibles: {}
     lineHeight: 1.24
     showIndentGuide: true
@@ -66,18 +66,11 @@
     esnext: true
     fixOnSave: true
     preset: "idiomatic"
+  "markdown-writer":
+    fileExtension: ".md"
+    sitePostsDir: "source/_posts"
   minimap:
     absoluteMode: false
-    plugins:
-      bookmarks: true
-      "color-highlight": true
-      "find-and-replace": true
-      "git-diff": true
-      "highlight-selected": true
-      linter: true
-      pigments: true
-      selection: true
-      "split-diff": true
   "open-recent":
     maxRecentDirectories: 8
     maxRecentFiles: 16
