@@ -18,6 +18,8 @@ msiexec /a %~dp0\downloads\node.msi /qb TARGETDIR=%~dp0\packages\node_tmp /quiet
 move %~dp0\packages\node_tmp\nodejs %~dp0\packages\nodejs  > nul
 rmdir /s /q %~dp0\packages\node_tmp 2> nul
 
+msiexec /a %~dp0\downloads\meld.msi /qb TARGETDIR=%~dp0\packages\meld /quiet
+
 %UN7ZIP% %~dp0\downloads\ConEmu.7z -o.\packages\Atom\App\ConEmu > nul
 %UN7ZIP% %~dp0\downloads\atom-windows.zip -o.\packages\Atom\App > nul
 %UN7ZIP% %~dp0\downloads\PortableGit.7z -o.\packages\Git > nul

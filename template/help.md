@@ -31,15 +31,14 @@ To add it to the portable package follow these instructions :
 
 4. Run Atom from "atom\Atom.Portable.exe"
 
-For Python and Meld its easiest to download  :  
-http://sourceforge.net/projects/meld-installer/files/meld-1.8.6.0.zip/download
+For Meld its easiest to download the installer from :  
+https://download.gnome.org/binaries/win32/meld/
 
 And extract in same way as before so that you have :
 ```
     <new directory>
      + atom
      + meld
-     + python
 ```
 
 
@@ -68,4 +67,4 @@ Despite all this Atom rocks :stuck_out_tongue_winking_eye:
 
 Anyway, enjoy :feelsgood:
 
-:copyright: John de Murga 2015
+:copyright: John de Murga 2016
