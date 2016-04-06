@@ -44,7 +44,6 @@
     lineHeight: 1.24
     showIndentGuide: true
     showInvisibles: true
-    softWrapAtPreferredLineLength: true
     tabLength: 4
   "grunt-runner":
     panelStartsHidden: true
@@ -66,6 +65,7 @@
     esnext: true
     fixOnSave: true
     preset: "idiomatic"
+  "markdown-preview": {}
   "markdown-writer":
     fileExtension: ".md"
     sitePostsDir: "source/_posts"
