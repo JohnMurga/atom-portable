@@ -10,12 +10,16 @@ rmdir /s /q .\packages\Atom\Data\AtomProfile\.node-gyp 2> nul
 rmdir /s /q .\packages\Atom\Data\AtomProfile\local-history 2> nul
 rmdir /s /q .\packages\Atom\Data\AtomProfile\local-storage 2> nul
 rmdir /s /q .\packages\Atom\Data\AtomProfile\storage 2> nul
+rmdir /s /q .\packages\LLVM 2> nul
 del   /f /q .\packages\Atom\Data\AtomProfile\config.cson.bak 2> nul
 
 echo Performing BASH fixups
 .\packages\Git\bin\bash.exe -e scripts\bash-fixups.sh
 
-echo Creating .\packages\AtomPortable.7z ... PLEASE WAIT
+echo Copying launchers
+copy .\tools\Launchers\*.exe .\packages
+
+echo Creating .\packages\AtomPortable-core.7z ... PLEASE WAIT
 %~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on -r .\packages\AtomPortable-Windows.7z .\packages\Atom\*
 
 :: ** For use on 8GB+ machines with and recent versions of 64Bit 7Zip **
