@@ -14,32 +14,28 @@ This package is created with the associated [Atom-Portable](https://github.com/J
 ### GIT / Python / Meld / ETC
 Atom expects you to have Git installed and in your path. So this launcher supports running a portable install of Git alongside Atom.
 
-It is not bundled it as many will already have it or may not use it.
+It is not bundled in the core package as many will already have it.
 
-To add it to the portable package follow these instructions :
+To add it to the portable package just download the "Addons" archive from the release page, and extract to the same directory as Atom.
 
-1. Create a new directory with the following structure :
+1. You will have the following structure :
 ```
-    <new directory>
+    <your directory>
      + atom
      + git
-```
-2. Extract the latest PortableGit files into "git"  
-*(Download from : https://github.com/git-for-windows/git/releases)*
-
-3. Install my portable package to "atom".
-
-4. Run Atom from "atom\Atom.Portable.exe"
-
-For Meld its easiest to download the installer from :  
-https://download.gnome.org/binaries/win32/meld/
-
-And extract in same way as before so that you have :
-```
-    <new directory>
-     + atom
      + meld
+     ...
 ```
+2. When you run Atom from Atom.exe it'll have Meld and Git integrated.
+3. ConEmu-BASH.exe launcher, will give you a BASH shell with meld.
+
+For python and GCC you just have to add the relevant directories at the same level :
+```
+    <your directory>
+     + python
+     + TDM-GCC-32
+```
+*Addon packs for this are coming.*
 
 
 ### Updating the Atom core without a rebuild
@@ -51,9 +47,9 @@ The Atom core can be upgraded manually, to do so just extract to Atom Windows ZI
 Even though this package works well you should be aware of the following issues :
 
 + Performance (specially on startup)  
-*The [PortableApps](http://portableapps.com) syncs and removes the Atom profile in your Windows HOME and APPDATA directories. If the launcher resides on the same drive then it's very fast (files are moved). However, if you are running this from a USB drive or a slower drive it can be a bit slow to start (and shutdown).*
+*The [PortableApps](http://portableapps.com) launcher syncs and removes some files in your Windows HOME and APPDATA directories. If you are running this from a USB drive or a slower drive it can be a bit slow to start (and shutdown), due to this and the fact that Atom is IO intensive.*
 
-+ Size - Total size of Atom with add-ons almost 500Mb  
++ Size - Total size of Atom with add-ons over 500Mb  
 *We can argue that it's an IDE, but it still seems kinda big*
 
 + Temp files - Atom and it's addons can be temp file happy.  
@@ -63,7 +59,7 @@ Even though this package works well you should be aware of the following issues 
 Some addons won't work or will exhibit strange behavior under Windows, I would suggest raising issues on the addon's tracker when this happens and hoping the issues get resolved.  
 **All the bundled addons are tested under windows**
 
-Despite all this Atom rocks :stuck_out_tongue_winking_eye:
+Despite all this Atom still rocks :stuck_out_tongue_winking_eye:
 
 Anyway, enjoy :feelsgood:
 

@@ -3,16 +3,16 @@
 Environment to build an Atom Portable distribution from scratch.
 
 This means taking care of long path issues and other annoyances.  
-For terminal goodness ConEmu is bound to CTRL+ALT+SHIFT+T.
+For terminal goodness ConEmu is bound to **CTRL+ALT+SHIFT+T**.
 
 I have bundled my favorite MIT/GPL licensed packages ...  
-*I would have loved to bundle [FoldingText for Atom](https://atom.io/packages/foldingtext-for-atom), but I can't as it is it is commercial software.*
+*I would have loved to bundle [FoldingText for Atom](https://atom.io/packages/foldingtext-for-atom), but I can't as it is commercial software.*
 
 ### How it works
 You can download and extract the pre-built 7z archive for every release ...  
 That is the easy and very much the faster way :smirk:
 
-Or you can download the source ZIP file and build from scratch ...
+Or you can download the source ZIP file and build from scratch ...  
 Which take a long time, but is hopefully as easy as (0!), 1, 2, 3 ...
 
 The build system is an experiment in automating a build with nothing but old fashioned vanilla Windows components (*not having to worry about PowerShell versions or the like*).
@@ -33,6 +33,8 @@ Then open a CMD window, go to the directory you extracted to and try :
 3-package-binaries.bat
 ```
 
+If you take a peek into the newly created "packages" directory, you will find a full build of my portable distribution, including the latest Atom, Git, Meld, NodeJs LTS and ConEmu ... And then all you have to do is enjoy :bomb:
+
 The build and package process should work on Windows 7 and above (just like Atom itself)  
 *Has been tested on Windows7/8/10*
 
@@ -45,7 +47,7 @@ As use this myself there is likely to be new features now and then.
 
 But a few things on the todo list :
 - Easier updating
-- A VS code sister to this project
+- A VS Code sister to this project
 
 Anyway ... 
 Enjoy :thumbsup:
