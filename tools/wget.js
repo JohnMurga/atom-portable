@@ -1,6 +1,3 @@
-// jscs:disable requireMultipleVarDecl
-// jscs:disable requireVarDeclFirst
-/* eslint new-cap:0 */
 /* global ActiveXObject WScript */
 
 /* Copyright 2014-2016 John de Murga - Licensed under the GPLv2 */
@@ -8,19 +5,19 @@
 function download( source, destination ) {
     "use strict";
 
-    var WinHttpReq = new ActiveXObject("WinHttp.WinHttpRequest.5.1");
+    var winHttpReq = new ActiveXObject("WinHttp.WinHttpRequest.5.1");
 
-    WinHttpReq.Open("GET", source, /*async=*/false );
-    WinHttpReq.Send();
+    winHttpReq.Open("GET", source, /*async=*/false );
+    winHttpReq.Send();
     // WScript.Echo(WinHttpReq.ResponseText);
 
-    var BinStream = new ActiveXObject("ADODB.Stream");
-    BinStream.Type = 1;
-    BinStream.Open();
-    BinStream.Write( WinHttpReq.ResponseBody );
-    BinStream.SaveToFile( destination );
+    var binStream = new ActiveXObject("ADODB.Stream");
+    binStream.Type = 1;
+    binStream.Open();
+    binStream.Write( winHttpReq.ResponseBody );
+    binStream.SaveToFile( destination );
 
-    BinStream = WinHttpReq = null;
+    binStream = winHttpReq = null;
 }
 
 WScript.StdOut.WriteLine("Downloading : " + WScript.Arguments( 0 ) );
