@@ -1,6 +1,6 @@
 activate-power-mode
 an-old-hope-syntax
-atom-dark-fusion-syntax
+atom-material-syntax-dark
 atom-material-ui
 atom-meld
 atom-runner
@@ -40,6 +40,7 @@ linter-luaparse
 linter-ruby
 linter-tslint
 local-history
+markdown-scroll-sync
 markdown-writer
 minimap
 minimap-bookmarks
@@ -50,8 +51,6 @@ minimap-pigments
 minimap-selection
 minimap-split-diff
 mocha-test-runner
-monokai-dark
-monokai-extended
 neon-syntax
 noj-syntax
 open-recent

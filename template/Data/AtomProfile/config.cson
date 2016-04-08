@@ -33,7 +33,7 @@
     ]
     themes: [
       "atom-material-ui"
-      "noj-syntax"
+      "atom-material-syntax-dark"
     ]
   editor:
     autoIndentOnPaste: false
