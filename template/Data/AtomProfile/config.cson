@@ -65,6 +65,9 @@
     esnext: true
     fixOnSave: true
     preset: "idiomatic"
+  "linter-write-good":
+    additionalArgs: "--no-passive"
+    nodePath: "node"
   "markdown-preview": {}
   "markdown-writer":
     fileExtension: ".md"

@@ -39,6 +39,7 @@ linter-jscs
 linter-luaparse
 linter-ruby
 linter-tslint
+linter-write-good
 local-history
 markdown-scroll-sync
 markdown-writer
