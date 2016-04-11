@@ -8,6 +8,9 @@ For terminal goodness ConEmu use the **CTRL+ALT+SHIFT+T** key binding.
 I have bundled my favorite MIT/GPL licensed packages ...  
 *I would have loved to bundle [FoldingText for Atom](https://atom.io/packages/foldingtext-for-atom), but I can't as it's commercial software.*
 
+### Preview
+![Atom portable in action](https://raw.githubusercontent.com/JohnMurga/atom-portable/master/media/preview.gif)
+
 ### How it works
 You can download and extract the pre-built 7z archive for every release ...  
 That is the easy and faster way to do it :smirk:
