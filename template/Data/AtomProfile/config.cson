@@ -48,7 +48,7 @@
   "grunt-runner":
     panelStartsHidden: true
   "highlight-column":
-    opacity: 0.03
+    opacity: 0.08
   linter:
     gutterEnabled: true
     gutterPosition: "Left"
@@ -88,6 +88,7 @@
       "text.plain source.gfm"
     ]
     ignoreVcsIgnoredPaths: false
+  "spell-check": {}
   tabs:
     showIcons: true
     usePreviewTabs: true

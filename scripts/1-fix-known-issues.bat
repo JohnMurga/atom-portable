@@ -45,3 +45,14 @@ type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
 move %MYFILE%.tmp %MYFILE% > nul
 
 cd ..\..
+
+REM ## The atom-material-syntax-dark ... Is not dark enough
+
+cd packages\atom-material-syntax-dark 
+set MYFILE=.\styles\syntax-variables.less
+set FIXSTR="syntax-background-color: #212121" "syntax-background-color: #181818"
+
+type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
+move %MYFILE%.tmp %MYFILE% > nul
+
+cd ..\..
