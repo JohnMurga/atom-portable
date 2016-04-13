@@ -1,6 +1,3 @@
-// jscs:disable requireMultipleVarDecl
-// jscs:disable requireVarDeclFirst
-/* eslint new-cap:0 */
 /* global WScript */
 
 /* Copyright 2014-2016 John de Murga - Licensed under the GPLv2 */
