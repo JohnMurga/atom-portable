@@ -22,10 +22,7 @@ msiexec /a %~dp0\downloads\meld.msi /qb TARGETDIR=%~dp0\packages\meld /quiet
 
 %UN7ZIP% %~dp0\downloads\ConEmu.7z -o.\packages\Atom\App\ConEmu > nul
 %UN7ZIP% %~dp0\downloads\atom-windows.zip -o.\packages\Atom\App > nul
-%UN7ZIP% %~dp0\downloads\PortableGit.7z -o.\packages\Git > nul
-%UN7ZIP% %~dp0\downloads\LLVM.7z -o.\packages\LLVM > nul
-
-copy .\packages\LLVM\bin\clang-format.exe .\packages\Atom\App > nul
+%UN7ZIP% %~dp0\downloads\PortableGit.7z -o.\packages\git > nul
 
 move .\packages\Atom\App\Atom* .\packages\Atom\App\Atom > nul 2> nul
 
