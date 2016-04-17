@@ -26,8 +26,7 @@ echo Creating .\packages\AtomPortable-Part1-Core.7z ... PLEASE WAIT
 echo Creating .\packages\AtomPortable-Part2-Addons.7z ... PLEASE WAIT
 %PACK% .\packages\AtomPortable-Part2-Addons.7z -r .\packages\git .\packages\meld .\packages\nodejs -x!Atom\App\meld
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Atom.exe -x!Atom\App\Atom\atom.exe
-%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\ConEmu-BASH.exe
-%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\ConEmu-CMD.exe
+%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Bash.exe
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Meld.exe
 
 :: ** For use on 8GB+ machines with and recent versions of 64Bit 7Zip **
