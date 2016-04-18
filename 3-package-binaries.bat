@@ -18,7 +18,7 @@ echo Performing BASH fixups
 echo Copying launchers
 copy .\tools\Launchers\*.exe .\packages
 
-set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m-ms=on
+set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
 echo Creating .\packages\AtomPortable-Part1-Core.7z ... PLEASE WAIT
 %PACK% .\packages\AtomPortable-Part1-Core.7z -r .\packages\Atom
