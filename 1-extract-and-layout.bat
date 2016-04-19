@@ -24,7 +24,7 @@ msiexec /a %~dp0\downloads\meld.msi /qb TARGETDIR=%~dp0\packages\meld /quiet
 %UN7ZIP% %~dp0\downloads\atom-windows.zip -o.\packages\Atom\App > nul
 %UN7ZIP% %~dp0\downloads\PortableGit.7z -o.\packages\git > nul
 
-move .\packages\Atom\App\Atom* .\packages\Atom\App\Atom > nul 2> nul
+move .\packages\Atom\App\Atom* .\packages\Atom\App\atom > nul 2> nul
 
 set PATH=%PATH%;%~dp0\packages\Atom\App\Atom\resources\app\apm\bin
 set PATH=%PATH%;%~dp0\packages\Atom\App\Atom\resources\app\apm\node_modules\.bin
