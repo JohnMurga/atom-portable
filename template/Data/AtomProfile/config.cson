@@ -40,7 +40,7 @@
     fontFamily: "ocp-light"
     fontSize: 13
     invisibles: {}
-    lineHeight: 1.24
+    lineHeight: 1.4
     showIndentGuide: true
     showInvisibles: true
     tabLength: 4
@@ -53,7 +53,7 @@
     gutterPosition: "Left"
     showErrorInline: false
     showErrorTabLine: true
-    underlineIssues: false
+    underlineIssues: true
   "linter-eslint":
     disableWhenNoEslintConfig: false
     eslintrcPath: "${ATOM_HOME}\\\\.eslintrc"
