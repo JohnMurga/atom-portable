@@ -20,18 +20,22 @@ rmdir /s /q %~dp0\packages\node_tmp 2> nul
 
 msiexec /a %~dp0\downloads\meld.msi /qb TARGETDIR=%~dp0\packages\meld /quiet
 
-%UN7ZIP% %~dp0\downloads\ConEmu.7z -o.\packages\Atom\App\ConEmu > nul
-%UN7ZIP% %~dp0\downloads\atom-windows.zip -o.\packages\Atom\App > nul
+%UN7ZIP% %~dp0\downloads\ConEmu.7z -o.\packages\atom\App\ConEmu > nul
+%UN7ZIP% %~dp0\downloads\atom-windows.zip -o.\packages\atom\App > nul
 %UN7ZIP% %~dp0\downloads\PortableGit.7z -o.\packages\git > nul
 
-move .\packages\Atom\App\Atom* .\packages\Atom\App\atom > nul 2> nul
+%UN7ZIP% -so %~dp0\downloads\sqlite.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
+%UN7ZIP% -so %~dp0\downloads\sqlite-lib.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
+del .\packages\git\.* > nul
 
-set PATH=%PATH%;%~dp0\packages\Atom\App\Atom\resources\app\apm\bin
-set PATH=%PATH%;%~dp0\packages\Atom\App\Atom\resources\app\apm\node_modules\.bin
+move .\packages\atom\App\Atom* .\packages\atom\App\Atom > nul 2> nul
+
+set PATH=%PATH%;%~dp0\packages\atom\App\Atom\resources\app\apm\bin
+set PATH=%PATH%;%~dp0\packages\atom\App\Atom\resources\app\apm\node_modules\.bin
 
 call npm --color false install marked highlight.js > nul 2> nul
 call node scripts\renderMarkup.js
 
-xcopy .\template\* .\packages\Atom /s /i > nul
+xcopy .\template\* .\packages\atom /s /i > nul
 
 rmdir /s /q node_modules 2> nul
