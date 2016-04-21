@@ -25,9 +25,9 @@ echo Creating .\packages\AtomPortable-Part1-Core.7z ... PLEASE WAIT
 
 echo Creating .\packages\AtomPortable-Part2-Addons.7z ... PLEASE WAIT
 %PACK% .\packages\AtomPortable-Part2-Addons.7z -r .\packages\git .\packages\meld .\packages\nodejs -x!Atom\App\meld
-%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Atom.exe -x!Atom\App\Atom\atom.exe
-%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Bash.exe
-%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Meld.exe
+%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Atom.exe -x!Atom\App\Atom\atom.exe > nul
+%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Bash.exe > nul
+%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Meld.exe > nul
 
 :: ** For use on 8GB+ machines with and recent versions of 64Bit 7Zip **
 :: %~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=580m -ms=on -r
