@@ -30,11 +30,17 @@
 
     function renderMarkdown( baseFilename ) {
         var emojiUrlPrefix = "http://www.emoji-cheat-sheet.com/graphics/emojis/";
+        var highlightCss = "http://cdn.jsdelivr.net/highlight.js/8.9.1/styles/github.min.css";
+        var githubCss = "https://sindresorhus.com/github-markdown-css/github-markdown.css";
+
+        var localCss = ".markdown-body" +
+            "{min-width: 200px; max-width: 790px; margin: 0 auto; padding: 30px;}";
+
         var header = "<!DOCTYPE html>\n" +
-                     "<link rel=\"stylesheet\" href=\"http://cdn.jsdelivr.net/highlight.js/8.9.1/styles/github.min.css\">\n" +
-                     "<link rel=\"stylesheet\" href=\"https://sindresorhus.com/github-markdown-css/github-markdown.css\">\n" +
-                     "<style>.markdown-body {min-width: 200px; max-width: 790px; margin: 0 auto; padding: 30px;}</style>\n" +
-                     "<article class=\"markdown-body\">\n";
+            "<link rel=\"stylesheet\" href=\"" + highlightCss + "\">\n" +
+            "<link rel=\"stylesheet\" href=\"" + githubCss + "\">\n" +
+            "<style>" + localCss + "</style>\n" +
+            "<article class=\"markdown-body\">\n";
 
         fs.readFile( baseFilename + ".md", "utf8", function( readError, data ) {
 
