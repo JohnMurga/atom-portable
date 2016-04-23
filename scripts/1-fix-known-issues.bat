@@ -18,19 +18,6 @@ set npm_config_loglevel=verbose
 
 set REPLACE=cscript /nologo %~dp0\..\tools\replace.js
 
-REM ## atom-ternjs doesn't work after 0.12.2
-REM ## So we lock it at this version
-
-cd packages\atom-ternjs
-
-set MYFILE=.\package.json
-set FIXSTR="\x22version\x22: \x220.12.2\x22" "\x22version\x22: \x220.13.2\x22"
-
-type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
-move %MYFILE%.tmp %MYFILE% > nul
-
-cd ..\..
-
 REM ## clipboard-plus has a GIT package reference
 REM ## This prevents package flattening, so we fix it
 

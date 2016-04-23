@@ -3,7 +3,7 @@ atom-material-syntax-dark
 atom-material-ui
 atom-meld
 atom-runner
-atom-ternjs@0.12.2
+atom-ternjs
 atom-typescript
 autoclose-html
 autocomplete-emojis
