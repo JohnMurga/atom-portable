@@ -47,7 +47,7 @@
   "grunt-runner":
     panelStartsHidden: true
   "highlight-column":
-    opacity: 0.08
+    opacity: 0.06
   linter:
     gutterEnabled: true
     gutterPosition: "Left"
