@@ -1,3 +1,7 @@
+#
+# Copyright 2014-2016 John de Murga - Licensed under the GPLv2
+# 
+
 echo ""
 echo "Deleting some of the larger unreferenced image files in packages"
 cd packages/Atom/Data/AtomProfile

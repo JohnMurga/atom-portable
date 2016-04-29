@@ -1,7 +1,7 @@
 @echo off
 @setlocal enabledelayedexpansion
 
-:: Copyright 2014-2015 John de Murga - Licensed under the GPLv2
+:: Copyright 2014-2016 John de Murga - Licensed under the GPLv2
 
 for %%a in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
    subst %%a: . > nul

@@ -1,5 +1,5 @@
 @echo off
-REM Copyright 2014-2015 John de Murga - Licensed under the GPLv2
+REM Copyright 2014-2016 John de Murga - Licensed under the GPLv2
 
 echo --------------------------------------------------
 echo Clean and package AtomPortable as 7z and ZIP files
