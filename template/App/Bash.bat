@@ -13,16 +13,18 @@ set NPM_CONFIG_userconfig=%PAL_DataDir%\Home\.npmrc
 set NPM_CONFIG_init-module=%PAL_DataDir%\Home\.npm-init.js
 set NPM_CONFIG_cache=%PAL_DataDir%\Home\npm-cache
 
-set PATH=%PATH%;%PAL_AppDir%
-set PATH=%PATH%;%PAL_AppDir%\..\..\git\bin
-set PATH=%PATH%;%PAL_AppDir%\..\..\git\cmd
-set PATH=%PATH%;%PAL_AppDir%\..\..\nodejs
-set PATH=%PATH%;%PAL_AppDir%\..\..\meld
-set PATH=%PATH%;%PAL_AppDir%\..\..\python
-set PATH=%PATH%;%PAL_AppDir%\..\..\ruby\bin
-set PATH=%PATH%;%PAL_AppDir%\..\..\gcc\bin
-set PATH=%PATH%;%PAL_AppDir%\..\..\rust\bin
-set PATH=%PATH%;%PAL_AppDir%\Atom\resources\app\apm\bin
+set MYPATH=%PAL_AppDir%
+set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\bin
+set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\cmd
+set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\nodejs
+set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\meld
+set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\python
+set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\ruby\bin
+set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\gcc\bin
+set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\rust\bin
+set MYPATH=%MYPATH%;%PAL_AppDir%\Atom\resources\app\apm\bin
+
+set PATH=%MYPATH%;%PATH%
 
 set CPATH=%PAL_AppDir%\..\..\git\usr\local\include
 
