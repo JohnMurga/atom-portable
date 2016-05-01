@@ -17,6 +17,7 @@ set MYPATH=%PAL_AppDir%
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\cmd
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\nodejs
+set MYPATH=%MYPATH%;%PAL_DataDir%\Home\npm
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\meld
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\python
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\ruby\bin
