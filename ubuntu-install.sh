@@ -1,20 +1,47 @@
 echo "Cleaning existing profile"
+
 rm -rf ~/.atom
 mkdir ~/.atom
 cd ~/.atom
+
 echo "Downloading and installing Atom"
-wget https://github.com/atom/atom/releases/download/v1.5.0-beta0/atom-amd64.deb
+
+wget https://github.com/atom/atom/releases/download/v1.7.3/atom-amd64.deb
 sudo dpkg -i ./atom-amd64.deb
+
 echo "Downloading and installing companion packages"
+
 wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/scripts/packages.txt
-apm install `cat packages.txt`
+
+for packageName in $(cat scripts/packages.txt)
+do
+    echo -n "$packageName "
+    apm install $packageName
+    if [ $? -ne 0 ]
+    then
+        apm install $packageName
+        if [ $? -ne 0 ]
+        then
+            apm install $packageName
+            if [ $? -ne 0 ]
+            then
+                echo "FAILED to install $packageName"
+            fi
+        fi
+    fi
+done
+
 echo "Downloading AtomPortable config"
+
 wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/template/Data/AtomProfile/config.cson
 wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/template/Data/AtomProfile/init.coffee
 wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/template/Data/AtomProfile/keymap.cson
 wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/template/Data/AtomProfile/styles.less
 wget https://raw.githubusercontent.com/JohnMurga/atom-portable/master/template/Data/AtomProfile/.eslintrc
+
 echo "Tweaking settings for Ubuntu"
+
 sed -i -- 's/Console\;exit//g' config.cson
 sed -i -- 's/ConEmu.bat/gnome-terminal/g' config.cson
+
 echo "All done !!"
