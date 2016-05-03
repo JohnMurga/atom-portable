@@ -21,6 +21,7 @@ find-selection
 git-history
 git-plus
 grunt-runner
+gruvbox-syntax
 highlight-column
 highlight-selected
 johns-work-arounds
