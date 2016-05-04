@@ -54,6 +54,7 @@ echo ""
 
 sed -i -- 's/Console\;exit//g' config.cson
 sed -i -- 's/ConEmu.bat/gnome-terminal/g' config.cson
+sed -i -- 's/\\\\\\\\/\//g' config.cson
 
 echo ""
 echo "All done !!"
