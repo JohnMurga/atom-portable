@@ -15,6 +15,6 @@ set WGET=cscript /nologo tools\wget.js
 %WGET% "http://repo.msys2.org/msys/i686/sqlite-3.10.0.0-1-i686.pkg.tar.xz" ".\\downloads\\sqlite.tar.xz"
 %WGET% "http://repo.msys2.org/msys/i686/libsqlite-3.10.0.0-1-i686.pkg.tar.xz" ".\\downloads\\sqlite-lib.tar.xz"
 %WGET% "https://download.gnome.org/binaries/win32/meld/3.16/Meld-3.16.0-win32.msi" ".\\downloads\\meld.msi"
-%WGET% "https://github.com/Maximus5/ConEmu/releases/download/v16.04.28/ConEmuPack.160428.7z" ".\\downloads\\ConEmu.7z"
+%WGET% "https://github.com/Maximus5/ConEmu/releases/download/v16.05.04/ConEmuPack.160504.7z" ".\\downloads\\ConEmu.7z"
 %WGET% "https://github.com/atom/atom/releases/download/v1.7.3/atom-windows.zip" ".\\downloads\\atom-windows.zip"
 %WGET% "https://github.com/git-for-windows/git/releases/download/v2.8.2.windows.1/PortableGit-2.8.2-32-bit.7z.exe" "downloads\\PortableGit.7z"
