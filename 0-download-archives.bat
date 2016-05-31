@@ -10,8 +10,8 @@ mkdir downloads 2> nul
 
 set WGET=cscript /nologo tools\wget.js
 
-%WGET% "http://www.7-zip.org/a/7z1600.msi" ".\\downloads\\7Zip.msi"
-%WGET% "https://nodejs.org/dist/v4.4.4/node-v4.4.4-x86.msi" ".\\downloads\\node.msi"
+%WGET% "http://www.7-zip.org/a/7z1602.msi" ".\\downloads\\7Zip.msi"
+%WGET% "https://nodejs.org/dist/v4.4.5/node-v4.4.5-x86.msi" ".\\downloads\\node.msi"
 %WGET% "http://repo.msys2.org/msys/i686/sqlite-3.8.8.2-1-i686.pkg.tar.xz" ".\\downloads\\sqlite.tar.xz"
 %WGET% "http://repo.msys2.org/msys/i686/libsqlite-3.8.8.2-1-i686.pkg.tar.xz" ".\\downloads\\sqlite-lib.tar.xz"
 %WGET% "https://download.gnome.org/binaries/win32/meld/3.16/Meld-3.16.0-win32.msi" ".\\downloads\\meld.msi"
