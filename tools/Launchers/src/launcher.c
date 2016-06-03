@@ -1,7 +1,7 @@
 /* Copyright 2014-2016 John de Murga - Licensed under the GPLv2  */
 //
 // Compile with :
-// gcc launcher.c -o launcher.exe -mwindows ; strip launcher.exe
+// gcc --static launcher.c -o launcher.exe -mwindows ; strip launcher.exe
 
 #include <stdio.h>
 #include <string.h>
