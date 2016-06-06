@@ -1,17 +1,28 @@
 /* Copyright 2014-2016 John de Murga - Licensed under the GPLv2  */
 //
-// Compile with :
+// TODO: Convert to wchar_t so that it works well in all locales (I assume it may not now)
+//
+// Compile the old way with :
 // gcc --static launcher.c -o launcher.exe -mwindows ; strip launcher.exe
+// Or better :
+// gcc --static launcher.c -o ../Vim.exe -mwindows -D_PROCESS_TO_EXECUTE_="\"Atom\\\App\\\Vim.bat\""
+// strip ../Vim.exe
+// ../bin/rcedit.exe ../Vim.exe --set-icon Vim.ico
 
 #include <stdio.h>
 #include <string.h>
 #include <windows.h>
 
 int main(int argc, char *argv[]) {
+
+#ifndef _PROCESS_TO_EXECUTE_
     const char *processToExecute = "_PROCESS_TO_EXECUTE_\0"
                                    "                                                            "
                                    "                                                            "
                                    "                                                            ";
+#else
+    const char *processToExecute = _PROCESS_TO_EXECUTE_;
+#endif
 
     TCHAR szFileName[1024];
     char commandLine[2048];
