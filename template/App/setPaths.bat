@@ -7,18 +7,18 @@ set PAL_AppDir=%~dp0\..\App
 :: Taken from the Launcher.ini
 set ATOM_HOME=%PAL_DataDir%\AtomProfile
 
-set HOME=%PAL_DataDir%\Home
+set HOME=%PAL_AppDir%\..\..\_home
 
-set NPM_CONFIG_prefix=%PAL_DataDir%\Home\npm
-set NPM_CONFIG_userconfig=%PAL_DataDir%\Home\.npmrc
-set NPM_CONFIG_init-module=%PAL_DataDir%\Home\.npm-init.js
-set NPM_CONFIG_cache=%PAL_DataDir%\Home\npm-cache
+set NPM_CONFIG_prefix=%HOME%\npm
+set NPM_CONFIG_userconfig=%HOME%\.npmrc
+set NPM_CONFIG_init-module=%HOME%\.npm-init.js
+set NPM_CONFIG_cache=%HOME%\npm-cache
 
 set MYPATH=%PAL_AppDir%
+set MYPATH=%MYPATH%;%HOME%\npm
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\cmd
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\nodejs
-set MYPATH=%MYPATH%;%PAL_DataDir%\Home\npm
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\meld
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\python
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\ruby\bin
