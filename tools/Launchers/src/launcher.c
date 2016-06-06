@@ -21,9 +21,10 @@ int main(int argc, char *argv[]) {
     char *ptr = strrchr(szFileName, '\\');
     ptr[1] = '\0';
 
-    const char *startCmd = "start \"\" ";
-    if (strstr(processToExecute, ".exe") != NULL) {
-        strcpy(commandLine, startCmd);
+    if (strstr(processToExecute, ".exe")) {
+        strcpy(commandLine, "start \"\" ");
+    } else {
+        strcpy(commandLine, "");
     }
 
     char *commandBuffer = strcat(commandLine, szFileName);
@@ -38,6 +39,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
+    printf("Executing : %s\n", commandBuffer);
     system(commandBuffer);
 
     return 0;
