@@ -8,7 +8,7 @@ set MSYSTEM=MINGW-W32
 
 cd /d "%~dp0\..\..\git\usr\bin"
 
-FOR /F "tokens=* USEBACKQ" %%F IN (`.\which.exe bash`) DO (
+FOR /F "tokens=* USEBACKQ" %%F IN (`.\which.exe .\bash`) DO (
     SET BASH_PATH=%%F
 )
 
