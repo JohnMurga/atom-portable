@@ -1,6 +1,19 @@
 @echo off
 :: Copyright 2014-2016 John de Murga - Licensed under the GPLv2
 
-call %~dp0\setPaths.bat
+SET SCRIPT_HOME=%~dp0
+SET BUFFER=
 
-start "" %~dp0\ConEmu\ConEmu.exe /loadcfgfile %~dp0\ConEmu.xml /cmd %~dp0\..\..\git\usr\bin\vim.exe %*
+:loop
+
+set FILE_NAME=%1
+set FILE_NAME=%FILE_NAME:\\=\\\\%
+set BUFFER=%BUFFER% %FILE_NAME%
+
+shift
+
+if not "%~1"=="" goto loop
+
+call %SCRIPT_HOME%\setPaths.bat
+
+start "" %SCRIPT_HOME%\ConEmu\ConEmu.exe /loadcfgfile %SCRIPT_HOME%\ConEmu.xml /cmd %SCRIPT_HOME%\..\..\git\usr\bin\vim.exe %BUFFER%
