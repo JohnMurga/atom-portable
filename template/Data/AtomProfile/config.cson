@@ -4,8 +4,6 @@
     width: 160
   "activate-power-mode":
     autoToggle: false
-  "atom-beautify":
-    analytics: false
   "atom-material-ui":
     colors: {}
     fonts: {}
