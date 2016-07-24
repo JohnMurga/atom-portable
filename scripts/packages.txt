@@ -1,5 +1,4 @@
 activate-power-mode
-atom-beautify
 atom-material-syntax-dark
 atom-material-ui
 atom-meld
@@ -9,6 +8,7 @@ atom-typescript
 autoclose-html
 autocomplete-emojis
 autocomplete-python
+clang-format
 clipboard-plus
 color-picker
 cursor-history
