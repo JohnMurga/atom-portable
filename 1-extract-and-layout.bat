@@ -14,19 +14,20 @@ msiexec /a %~dp0\downloads\7Zip.msi /qb TARGETDIR=%~dp0\tools\7Zip /quiet
 move %~dp0\tools\7Zip\Files\7-Zip\* %~dp0\tools\7Zip > nul
 rmdir /s /q %~dp0\tools\7Zip\File 2> nul
 
-msiexec /a %~dp0\downloads\node.msi /qb TARGETDIR=%~dp0\packages\node_tmp /quiet
+msiexec /a %~dp0\downloads\Node.msi /qb TARGETDIR=%~dp0\packages\node_tmp /quiet
 move %~dp0\packages\node_tmp\nodejs %~dp0\packages\nodejs  > nul
 rmdir /s /q %~dp0\packages\node_tmp 2> nul
 
-msiexec /a %~dp0\downloads\meld.msi /qb TARGETDIR=%~dp0\packages\meld /quiet
+msiexec /a %~dp0\downloads\Meld.msi /qb TARGETDIR=%~dp0\packages\meld /quiet
 
 %UN7ZIP% %~dp0\downloads\ConEmu.7z -o.\packages\atom\App\ConEmu > nul
-%UN7ZIP% %~dp0\downloads\atom-windows.zip -o.\packages\atom\App > nul
+%UN7ZIP% %~dp0\downloads\Atom-windows.zip -o.\packages\atom\App > nul
 %UN7ZIP% %~dp0\downloads\PortableGit.7z -o.\packages\git > nul
+%UN7ZIP% %~dp0\downloads\Fossil.zip -o.\packages\git\usr\bin > nul
 mkdir .\packages\_home
 
-%UN7ZIP% -so %~dp0\downloads\sqlite.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
-%UN7ZIP% -so %~dp0\downloads\sqlite-lib.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
+%UN7ZIP% -so %~dp0\downloads\Sqlite.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
+%UN7ZIP% -so %~dp0\downloads\Sqlite-lib.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
 del .\packages\git\.* > nul
 
 move .\packages\atom\App\Atom* .\packages\atom\App\Atom > nul 2> nul
