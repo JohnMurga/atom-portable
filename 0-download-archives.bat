@@ -17,5 +17,5 @@ set WGET=cscript /nologo tools\wget.js
 %WGET% "http://ftp.nara.wide.ad.jp/pub/X11/GNOME/binaries/win32/meld/3.16/Meld-3.16.0-win32.msi" ".\\downloads\\Meld.msi"
 %WGET% "https://www.fossil-scm.org/download/fossil-w32-1.35.zip" ".\\downloads\\Fossil.zip"
 %WGET% "https://github.com/Maximus5/ConEmu/releases/download/v16.07.24/ConEmuPack.160724.7z" ".\\downloads\\ConEmu.7z"
-%WGET% "https://github.com/atom/atom/releases/download/v1.10.0-beta0/atom-windows.zip" ".\\downloads\\Atom-windows.zip"
+%WGET% "https://github.com/atom/atom/releases/download/v1.9.4/atom-windows.zip" ".\\downloads\\Atom-windows.zip"
 %WGET% "https://github.com/git-for-windows/git/releases/download/v2.9.2.windows.1/PortableGit-2.9.2-32-bit.7z.exe" "downloads\\PortableGit.7z"
