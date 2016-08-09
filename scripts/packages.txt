@@ -7,7 +7,11 @@ atom-runner
 atom-ternjs
 atom-typescript
 autoclose-html
+autocomplete-awk
+autocomplete-bash-builtins
 autocomplete-emojis
+autocomplete-en-en
+autocomplete-project-paths
 autocomplete-python
 clang-format
 clipboard-plus
@@ -22,11 +26,11 @@ find-selection
 git-history
 git-plus
 grunt-runner
-gruvbox-syntax
 highlight-column
 highlight-selected
 johns-work-arounds
 jsdoc-generator
+language-awk
 language-batchfile
 language-diff
 language-lua
