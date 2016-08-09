@@ -1,4 +1,5 @@
 activate-power-mode
+atom-format-lua
 atom-material-syntax-dark
 atom-material-ui
 atom-meld

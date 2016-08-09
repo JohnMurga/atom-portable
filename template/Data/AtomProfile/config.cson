@@ -4,6 +4,9 @@
     width: 160
   "activate-power-mode":
     autoToggle: false
+  "atom-format-lua":
+    indentSize: 4
+    lua51: "lua.exe"
   "atom-material-ui":
     colors: {}
     fonts: {}
