@@ -42,6 +42,7 @@ linter-eslint
 linter-gcc
 linter-htmlhint
 linter-jscs
+linter-luacheck
 linter-luaparse
 linter-ruby
 linter-rust
