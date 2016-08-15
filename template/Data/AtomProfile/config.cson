@@ -26,6 +26,8 @@
       "*.md"
     ]
   "clang-format":
+    formatCOnSave: false
+    formatCPlusPlusOnSave: false
     style: "{IndentWidth: 4, ColumnLimit: 120}"
   core:
     autoHideMenuBar: true
