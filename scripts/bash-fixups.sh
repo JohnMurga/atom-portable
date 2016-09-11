@@ -2,6 +2,10 @@
 # Copyright 2014-2016 John de Murga - Licensed under the GPLv2
 # 
 
+cp ./downloads/.vimrc ./packages/_home/.vimrc
+echo "" >> ./packages/_home/.vimrc
+echo "let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', 'json=javascript', 'xml']" >> ./packages/_home/.vimrc
+
 echo ""
 echo "Deleting some of the larger unreferenced image files in packages"
 cd packages/Atom/Data/AtomProfile
