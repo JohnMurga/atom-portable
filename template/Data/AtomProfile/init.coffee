@@ -14,4 +14,32 @@
 #     editor.setSoftWrap(true)
 
 # No need to zoom anymore ?
-# require('web-frame').setZoomFactor(1.08);
+`
+function setWinDpi( callback ) {
+    var exec = require("child_process" ).exec;
+    var cmd = "wmic desktopmonitor get PixelsPerXLogicalInch";
+
+    exec( cmd, function( error, stdout, stderr ) {
+        var dpi = 96;
+        var lines = stdout.split("\n");
+
+        for ( var i = 0; i < lines.length; i++ ) {
+            if ( !isNaN( lines[ i ].trim() ) ) {
+                dpi = lines[ i ].trim();
+                break;
+            }
+        }
+
+
+        callback( dpi );
+    });
+}
+
+if ( /^win32/.test( process.platform ) ) {
+    setWinDpi(function( dpi ) {
+        if ( dpi != 96 ) {
+                require("web-frame" ).setZoomFactor( dpi * 0.9 / 96 );
+        }
+    });
+}
+`
