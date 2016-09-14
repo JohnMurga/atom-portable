@@ -37,8 +37,8 @@ function setWinDpi( callback ) {
 
 if ( /^win32/.test( process.platform ) ) {
     setWinDpi(function( dpi ) {
-        if ( dpi != 96 ) {
-                require("web-frame" ).setZoomFactor( dpi * 0.9 / 96 );
+        if ( dpi > 108 && window.devicePixelRatio == 1 ) {
+            require("web-frame" ).setZoomFactor( dpi * 0.9 / 96 );
         }
     });
 }
