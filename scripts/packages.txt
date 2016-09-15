@@ -38,7 +38,7 @@ language-rust
 language-vbscript
 linter
 linter-csslint
-linter-eslint
+linter-eslint@7.2.4
 linter-gcc
 linter-htmlhint
 linter-jscs
