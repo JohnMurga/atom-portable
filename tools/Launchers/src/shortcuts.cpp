@@ -25,7 +25,7 @@ void getBasePath(wchar_t *basePath) {
     ptr[1] = '\0';
 }
 
-int createShortcut(const wchar_t *target, const wchar_t *name, const wchar_t *icon, const wchar_t *destination) {
+int createShortcut(const wchar_t *target, const wchar_t *name, const wchar_t *icon, const wchar_t *destination, const wchar_t *workingDir) {
     CoInitialize(NULL);
     IShellLinkW *pShellLink = NULL;
     HRESULT hres;
@@ -34,6 +34,7 @@ int createShortcut(const wchar_t *target, const wchar_t *name, const wchar_t *ic
     if (SUCCEEDED(hres)) {
         pShellLink->SetPath(target);
         pShellLink->SetDescription(name);
+        pShellLink->SetWorkingDirectory(workingDir);
         pShellLink->SetIconLocation(icon, 0);
 
         IPersistFile *pPersistFile;
@@ -70,7 +71,7 @@ int doShortCut(const wchar_t *baseName, wchar_t *exeBasePath, wchar_t *shortcutB
 
     printf("\"%S\", \"%S\", \"%S\", \"%S\"\n", currentLauncher, baseName, currentLauncher, shortcutPath);
 
-    return (createShortcut(currentLauncher, baseName, currentLauncher, shortcutPath));
+    return (createShortcut(currentLauncher, baseName, currentLauncher, shortcutPath, exeBasePath));
 }
 
 void createShortcuts() {
