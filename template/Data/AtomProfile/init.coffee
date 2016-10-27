@@ -13,7 +13,7 @@
 #   if path.extname(editor.getPath()) is '.md'
 #     editor.setSoftWrap(true)
 
-# No need to zoom anymore ?
+# Fix for when Windows DPI settings are not picked up correctly
 `
 function setWinDpi( callback ) {
     var exec = require("child_process" ).exec;
@@ -42,4 +42,9 @@ if ( /^win32/.test( process.platform ) ) {
         }
     });
 }
+`
+# Fix for when spell-check dictionaries are not picked up
+`
+atom.config.set("spell-check.locales", ["en-US"]);
+atom.config.set("spell-check.localePaths", [atom.getLoadSettings().resourcePath + ".unpacked/node_modules/spellchecker/vendor/hunspell_dictionaries"]);
 `
