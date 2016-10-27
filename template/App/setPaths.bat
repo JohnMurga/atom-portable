@@ -16,16 +16,15 @@ set NPM_CONFIG_cache=%HOME%\npm-cache
 
 set MYPATH=%PAL_AppDir%
 set MYPATH=%MYPATH%;%HOME%\npm
+set MYPATH=%MYPATH%;%PAL_AppDir%\Atom\resources\app\apm\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\cmd
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\usr\bin
-set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\nodejs
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\meld
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\python
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\ruby\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\gcc\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\rust\bin
-set MYPATH=%MYPATH%;%PAL_AppDir%\Atom\resources\app\apm\bin
 
 set PATH=%MYPATH%;%PATH%
 
