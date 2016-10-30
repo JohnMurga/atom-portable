@@ -40,8 +40,8 @@
   editor:
     autoIndentOnPaste: false
     backUpBeforeSaving: true
-    fontFamily: "ocp-light"
-    fontSize: 13
+    fontFamily: "ocp-regular"
+    fontSize: 12
     invisibles: {}
     lineHeight: 1.4
     showIndentGuide: true
