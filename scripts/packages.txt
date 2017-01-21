@@ -18,6 +18,7 @@ clipboard-plus
 color-picker
 cursor-history
 docblockr
+emmet-simplified 
 escape-utils
 expose
 figlet
@@ -26,6 +27,7 @@ find-selection
 git-history
 git-plus
 grunt-runner
+hex
 highlight-column
 highlight-selected
 johns-work-arounds
@@ -41,7 +43,6 @@ linter-csslint
 linter-eslint
 linter-gcc
 linter-htmlhint
-linter-jscs
 linter-luacheck
 linter-ruby
 linter-rust
@@ -67,6 +68,7 @@ pigments
 project-manager
 react
 Remote-FTP
+rest-client
 split-diff
 Sublime-Style-Column-Selection
 symbols-tree-view
