@@ -1,5 +1,18 @@
 {
-    "extends": "eslint:recommended",
+    "extends": "idiomatic",
+    "rules": {
+        "quotes": [2, "double"],
+        "max-len": [2, 100],
+        "indent": [2, 4],
+        "no-underscore-dangle":[2],
+        "no-loop-func":[2],
+        "dot-notation":[2],
+        "camelcase":[2],
+        "new-cap":[2],
+        "vars-on-top": [0],
+        "func-names": [0],
+        "one-var": [0],
+    },
     "env": {
         "browser": true,
         "node": true,

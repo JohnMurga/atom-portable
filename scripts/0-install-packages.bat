@@ -16,7 +16,6 @@ if not exist "%ATOM_HOME%\" (
 set PATH=%PATH%;%ATOM_HOME%\..\..\App\Atom\resources\app\apm\bin
 set PATH=%PATH%;%ATOM_HOME%\..\..\App\..\..\git\bin
 
-set ATOM_HOME=%ATOM_HOME%
 set npm_config_loglevel=verbose
 
 set LOG_FILE=%~dp0\..\install-log.txt
@@ -54,3 +53,8 @@ for %%a in (%PACKAGES%) do (
 	)
 )
 echo.
+
+echo Adding idiomatic config to EsLint
+set ESLINT_DIR=%ATOM_HOME%\packages\linter-eslint
+call npm --prefix %ESLINT_DIR% --color false install eslint-config-idiomatic 1>> %LOG_FILE% 2>&1
+cd ..
