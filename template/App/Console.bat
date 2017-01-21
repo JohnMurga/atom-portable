@@ -32,3 +32,5 @@ if "%BASH_PATH%" EQU "" (
     set PROMPT=%username%@%computername% $p$_^> 
     %START_SHELL% "%BASH_PATH%" --login -i -s
 )
+
+exit
