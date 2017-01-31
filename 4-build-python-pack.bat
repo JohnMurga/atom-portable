@@ -8,7 +8,7 @@ echo ---------------------------
 set WGET=cscript /nologo tools\wget.js
 
 IF NOT EXIST ".\\downloads\\python.msi" (
-    %WGET% "https://www.python.org/ftp/python/2.7.11/python-2.7.11.msi" ".\\downloads\\python.msi"
+    %WGET% "https://www.python.org/ftp/python/2.7.13/python-2.7.13.msi" ".\\downloads\\python.msi"
 ) else (
     echo Python Download already present
 )

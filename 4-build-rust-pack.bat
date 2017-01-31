@@ -8,7 +8,7 @@ echo ------------------------
 set WGET=cscript /nologo tools\wget.js
 
 IF NOT EXIST ".\\downloads\\rust.msi" (
-    %WGET% "https://static.rust-lang.org/dist/rust-1.9.0-i686-pc-windows-gnu.msi" ".\\downloads\\rust.msi"
+    %WGET% "https://static.rust-lang.org/dist/rust-1.14.0-i686-pc-windows-gnu.msi" ".\\downloads\\rust.msi"
 ) else (
     echo Rust Download already present
 )
@@ -29,4 +29,4 @@ echo ------------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part3-Rust-1.9.0.7z -r .\packages\rust
+%PACK% .\packages\AtomPortable-Part3-Rust-1.14.0.7z -r .\packages\rust
