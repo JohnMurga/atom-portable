@@ -27,7 +27,6 @@ find-selection
 git-history
 git-plus
 grunt-runner
-hex
 highlight-column
 highlight-selected
 johns-work-arounds
