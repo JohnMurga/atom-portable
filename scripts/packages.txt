@@ -5,7 +5,7 @@ atom-material-ui
 atom-meld
 atom-runner
 atom-ternjs
-atom-typescript
+atom-typescript-beta
 autoclose-html
 autocomplete-awk
 autocomplete-bash-builtins
@@ -72,6 +72,5 @@ split-diff
 Sublime-Style-Column-Selection
 symbols-tree-view
 todo-show
-tortoise-svn
 turbo-javascript
 Zen
