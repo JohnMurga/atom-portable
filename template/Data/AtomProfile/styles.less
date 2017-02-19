@@ -6,7 +6,7 @@ atom-text-editor {
     text-rendering: optimizeSpeed;
 }
 
-atom-text-editor::shadow  {
+atom-text-editor  {
     .selection .region {
         background: rgba(180, 240, 240, 0.2);
     }
@@ -16,7 +16,7 @@ atom-text-editor::shadow  {
     }
 }
 
-atom-text-editor::shadow, .tree-view-resizer {
+atom-text-editor, .tree-view-resizer {
     ::-webkit-scrollbar {
         width: 10px !important;
         height: 10px !important;
@@ -43,7 +43,7 @@ atom-text-editor::shadow, .tree-view-resizer {
 }
 
 // Stop the cursor from blinking
-atom-text-editor::shadow .cursors .cursor {
+atom-text-editor .cursors .cursor {
     background-color: rgba(255,250,150, 0.2);
     opacity: 0.4;
     //border-left-width: 1px;
@@ -51,7 +51,7 @@ atom-text-editor::shadow .cursors .cursor {
 }
 
 // Highlights the cursor line and column
-atom-text-editor::shadow {
+atom-text-editor {
   .cursor-line {
     background-color: rgba(128, 128, 128, 0.1) !important;
   }
@@ -60,7 +60,7 @@ atom-text-editor::shadow {
   }
 }
 
-atom-text-editor::shadow .gutter .foldable .icon-right {
+atom-text-editor .gutter .foldable .icon-right {
     color: rgb(255,255, 255);
 }
 
