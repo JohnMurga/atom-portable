@@ -48,3 +48,6 @@ type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
 move %MYFILE%.tmp %MYFILE% > nul
 
 cd ..\..
+
+REM ## Fix for Python Windows OS detection
+COPY /Y %~dp0\patch\read-arch.bat packages\autocomplete-python\node_modules\kite-installer\lib\support
