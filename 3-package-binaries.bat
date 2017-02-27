@@ -32,7 +32,7 @@ del .\packages\AtomPortable-Part2-Addons.7z 2> nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Meld.exe > nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Vim.exe -x!git\usr\bin\vim.exe > nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Shortcuts.exe > nul
-%PACK% .\packages\AtomPortable-Part2-Addons.7z -r .\packages\git .\packages\meld .\packages\nodejs -x!Atom\App\meld
+%PACK% .\packages\AtomPortable-Part2-Addons.7z -r .\packages\git .\packages\meld .\packages\nodejs -x!atom\App 
 
 :: ** For use on 8GB+ machines with and recent versions of 64Bit 7Zip **
 :: %~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=580m -ms=on -r
