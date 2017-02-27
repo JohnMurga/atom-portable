@@ -18,5 +18,5 @@ set WGET=cscript /nologo tools\wget.js
 %WGET% "https://www.fossil-scm.org/fossil/uv/download/fossil-w32-1.37.zip" ".\\downloads\\Fossil.zip"
 %WGET% "https://github.com/Maximus5/ConEmu/releases/download/v17.01.18/ConEmuPack.170118.7z" ".\\downloads\\ConEmu.7z"
 %WGET% "https://github.com/atom/atom/releases/download/v1.15.0-beta3/atom-windows.zip" ".\\downloads\\Atom-windows.zip"
-%WGET% "https://github.com/git-for-windows/git/releases/download/v2.11.1.windows.1/PortableGit-2.11.1-32-bit.7z.exe" "downloads\\PortableGit.7z"
+%WGET% "https://github.com/git-for-windows/git/releases/download/v2.12.0.windows.1/PortableGit-2.12.0-32-bit.7z.exe" "downloads\\PortableGit.7z"
 %WGET% "https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim" ".\\downloads\\.vimrc"
