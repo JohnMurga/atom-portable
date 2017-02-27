@@ -14,6 +14,10 @@ set NPM_CONFIG_userconfig=%HOME%\.npmrc
 set NPM_CONFIG_init-module=%HOME%\.npm-init.js
 set NPM_CONFIG_cache=%HOME%\npm-cache
 
+set GOROOT=%PAL_AppDir%\..\..\go
+set GOPATH=%PAL_AppDir%\..\..\_home\go
+set GOBIN=%GOPATH%\bin
+
 set MYPATH=%PAL_AppDir%
 set MYPATH=%MYPATH%;%HOME%\npm
 set MYPATH=%MYPATH%;%PAL_AppDir%\Atom\resources\app\apm\bin
@@ -25,6 +29,7 @@ set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\python
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\ruby\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\gcc\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\rust\bin
+set MYPATH=%MYPATH%;%GOROOT%\bin;%GOBIN%
 
 set PATH=%MYPATH%;%PATH%
 
