@@ -1,4 +1,5 @@
 activate-power-mode
+advanced-open-file
 atom-format-lua
 atom-material-syntax-dark
 atom-material-ui
@@ -12,9 +13,10 @@ autocomplete-bash-builtins
 autocomplete-emojis
 autocomplete-en-en
 autocomplete-project-paths
-autocomplete-python
+busy-signal
 clang-format
 clipboard-plus
+code-peek
 color-picker
 cursor-history
 docblockr
@@ -24,6 +26,7 @@ expose
 figlet
 file-icons
 find-selection
+intentions
 git-history
 git-plus
 grunt-runner
@@ -38,6 +41,7 @@ language-lua
 language-rust
 language-vbscript
 linter
+linter-ui-default
 linter-csslint
 linter-eslint
 linter-gcc
