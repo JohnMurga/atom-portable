@@ -6,7 +6,7 @@ atom-material-ui
 atom-meld
 atom-runner
 atom-ternjs
-atom-typescript-beta
+atom-typescript
 autoclose-html
 autocomplete-awk
 autocomplete-bash-builtins
