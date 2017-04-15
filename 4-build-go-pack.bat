@@ -8,7 +8,7 @@ echo -----------------------
 set WGET=cscript /nologo tools\wget.js
 
 IF NOT EXIST ".\\downloads\\go.zip" (
-    %WGET% "https://storage.googleapis.com/golang/go1.8.windows-amd64.zip" ".\\downloads\\go.zip"
+    %WGET% "https://storage.googleapis.com/golang/go1.8.1.windows-amd64.zip" ".\\downloads\\go.zip"
 ) else (
     echo Go Download already present
 )
@@ -82,7 +82,7 @@ FOR %%G IN (%PACKAGE_LIST%) DO (
 	move %PACKAGES%\%%G %MY_TEMP% > nul
 )
 
-%PACK% .\packages\AtomPortable-Part4-Go-1.8-64bit.7z -r .\packages\_tmp\atom
+%PACK% .\packages\AtomPortable-Part4-Go-1.8.1-64bit.7z -r .\packages\_tmp\atom
 
 FOR %%G IN (%PACKAGE_LIST%) DO (
 	move %MY_TEMP%\%%G %PACKAGES% > nul
