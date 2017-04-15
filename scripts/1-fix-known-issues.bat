@@ -49,8 +49,5 @@ move %MYFILE%.tmp %MYFILE% > nul
 
 cd ..\..
 
-REM ## Fix for Python Windows OS detection
-COPY /Y %~dp0\patch\read-arch.bat packages\autocomplete-python\node_modules\kite-installer\lib\support
-
 REM ## Fix for TypeScript beta on Windows
 COPY /Y %~dp0\patch\fs.js packages\atom-typescript\dist\main\atom\utils
