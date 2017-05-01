@@ -63,11 +63,13 @@ minimap-pigments
 minimap-selection
 minimap-split-diff
 mocha-test-runner
+monokai-blackboard 
 neon-syntax
 noj-syntax
 open-recent
 open-terminal-here
 pigments
+prettier-atom
 project-manager
 react
 Remote-FTP
