@@ -1,25 +1,31 @@
 {
-    "extends": "idiomatic",
+    "extends": [
+        "eslint:recommended",
+        "idiomatic"
+    ],
     "rules": {
-        "quotes": [2, "double"],
         "max-len": [2, 100],
         "indent": [2, 4],
-        "no-underscore-dangle":[2],
-        "no-loop-func":[2],
-        "dot-notation":[2],
-        "camelcase":[2],
-        "new-cap":[2],
+        "no-loop-func": [2],
+        "dot-notation": [2],
+        "camelcase": [2],
+        "new-cap": [2],
+        "space-in-parens": [0],
+        "computed-property-spacing": [0],
+        "one-var-declaration-per-line": [0],
+        "array-bracket-spacing": [0],
         "vars-on-top": [0],
         "func-names": [0],
         "one-var": [0],
+        "quotes": [0],
     },
     "env": {
         "browser": true,
         "node": true,
-        "es6": true
+        "es6": true,
     },
     "ecmaFeatures": {
-        "modules": true
+        "modules": true,
     },
     "parserOptions": {
         "sourceType": "module",
