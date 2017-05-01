@@ -56,6 +56,10 @@ go get -u golang.org/x/tools/cmd/guru
 go get -u github.com/fatih/gomodifytags
 go get -u github.com/derekparker/delve/cmd/dlv
 
+:: Some default packages
+go get -u google.golang.org/grpc
+go get -u github.com/gopherjs/gopherjs
+
 echo ----------------------
 echo Installing Go packages
 echo ----------------------
@@ -72,7 +76,7 @@ echo ----------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part4-Go-1.8-64bit.7z -r .\packages\go .\packages\_home -x!atom\Data -x!_home\.vimrc
+%PACK% .\packages\AtomPortable-Part4-Go-1.8.1-64bit.7z -r .\packages\go .\packages\_home -x!atom\Data -x!_home\.vimrc
 
 set MY_TEMP=.\packages\_tmp\atom\Data\AtomProfile\packages
 set PACKAGES=.\packages\atom\Data\AtomProfile\packages
