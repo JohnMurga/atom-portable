@@ -37,13 +37,13 @@ REM ## The atom-material-syntax-dark ... Is not dark enough
 
 cd packages\atom-material-syntax-dark 
 
-set MYFILE=.\styles\syntax-variables.less
-set FIXSTR="syntax-background-color: #212121" "syntax-background-color: #141414"
+set MYFILE=.\styles\colors.less
+set FIXSTR="@very-dark-gray:    #212121;" "@very-dark-gray:    #141414;"
 type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
 move %MYFILE%.tmp %MYFILE% > nul
 
 set MYFILE=.\styles\syntax-variables.less
-set FIXSTR="syntax-comment-color: #444" "syntax-comment-color: #6b6b6b"
+set FIXSTR="very-dark-gray, 20" "very-dark-gray, 30"
 type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
 move %MYFILE%.tmp %MYFILE% > nul
 
