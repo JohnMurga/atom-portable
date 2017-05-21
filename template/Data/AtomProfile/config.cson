@@ -63,9 +63,7 @@
     fixOnSave: true
     preset: "idiomatic"
   "linter-luacheck": {}
-  "linter-ui-default":
-    panelHeight: 60
-    showPanel: true
+  "linter-ui-default": {}
   "linter-write-good":
     additionalArgs: "--no-passive"
     nodePath: "node"
