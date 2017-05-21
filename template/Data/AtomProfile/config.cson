@@ -34,7 +34,7 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "nucleus-dark-ui"
+      "flexible-ui"
       "atom-material-syntax-dark"
     ]
   editor:
@@ -51,12 +51,7 @@
     panelStartsHidden: true
   "highlight-column":
     opacity: 0.06
-  linter:
-    gutterEnabled: true
-    gutterPosition: "Left"
-    showErrorInline: false
-    showErrorTabLine: true
-    underlineIssues: true
+  linter: {}
   "linter-eslint":
     disableWhenNoEslintConfig: false
     eslintrcPath: "${ATOM_HOME}\\\\.eslintrc"
@@ -67,6 +62,10 @@
     esnext: true
     fixOnSave: true
     preset: "idiomatic"
+  "linter-luacheck": {}
+  "linter-ui-default":
+    panelHeight: 60
+    showPanel: true
   "linter-write-good":
     additionalArgs: "--no-passive"
     nodePath: "node"

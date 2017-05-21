@@ -25,6 +25,7 @@ expose
 figlet
 file-icons
 find-selection
+flexible-ui
 intentions
 git-history
 git-plus
@@ -65,7 +66,6 @@ mocha-test-runner
 monokai-blackboard 
 neon-syntax
 noj-syntax
-nucleus-dark-ui
 open-recent
 open-terminal-here
 pigments
