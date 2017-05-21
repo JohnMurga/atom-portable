@@ -2,7 +2,6 @@ activate-power-mode
 advanced-open-file
 atom-format-lua
 atom-material-syntax-dark
-atom-material-ui
 atom-meld
 atom-runner
 atom-ternjs
@@ -66,6 +65,7 @@ mocha-test-runner
 monokai-blackboard 
 neon-syntax
 noj-syntax
+nucleus-dark-ui
 open-recent
 open-terminal-here
 pigments

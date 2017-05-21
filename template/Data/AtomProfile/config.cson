@@ -34,7 +34,7 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "atom-material-ui"
+      "nucleus-dark-ui"
       "atom-material-syntax-dark"
     ]
   editor:
