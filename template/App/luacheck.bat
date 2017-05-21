@@ -1,2 +1,2 @@
 @echo off
-lua.exe -e "package.path=[[%APP_DIR%\luaCheck\src\?.lua;%APP_DIR%\luaCheck\src\?\init.lua;]]..package.path" "%APP_DIR%\luaCheck\bin\luacheck.lua" %*
+lua.exe -e "package.path=[[%~dp0luaCheck\src\?.lua;%~dp0luaCheck\src\?\init.lua;]]..package.path" "%~dp0luaCheck\bin\luacheck.lua" %*
