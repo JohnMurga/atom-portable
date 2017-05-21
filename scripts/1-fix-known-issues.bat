@@ -38,7 +38,7 @@ REM ## The atom-material-syntax-dark ... Is not dark enough
 cd packages\atom-material-syntax-dark 
 
 set MYFILE=.\styles\colors.less
-set FIXSTR="@very-dark-gray:    #212121;" "@very-dark-gray:    #141414;"
+set FIXSTR="@very-dark-gray:    #212121;" "@very-dark-gray:    #161616;"
 type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
 move %MYFILE%.tmp %MYFILE% > nul
 
@@ -49,5 +49,7 @@ move %MYFILE%.tmp %MYFILE% > nul
 
 cd ..\..
 
-REM ## Fix for TypeScript beta on Windows
+REM ## Fixes for packages with open pull requests
 COPY /Y %~dp0\patch\fs.js packages\atom-typescript\dist\main\atom\utils
+COPY /Y %~dp0\patch\highlight-column-element.coffee packages\highlight-column\lib
+COPY /Y %~dp0\patch\atom-meld.coffee packages\atom-meld\lib
