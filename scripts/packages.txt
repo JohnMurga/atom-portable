@@ -33,10 +33,10 @@ grunt-runner
 highlight-column
 highlight-selected
 johns-work-arounds
-jsdoc-generator
 language-awk
 language-batchfile
 language-diff
+language-kotlin
 language-lua
 language-rust
 language-vbscript
