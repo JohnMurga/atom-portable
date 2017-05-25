@@ -64,20 +64,6 @@ atom-text-editor .gutter .foldable .icon-right {
     color: rgb(255,255, 255);
 }
 
-// Makes labels on autocomplete more readable
-// https://github.com/atom/autocomplete-plus/blob/master/styles/autocomplete.less
-autocomplete-suggestion-list.select-list.popover-list {
-    ol.list-group {
-      li {
-        &.selected {
-          .left-label, .right-label, .snippet-completion {
-            color: saturate(@text-color-selected, 50%);
-          }
-        }
-      }
-    }
-}
-
 // Makes Clipboard plus usable
 atom-panel.clipboard-plus {
   .select-list ol.list-group {
