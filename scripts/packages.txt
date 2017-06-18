@@ -59,7 +59,6 @@ minimap-bookmarks
 minimap-cursorline
 minimap-find-and-replace
 minimap-highlight-selected
-minimap-pigments
 minimap-selection
 minimap-split-diff
 mocha-test-runner
@@ -68,7 +67,6 @@ neon-syntax
 noj-syntax
 open-recent
 open-terminal-here
-pigments
 prettier-atom
 project-manager
 react
