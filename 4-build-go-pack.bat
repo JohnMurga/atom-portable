@@ -1,5 +1,5 @@
 @echo off
-REM Copyright 2014-2016 John de Murga - Licensed under the GPLv2
+REM Copyright 2014-2017 John de Murga - Licensed under the GPLv2
 
 echo -----------------------
 echo Downloading Go packages
@@ -64,7 +64,8 @@ echo ----------------------
 echo Installing Go packages
 echo ----------------------
 
-SET PACKAGE_LIST=go-plus hyperclick go-signature-statusbar go-debug
+SET PACKAGE_LIST=go-plus go-signature-statusbar go-debug
+::SET PACKAGE_LIST=go-plus hyperclick go-signature-statusbar go-debug
 
 FOR %%G IN (%PACKAGE_LIST%) DO (
 	call apm --color false install %%G
