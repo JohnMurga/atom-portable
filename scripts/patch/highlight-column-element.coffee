@@ -85,10 +85,17 @@ class HighlightColumnView extends HTMLDivElement
     {row, column} = @cursor.getScreenPosition()
     screenRange = new Range(new Point(row, column), new Point(row, column + 1))
     if  @editorElement.component != null
-        rect = @editorElement.pixelRectForScreenRange(screenRange)
-        range = @editorElement.pixelRangeForScreenRange(screenRange)
-        rect.left = range.start.left
-        rect.right = range.end.left
+        try
+            rect = @editorElement.pixelRectForScreenRange(screenRange)
+            range = @editorElement.pixelRangeForScreenRange(screenRange)
+        catch error
+            console.error error
+
+        if !rect or !range
+            rect = null
+        else
+            rect.left = range.start.left
+            rect.right = range.end.left
     else
         rect = null
     rect
