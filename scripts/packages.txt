@@ -21,7 +21,6 @@ cursor-history
 docblockr
 emmet-simplified 
 escape-utils
-expose
 figlet
 file-icons
 find-selection
@@ -29,12 +28,12 @@ flexible-ui
 intentions
 git-history
 git-plus
-grunt-runner
 highlight-column
 highlight-selected
 johns-work-arounds
 language-awk
 language-batchfile
+language-ceylon
 language-diff
 language-kotlin
 language-lua
@@ -60,8 +59,6 @@ minimap-cursorline
 minimap-find-and-replace
 minimap-highlight-selected
 minimap-selection
-minimap-split-diff
-mocha-test-runner
 monokai-blackboard 
 neon-syntax
 noj-syntax
@@ -72,7 +69,6 @@ project-manager
 react
 Remote-FTP
 rest-client
-split-diff
 Sublime-Style-Column-Selection
 symbols-tree-view
 todo-show
