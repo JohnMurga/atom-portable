@@ -50,6 +50,4 @@ move %MYFILE%.tmp %MYFILE% > nul
 cd ..\..
 
 REM ## Fixes for packages with open pull requests
-COPY /Y %~dp0\patch\fs.js packages\atom-typescript\dist\main\atom\utils
 COPY /Y %~dp0\patch\highlight-column-element.coffee packages\highlight-column\lib
-COPY /Y %~dp0\patch\atom-meld.coffee packages\atom-meld\lib
