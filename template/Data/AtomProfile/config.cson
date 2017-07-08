@@ -47,8 +47,12 @@
     showIndentGuide: true
     showInvisibles: true
     tabLength: 4
+  "git-history":
+    showDiff: false
   "grunt-runner":
     panelStartsHidden: true
+  "gruvbox-plus-syntax":
+    contrast: "Hard"
   "highlight-column":
     opacity: 0.06
   linter: {}
@@ -87,6 +91,8 @@
       "text.plain source.gfm"
     ]
     ignoreVcsIgnoredPaths: false
+  "prettier-atom":
+    useEslint: true
   "spell-check": {}
   tabs:
     showIcons: true
