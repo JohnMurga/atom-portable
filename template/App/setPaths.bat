@@ -18,6 +18,8 @@ set GOROOT=%PAL_AppDir%\..\..\go
 set GOPATH=%PAL_AppDir%\..\..\_home\go
 set GOBIN=%GOPATH%\bin
 
+set JAVA_HOME=%PAL_AppDir%\..\..\java
+
 set MYPATH=%PAL_AppDir%
 set MYPATH=%MYPATH%;%HOME%\npm
 set MYPATH=%MYPATH%;%PAL_AppDir%\Atom\resources\app\apm\bin
@@ -30,6 +32,7 @@ set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\ruby\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\gcc\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\rust\bin
 set MYPATH=%MYPATH%;%GOROOT%\bin;%GOBIN%
+set MYPATH=%MYPATH%;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
 
 set PATH=%MYPATH%;%PATH%
 
