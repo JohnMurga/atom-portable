@@ -19,6 +19,10 @@ set GOPATH=%PAL_AppDir%\..\..\_home\go
 set GOBIN=%GOPATH%\bin
 
 set JAVA_HOME=%PAL_AppDir%\..\..\java
+set _JAVA_OPTIONS=-Duser.home=%PAL_AppDir%\..\..\_home
+set GRADLE_USER_HOME=%PAL_AppDir%\..\..\_home\.gradle
+
+set ANDROID_HOME=%PAL_AppDir%\..\..\android
 
 set MYPATH=%PAL_AppDir%
 set MYPATH=%MYPATH%;%HOME%\npm
@@ -33,6 +37,7 @@ set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\gcc\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\rust\bin
 set MYPATH=%MYPATH%;%GOROOT%\bin;%GOBIN%
 set MYPATH=%MYPATH%;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
+set MYPATH=%MYPATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
 
 set PATH=%MYPATH%;%PATH%
 
