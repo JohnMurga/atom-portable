@@ -21,3 +21,7 @@ strip ../Meld.exe
 gcc --static launcher.c -o ../Bash.exe -mwindows -D_PROCESS_TO_EXECUTE_="\"Atom\\\App\\\Bash.bat\""
 strip ../Bash.exe
 ../bin/rcedit.exe ../Bash.exe --set-icon bash.ico
+
+gcc --static launcher.c -o ../TMux.exe -mwindows -D_PROCESS_TO_EXECUTE_="\"Atom\\\App\\\TMux.bat\""
+strip ../TMux.exe
+../bin/rcedit.exe ../TMux.exe --set-icon TMux.ico

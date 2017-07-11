@@ -27,8 +27,10 @@ msiexec /a %~dp0\downloads\Meld.msi /qb TARGETDIR=%~dp0\packages\meld /quiet
 mkdir .\packages\_home
 
 %UN7ZIP% -so %~dp0\downloads\Sqlite.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
-%UN7ZIP% -so %~dp0\downloads\Sqlite-lib.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
+%UN7ZIP% -so %~dp0\downloads\libsqlite.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
 %UN7ZIP% -so %~dp0\downloads\Curl.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
+%UN7ZIP% -so %~dp0\downloads\libevent.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
+%UN7ZIP% -so %~dp0\downloads\tmux-git.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
 del .\packages\git\.* > nul
 
 move .\packages\atom\App\Atom* .\packages\atom\App\Atom > nul 2> nul

@@ -88,6 +88,7 @@ void createShortcuts() {
     doShortCut(L"Vim", basePath, sendToPath);
     doShortCut(L"Bash", basePath, desktopPath);
     doShortCut(L"Meld", basePath, sendToPath);
+    doShortCut(L"TMux", basePath, desktopPath);
 }
 
 int main() {
