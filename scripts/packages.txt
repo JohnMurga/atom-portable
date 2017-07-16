@@ -1,5 +1,6 @@
 activate-power-mode
 advanced-open-file
+api-docs 
 atom-format-lua
 atom-material-syntax-dark
 atom-meld
@@ -51,6 +52,7 @@ linter-rust
 linter-tslint
 linter-write-good
 local-history
+markdown-preview-enhanced 
 markdown-scroll-sync
 markdown-writer
 minimap
