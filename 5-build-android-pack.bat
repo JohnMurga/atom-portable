@@ -37,12 +37,16 @@ set ANDROID_HOME=%~dp0\packages\android
 mkdir %ANDROID_HOME%\licenses
 <nul set /p =8933bad161af4178b1185d1a37fbf41ea5269c55> %ANDROID_HOME%\licenses\android-sdk-license
 
-%ANDROID_HOME%\tools\bin\sdkmanager.bat "build-tools;26.0.0" "extras;android;m2repository" "extras;google;m2repository" "patcher;v4" "platform-tools" "platforms;android-26"
+:: Why don't "cmd /k" or "start /w /b" work ?
+start "Installing Android SDK, will close when done ..." /W cmd /c "%ANDROID_HOME%\tools\bin\sdkmanager.bat "build-tools;26.0.0" "extras;android;m2repository" "extras;google;m2repository" "patcher;v4" "platform-tools" "platforms;android-26" > androidSdk.log 2>&1"
 
-echo ----------------------
-echo Installing Android SDK
-echo ----------------------
+echo call %~dp0\..\atom\App\setPaths.bat> %ANDROID_HOME%\android-studio.bat
+echo start "" android-studio\bin\studio.exe>> %ANDROID_HOME%\android-studio.bat
+
+echo ---------------------------
+echo Creating Android Addon pack
+echo ---------------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part5-AndroidSDK.7z -r .\packages\android -x!atom\Data -x!_home\.vimrc
+%PACK% .\packages\AtomPortable-Part5-AndroidSDK.7z -r .\packages\android -x!atom\Data -x!_home\.vimrc -x!go

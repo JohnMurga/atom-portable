@@ -53,7 +53,7 @@ echo ----------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part4-Java-1.8.7z -r .\packages\java -x!atom\Data -x!_home\.vimrc
+%PACK% .\packages\AtomPortable-Part4-Java-1.8.7z -r .\packages\java -x!atom\Data -x!_home\.vimrc -x!git
 
 set MY_TEMP=.\packages\_tmp\atom\Data\AtomProfile\packages
 set PACKAGES=.\packages\atom\Data\AtomProfile\packages
