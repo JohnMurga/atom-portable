@@ -23,6 +23,7 @@ set _JAVA_OPTIONS=-Xmx512M -Duser.home=%PAL_AppDir%\..\..\_home
 set GRADLE_USER_HOME=%PAL_AppDir%\..\..\_home\.gradle
 
 set ANDROID_HOME=%PAL_AppDir%\..\..\android
+set ANDROID_SDK_HOME=%PAL_AppDir%\..\..\android
 
 set MYPATH=%PAL_AppDir%
 set MYPATH=%MYPATH%;%HOME%\npm
