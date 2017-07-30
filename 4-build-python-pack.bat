@@ -37,7 +37,7 @@ echo --------------------------
 echo Installing Python packages
 echo --------------------------
 
-SET PACKAGE_LIST=autocomplete-python linter-pylama
+SET PACKAGE_LIST=autocomplete-python-jedi linter-pylama
 
 FOR %%G IN (%PACKAGE_LIST%) DO (
 	call apm --color false install %%G

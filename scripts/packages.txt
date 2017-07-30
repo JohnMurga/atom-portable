@@ -55,7 +55,7 @@ local-history
 markdown-preview-enhanced 
 markdown-scroll-sync
 markdown-writer
-minimap
+minimap-plus
 minimap-bookmarks
 minimap-cursorline
 minimap-find-and-replace
