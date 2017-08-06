@@ -14,7 +14,10 @@ echo "CursorType=block" >> ./packages/git/etc/minttyrc
 echo ""
 
 echo "Tweaking profile for TMux"
-echo "export TERM=xterm-256color" >> ./packages/git/etc/profile
+echo "if [[ \"$ConEmuHWND\" == \"\" ]]" >> ./packages/git/etc/profile
+echo "then" >> ./packages/git/etc/profile
+echo "  export TERM=xterm-256color" >> ./packages/git/etc/profile
+echo "fi" >> ./packages/git/etc/profile
 echo ""
 
 echo "Deleting some of the larger unreferenced image files in packages"
