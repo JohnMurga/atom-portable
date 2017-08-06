@@ -16,7 +16,7 @@ set CURL=.\packages\Git\usr\bin\curl.exe -L
 ::    %CURL% "http://download.sourceforge.net/project/mingw-w64/Toolchains targetting Win32/Personal Builds/mingw-builds/7.1.0/threads-win32/sjlj/i686-7.1.0-release-win32-sjlj-rt_v5-rev0.7z" -o ".\\downloads\\gcc.7z"
 
 IF NOT EXIST ".\\downloads\\gcc.7z" (
-    %CURL% "http://download.sourceforge.net/project/mingw-w64/Toolchains targetting Win32/Personal Builds/mingw-builds/7.1.0/threads-win32/sjlj/i686-7.1.0-release-win32-sjlj-rt_v5-rev0.7z" -o ".\\downloads\\gcc.7z"
+    %CURL% "http://download.sourceforge.net/project/mingw-w64/Toolchains targetting Win32/Personal Builds/mingw-builds/7.1.0/threads-win32/sjlj/i686-7.1.0-release-win32-sjlj-rt_v5-rev1.7z" -o ".\\downloads\\gcc.7z"
 ) else (
     echo GCC Download already present
 )
