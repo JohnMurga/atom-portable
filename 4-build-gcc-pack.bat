@@ -48,4 +48,4 @@ echo ------------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part3-GCC-4.8.5.7z -r .\packages\gcc
+%PACK% .\packages\AtomPortable-Part3-GCC-7.1.0.7z -r .\packages\gcc
