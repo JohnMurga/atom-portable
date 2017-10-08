@@ -31,6 +31,7 @@ set MYPATH=%MYPATH%;%PAL_AppDir%\Atom\resources\app\apm\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\cmd
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\usr\bin
+set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\mingw32\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\meld
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\python
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\ruby\bin
