@@ -1,7 +1,7 @@
 activate-power-mode
 advanced-open-file
 api-docs 
-atom-format-lua
+atom-beautify
 atom-material-syntax-dark
 atom-meld
 atom-runner
@@ -14,11 +14,11 @@ autocomplete-emojis
 autocomplete-en-en
 autocomplete-project-paths
 busy-signal
-clang-format
 clipboard-plus
 code-peek
 color-picker
 cursor-history
+dbg-lua
 docblockr
 emmet-simplified 
 escape-utils
