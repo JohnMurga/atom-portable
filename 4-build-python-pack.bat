@@ -8,7 +8,7 @@ echo ---------------------------
 set WGET=cscript /nologo tools\wget.js
 
 IF NOT EXIST ".\\downloads\\python.msi" (
-    %WGET% "https://www.python.org/ftp/python/2.7.13/python-2.7.13.msi" ".\\downloads\\python.msi"
+    %WGET% "https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi" ".\\downloads\\python.msi"
 ) else (
     echo Python Download already present
 )
@@ -48,7 +48,7 @@ echo Creating Python Addon pack
 echo --------------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
-set ARCHIVE=.\packages\AtomPortable-Part4-Python-2.7.13.7z
+set ARCHIVE=.\packages\AtomPortable-Part4-Python-2.7.14.7z
 
 %PACK% %ARCHIVE% -r .\packages\python -x!atom\Data -x!_home\.vimrc -x!gcc
 
