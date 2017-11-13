@@ -8,7 +8,7 @@ echo -----------------------
 set WGET=cscript /nologo tools\wget.js
 
 IF NOT EXIST ".\\downloads\\go.zip" (
-    %WGET% "https://storage.googleapis.com/golang/go1.9.1.windows-amd64.zip" ".\\downloads\\go.zip"
+    %WGET% "https://storage.googleapis.com/golang/go1.9.2.windows-amd64.zip" ".\\downloads\\go.zip"
 ) else (
     echo Go Download already present
 )
@@ -77,7 +77,7 @@ echo ----------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part4-Go-1.9.1-64bit.7z -r .\packages\go .\packages\_home -x!atom\Data -x!_home\.vimrc
+%PACK% .\packages\AtomPortable-Part4-Go-1.9.2-64bit.7z -r .\packages\go .\packages\_home -x!atom\Data -x!_home\.vimrc
 
 set MY_TEMP=.\packages\_tmp\atom\Data\AtomProfile\packages
 set PACKAGES=.\packages\atom\Data\AtomProfile\packages
@@ -87,7 +87,7 @@ FOR %%G IN (%PACKAGE_LIST%) DO (
 	move %PACKAGES%\%%G %MY_TEMP% > nul
 )
 
-%PACK% .\packages\AtomPortable-Part4-Go-1.9.1-64bit.7z -r .\packages\_tmp\atom
+%PACK% .\packages\AtomPortable-Part4-Go-1.9.2-64bit.7z -r .\packages\_tmp\atom
 
 FOR %%G IN (%PACKAGE_LIST%) DO (
 	move %MY_TEMP%\%%G %PACKAGES% > nul
