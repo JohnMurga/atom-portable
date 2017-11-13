@@ -21,7 +21,6 @@
     enableUnicodeEmojis: false
   "autocomplete-plus":
     autoActivationDelay: 500
-    confirmCompletion: "tab always, enter when suggestion explicitly selected"
   "clang-format":
     formatCOnSave: false
     formatCPlusPlusOnSave: false
