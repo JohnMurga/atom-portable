@@ -35,10 +35,10 @@ function setWinDpi( callback ) {
     });
 }
 
-if ( /^win32/.test( process.platform ) ) {
+if ( /^win/.test( process.platform ) ) {
     setWinDpi(function( dpi ) {
         if ( dpi > 108 && window.devicePixelRatio == 1 ) {
-            require("web-frame" ).setZoomFactor( dpi * 0.9 / 96 );
+            require("electron").webFrame.setZoomFactor( dpi * 0.95 / 96 );
         }
     });
 }
