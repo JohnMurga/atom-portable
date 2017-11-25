@@ -20,7 +20,7 @@
   "autocomplete-emojis":
     enableUnicodeEmojis: false
   "autocomplete-plus":
-    autoActivationDelay: 500
+    autoActivationDelay: 750
   "clang-format":
     formatCOnSave: false
     formatCPlusPlusOnSave: false
