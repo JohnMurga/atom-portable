@@ -69,10 +69,10 @@ open-terminal-here
 prettier-atom
 project-manager
 react
-Remote-FTP
+remote-ftp
 rest-client
-Sublime-Style-Column-Selection
+sublime-style-column-selection
 symbols-tree-view
 todo-show
 turbo-javascript
-Zen
+zen
