@@ -18,6 +18,9 @@ set GOROOT=%PAL_AppDir%\..\..\go
 set GOPATH=%PAL_AppDir%\..\..\_home\go
 set GOBIN=%GOPATH%\bin
 
+set CARGO_HOME=%PAL_AppDir%\..\..\rust\.cargo
+set RUSTUP_HOME=%PAL_AppDir%\..\..\rust\.rustup
+
 set JAVA_HOME=%PAL_AppDir%\..\..\java
 set _JAVA_OPTIONS=-Xmx512M -Duser.home=%PAL_AppDir%\..\..\_home
 set GRADLE_USER_HOME=%PAL_AppDir%\..\..\_home\.gradle
@@ -36,7 +39,7 @@ set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\meld
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\python
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\ruby\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\gcc\bin
-set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\rust\bin
+set MYPATH=%MYPATH%;%CARGO_HOME%\bin;%RUSTUP_HOME%\toolchains\nightly-i686-pc-windows-gnu\bin
 set MYPATH=%MYPATH%;%GOROOT%\bin;%GOBIN%
 set MYPATH=%MYPATH%;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
 set MYPATH=%MYPATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
