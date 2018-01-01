@@ -51,9 +51,12 @@ go get -u github.com/sqs/goreturns
 go get -u github.com/nsf/gocode
 go get -u github.com/alecthomas/gometalinter
 go get -u github.com/zmb3/gogetdoc
+go get -u github.com/zmb3/goaddimport
 go get -u github.com/rogpeppe/godef
 go get -u golang.org/x/tools/cmd/guru
 go get -u github.com/fatih/gomodifytags
+go get -u github.com/tpng/gopkgs
+
 go get -u github.com/derekparker/delve/cmd/dlv
 
 :: Some default packages
@@ -77,7 +80,7 @@ echo ----------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part4-Go-1.9.2-64bit.7z -r .\packages\go .\packages\_home -x!atom\Data -x!_home\.vimrc
+%PACK% .\packages\AtomPortable-Part4-Go-1.9.2-64bit.7z -r .\packages\go .\packages\_home -x!atom\Data -x!_home\.vimrc -x!_home\.cargo
 
 set MY_TEMP=.\packages\_tmp\atom\Data\AtomProfile\packages
 set PACKAGES=.\packages\atom\Data\AtomProfile\packages
