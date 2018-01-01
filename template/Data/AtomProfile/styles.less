@@ -1,20 +1,4 @@
-atom-workspace {
-    text-rendering: optimizeLegibility;
-}
-
-atom-text-editor {
-    text-rendering: optimizeSpeed;
-}
-
-atom-text-editor  {
-    .selection .region {
-        background: rgba(180, 240, 240, 0.2);
-    }
-    .bracket-matcher {
-        opacity: 0.5;
-        background-color: #ff2244;
-    }
-}
+html, body { font-size: 13px; }
 
 atom-text-editor, .tree-view-resizer {
     ::-webkit-scrollbar {
@@ -44,10 +28,9 @@ atom-text-editor, .tree-view-resizer {
 
 // Stop the cursor from blinking
 atom-text-editor .cursors .cursor {
-    background-color: rgba(255,250,150, 0.2);
+    //background-color: rgba(255,250,150, 0.2);
     opacity: 0.4;
-    //border-left-width: 1px;
-    outline: rgba(255,255,255,0.4)// double 3px;
+    border-left-width: 4px;
 }
 
 // Highlights the cursor line and column
@@ -60,6 +43,7 @@ atom-text-editor {
   }
 }
 
+// Make folding easy to see regardless of theme
 atom-text-editor .gutter .foldable .icon-right {
     color: rgb(255,255, 255);
 }
@@ -77,12 +61,4 @@ atom-panel.clipboard-plus {
       }
     }
   }
-}
-
-.ft-item {
-  font-size: 14px;
-  line-height: 1;
-}
-.ft-item-content {
-  line-height: 1;
 }

@@ -33,7 +33,7 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "flexible-ui"
+      "isotope-ui"
       "atom-material-syntax-dark"
     ]
   editor:
