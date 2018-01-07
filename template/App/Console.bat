@@ -6,6 +6,8 @@ set START_DIR=%CD%
 :: Fix/hack for uname behavior affecting make/configure (MSYS vs MINGW)
 set MSYSTEM=MINGW-W32
 
+IF DEFINED RUN_DOS GOTO RUN_DOS
+
 cd /d "%~dp0\..\..\git\usr\bin"
 
 FOR /F "tokens=* USEBACKQ" %%F IN (`.\which.exe .\bash`) DO (
@@ -15,6 +17,8 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`.\which.exe .\bash`) DO (
 FOR /F "tokens=* USEBACKQ" %%F IN (`.\cygpath.exe -w "%BASH_PATH%"`) DO (
     SET BASH_PATH=%%F
 )
+
+:RUN_DOS
 
 cd /d "%START_DIR%"
 set START_SHELL=call start "" /B /W /D "%START_DIR%"
