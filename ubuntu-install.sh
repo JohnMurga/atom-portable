@@ -10,7 +10,7 @@ echo ""
 echo "Downloading and installing Atom"
 echo ""
 
-wget https://github.com/atom/atom/releases/download/v1.10.2/atom-amd64.deb
+wget https://github.com/atom/atom/releases/download/v1.24.0-beta3/atom-amd64.deb
 sudo dpkg -i ./atom-amd64.deb
 sudo apt-get -f install
 
