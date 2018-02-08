@@ -22,7 +22,9 @@ set CARGO_HOME=%PAL_AppDir%\..\..\rust\.cargo
 set RUSTUP_HOME=%PAL_AppDir%\..\..\rust\.rustup
 
 set JAVA_HOME=%PAL_AppDir%\..\..\java
-set _JAVA_OPTIONS=-Xmx512M -Duser.home=%PAL_AppDir%\..\..\_home
+set _JAVA_OPTIONS=-Duser.home=%PAL_AppDir%\..\..\_home
+
+set GRADLE_OPTS=-Xmx512m
 set GRADLE_USER_HOME=%PAL_AppDir%\..\..\_home\.gradle
 
 set ANDROID_HOME=%PAL_AppDir%\..\..\android
