@@ -11,10 +11,11 @@ mkdir downloads 2> nul
 set WGET=cscript /nologo tools\wget.js
 
 %WGET% "http://www.7-zip.org/a/7z1701.msi" ".\\downloads\\7Zip.msi"
+%WGET% "http://repo.msys2.org/msys/i686/rsync-3.1.3-1-i686.pkg.tar.xz" ".\\downloads\\RSync.tar.xz"
 %WGET% "http://repo.msys2.org/msys/i686/sqlite-3.19.3.0-2-i686.pkg.tar.xz" ".\\downloads\\Sqlite.tar.xz"
 %WGET% "http://repo.msys2.org/msys/i686/libsqlite-3.19.3.0-2-i686.pkg.tar.xz" ".\\downloads\\libsqlite.tar.xz"
 %WGET% "http://repo.msys2.org/msys/i686/libevent-2.1.8-1-i686.pkg.tar.xz" ".\\downloads\\libevent.tar.xz"
-%WGET% "http://repo.msys2.org/msys/i686/tmux-git-2.5.94.g73b9328c-1-i686.pkg.tar.xz" ".\\downloads\\tmux-git.tar.xz"
+%WGET% "http://repo.msys2.org/msys/i686/tmux-2.6-1-i686.pkg.tar.xz" ".\\downloads\\tmux-git.tar.xz"
 %WGET% "http://repo.msys2.org/msys/i686/zsh-5.4.2-1-i686.pkg.tar.xz" ".\\downloads\\zsh.tar.xz"
 %WGET% "http://ftp.gnome.org/mirror/gnome.org/binaries/win32/meld/3.16/Meld-3.16.2-win32.msi" ".\\downloads\\Meld.msi"
 %WGET% "https://www.fossil-scm.org/index.html/uv/fossil-w32-2.4.zip" ".\\downloads\\Fossil.zip"

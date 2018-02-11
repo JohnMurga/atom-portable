@@ -5,5 +5,4 @@ call %~dp0\setPaths.bat
 
 cd /D %HOME%
 
-:: cmd /c "" %~dp0\ConEmu.bat
-start "" mintty --size 140,40 tmux
+mintty --title "TMUX Window" --size 140,40 tmux new bash
