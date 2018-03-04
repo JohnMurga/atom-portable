@@ -36,6 +36,7 @@
       "isotope-ui"
       "atom-material-syntax-dark"
     ]
+    uriHandlerRegistration: "never"
   editor:
     autoIndentOnPaste: false
     backUpBeforeSaving: true
