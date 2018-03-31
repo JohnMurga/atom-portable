@@ -55,6 +55,8 @@
     contrast: "Hard"
   "highlight-column":
     opacity: 0.06
+  "isotope-ui":
+    minimalMode: true
   linter: {}
   "linter-eslint":
     disableWhenNoEslintConfig: false
