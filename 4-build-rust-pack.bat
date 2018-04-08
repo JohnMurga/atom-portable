@@ -38,6 +38,7 @@ set PATH=%CARGO_HOME%\bin;%RUSTUP_HOME%\toolchains\nightly-i686-pc-windows-gnu\b
 .\\downloads\\rustup.exe -v target add wasm32-unknown-unknown
 .\\downloads\\rustup.exe show
 cargo install racer
+cargo install -f cargo-web
 cargo install --git https://github.com/alexcrichton/wasm-gc
 copy .\\downloads\\rustup.exe %CARGO_HOME%\bin
 
