@@ -32,6 +32,7 @@ mkdir .\packages\_home
 %UN7ZIP% -so %~dp0\downloads\tmux-git.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
 %UN7ZIP% -so %~dp0\downloads\zsh.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
 %UN7ZIP% -so %~dp0\downloads\RSync.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
+%UN7ZIP% -so %~dp0\downloads\cmake.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
 del .\packages\git\.* > nul
 
 move .\packages\atom\App\Atom* .\packages\atom\App\Atom > nul 2> nul
