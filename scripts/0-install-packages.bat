@@ -30,6 +30,7 @@ setlocal enabledelayedexpansion
 ::for /F "tokens=* USEBACKQ" %%F in (`type %~dp0\packages.txt`) do (
 ::	SET PACKAGES=%%F
 ::)
+SET PACKAGES=
 
 for /F "tokens=*" %%F in (%~dp0\packages.txt) do (
 	SET PACKAGES=!PACKAGES! %%F
