@@ -35,7 +35,7 @@ cd ..\..
 
 REM ## The tomorrow-night-eighties-syntax ... Is not dark enough
 
-cd packages\tomorrow-night-eighties-syntax 
+cd packages\tomorrow-night-eighties-syntax
 
 set MYFILE=.\styles\colors.less
 set FIXSTR="@background: #2d2d2d;" "@background: #181818;"
@@ -46,7 +46,7 @@ cd ..\..
 
 REM ## The atom-material-syntax-dark ... Is not dark enough
 
-cd packages\atom-material-syntax-dark 
+cd packages\atom-material-syntax-dark
 
 set MYFILE=.\styles\colors.less
 set FIXSTR="@light-gray:        #B2CCD6;" "@light-gray:        #B5B5B5;"
