@@ -15,15 +15,17 @@ set CURL=.\packages\Git\mingw32\bin\curl.exe -L
 ::    %CURL% "http://download.sourceforge.net/project/mingw-w64/Toolchains targetting Win32/Personal Builds/mingw-builds/6.3.0/threads-posix/sjlj/i686-6.3.0-release-posix-sjlj-rt_v5-rev1.7z" -o ".\\downloads\\gcc.7z"
 ::    %CURL% "http://download.sourceforge.net/project/mingw-w64/Toolchains targetting Win32/Personal Builds/mingw-builds/7.1.0/threads-win32/sjlj/i686-7.1.0-release-win32-sjlj-rt_v5-rev2.7z" -o ".\\downloads\\gcc.7z"
 ::    %CURL% "http://download.sourceforge.net/project/mingw-w64/Toolchains targetting Win32/Personal Builds/mingw-builds/7.2.0/threads-win32/sjlj/i686-7.2.0-release-win32-sjlj-rt_v5-rev0.7z" -o ".\\downloads\\gcc.7z"
+::    %CURL% "http://download.sourceforge.net/project/mingw-w64/Toolchains targetting Win32/Personal Builds/mingw-builds/7.3.0/threads-win32/sjlj/i686-7.3.0-release-win32-sjlj-rt_v5-rev0.7z"
+::    %CURL% "http://download.sourceforge.net/project/mingw-w64/Toolchains targetting Win32/Personal Builds/mingw-builds/8.1.0/threads-win32/sjlj/i686-8.1.0-release-win32-sjlj-rt_v6-rev0.7z"
 
 IF NOT EXIST ".\\downloads\\gcc.7z" (
-    %CURL% "http://download.sourceforge.net/project/mingw-w64/Toolchains targetting Win32/Personal Builds/mingw-builds/7.1.0/threads-win32/sjlj/i686-7.1.0-release-win32-sjlj-rt_v5-rev2.7z" -o ".\\downloads\\gcc.7z"
+    %CURL% "http://download.sourceforge.net/project/mingw-w64/Toolchains targetting Win32/Personal Builds/mingw-builds/8.1.0/threads-win32/sjlj/i686-8.1.0-release-win32-sjlj-rt_v6-rev0.7z" -o ".\\downloads\\gcc.7z"
 ) else (
     echo GCC Download already present
 )
 
 IF NOT EXIST ".\\downloads\\make.tar.xz" (
-    %WGET% "http://repo.msys2.org/msys/i686/make-4.1-4-i686.pkg.tar.xz" ".\\downloads\\make.tar.xz"
+    %WGET% "http://repo.msys2.org/msys/i686/make-4.2.1-1-i686.pkg.tar.xz" ".\\downloads\\make.tar.xz"
 ) else (
     echo MSys2 MAKE Download already present
 )
@@ -49,4 +51,4 @@ echo ------------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part3-GCC-7.1.0.7z -r .\packages\gcc
+%PACK% .\packages\AtomPortable-Part3-GCC-8.1.0.7z -r .\packages\gcc
