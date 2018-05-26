@@ -33,17 +33,37 @@ move %MYFILE%.tmp %MYFILE% > nul
 
 cd ..\..
 
+REM ## The tomorrow-night-eighties-syntax ... Is not dark enough
+
+cd packages\tomorrow-night-eighties-syntax 
+
+set MYFILE=.\styles\colors.less
+set FIXSTR="@background: #2d2d2d;" "@background: #181818;"
+type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
+move %MYFILE%.tmp %MYFILE% > nul
+
+cd ..\..
+
 REM ## The atom-material-syntax-dark ... Is not dark enough
 
 cd packages\atom-material-syntax-dark 
 
 set MYFILE=.\styles\colors.less
-set FIXSTR="@very-dark-gray:    #212121;" "@very-dark-gray:    #161616;"
+set FIXSTR="@light-gray:        #B2CCD6;" "@light-gray:        #B5B5B5;"
+type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
+move %MYFILE%.tmp %MYFILE% > nul
+set FIXSTR="@gray:              #373b41;" "@gray:              #353535;"
+type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
+move %MYFILE%.tmp %MYFILE% > nul
+set FIXSTR="@dark-gray:         #282a2e;" "@dark-gray:         #252525;"
+type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
+move %MYFILE%.tmp %MYFILE% > nul
+set FIXSTR="@very-dark-gray:    #212121;" "@very-dark-gray:    #151515;"
 type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
 move %MYFILE%.tmp %MYFILE% > nul
 
 set MYFILE=.\styles\syntax-variables.less
-set FIXSTR="very-dark-gray, 20" "very-dark-gray, 30"
+set FIXSTR="very-dark-gray, 20" "very-dark-gray, 35"
 type %MYFILE% | %REPLACE% %FIXSTR% > %MYFILE%.tmp
 move %MYFILE%.tmp %MYFILE% > nul
 

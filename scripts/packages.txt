@@ -1,6 +1,6 @@
 activate-power-mode
 advanced-open-file
-api-docs 
+api-docs
 atom-beautify
 atom-material-syntax-dark
 atom-meld
@@ -32,6 +32,7 @@ intentions
 isotope-ui
 git-history
 git-plus
+gruvbox-plus-syntax
 highlight-column
 highlight-selected
 johns-work-arounds
@@ -78,5 +79,6 @@ rest-client
 sublime-style-column-selection
 symbols-tree-view
 todo-show
+tomorrow-night-eighties-syntax
 turbo-javascript
 zen
