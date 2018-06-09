@@ -18,6 +18,7 @@ set WGET=cscript /nologo tools\wget.js
 %WGET% "http://repo.msys2.org/msys/i686/libevent-2.1.8-1-i686.pkg.tar.xz" ".\\downloads\\libevent.tar.xz"
 %WGET% "http://repo.msys2.org/msys/i686/tmux-2.6-1-i686.pkg.tar.xz" ".\\downloads\\tmux-git.tar.xz"
 %WGET% "http://repo.msys2.org/msys/i686/zsh-5.4.2-1-i686.pkg.tar.xz" ".\\downloads\\zsh.tar.xz"
+%WGET% "http://repo.msys2.org/msys/i686/wget-1.19.4-1-i686.pkg.tar.xz" ".\\downloads\\wget.tar.xz"
 %WGET% "http://ftp.gnome.org/mirror/gnome.org/binaries/win32/meld/3.16/Meld-3.16.2-win32.msi" ".\\downloads\\Meld.msi"
 %WGET% "https://fossil-scm.org/index.html/uv/fossil-w32-2.6.zip" ".\\downloads\\Fossil.zip"
 %WGET% "https://github.com/Maximus5/ConEmu/releases/download/v18.05.06/ConEmuPack.180506.7z" ".\\downloads\\ConEmu.7z"
