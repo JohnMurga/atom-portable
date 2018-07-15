@@ -9,7 +9,7 @@ echo "let g:markdown_fenced_languages = ['css', 'javascript', 'js=javascript', '
 echo ""
 
 echo "Tweaking minttyrc for readability"
-echo "Transparency=low" >> ./packages/git/etc/minttyrc
+echo "Transparency=low" > ./packages/git/etc/minttyrc
 echo "CursorType=block" >> ./packages/git/etc/minttyrc
 echo ""
 
