@@ -17,14 +17,12 @@ busy-signal
 clipboard-plus
 code-peek
 color-picker
-console-log
 cursor-history
 dbg-lua
 docblockr
 emmet-simplified 
 escape-utils
 expand-region
-figlet
 file-icons
 find-selection
 flexible-ui
