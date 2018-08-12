@@ -56,8 +56,10 @@
   "highlight-column":
     opacity: 0.06
   "isotope-ui":
+    backgroundGradient: true
     minimalMode: true
-  linter: {}
+  linter:
+    lintOnChangeInterval: 750
   "linter-eslint":
     disableWhenNoEslintConfig: false
     eslintrcPath: "${ATOM_HOME}\\\\.eslintrc"
@@ -69,6 +71,8 @@
     fixOnSave: true
     preset: "idiomatic"
   "linter-luacheck": {}
+  "linter-pylama":
+    ignoreErrorsAndWarnings: "D203,D212,D213,D404,E501"
   "linter-ui-default": {}
   "linter-write-good":
     additionalArgs: "--no-passive"
