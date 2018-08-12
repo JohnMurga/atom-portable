@@ -15,6 +15,11 @@ PS1='\[\033]0;$MSYSTEM:\w\007
 # When the shell exits, append to the history file instead of overwriting it
 shopt -s histappend
 
+# Other tweaks for history
+export HISTCONTROL=ignoredups
+export HISTSIZE=9999
+export HISTFILESIZE=999999
+
 # After each command, append to the history file and reread it
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
