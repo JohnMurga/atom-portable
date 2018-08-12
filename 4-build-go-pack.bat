@@ -8,7 +8,7 @@ echo -----------------------
 set WGET=cscript /nologo tools\wget.js
 
 IF NOT EXIST ".\\downloads\\go.zip" (
-    %WGET% "https://dl.google.com/go/go1.11beta1.windows-amd64.zip" ".\\downloads\\go.zip"
+    %WGET% "https://dl.google.com/go/go1.11beta3.windows-amd64.zip" ".\\downloads\\go.zip"
 ) else (
     echo Go Download already present
 )
@@ -21,7 +21,8 @@ rmdir /S /Q .\packages\go 2> nul
 
 set UN7ZIP=%~dp0\tools\7Zip\7z.exe x -y
 
-%UN7ZIP% %~dp0\downloads\go.zip -o.\packages > nul
+%UN7ZIP% %~dp0\downloads\go.zip -o.\packages\go > nul
+move .\packages\go\go .\packages\go\.install
 
 echo -------------------
 echo Setting environment
@@ -39,9 +40,11 @@ echo -------------------
 echo Installing Go tools
 echo -------------------
 
-set GOROOT=%~dp0\packages\go
-set GOPATH=%~dp0\packages\_home\go
-set GOBIN=%GOPATH%\bin
+mkdir %~dp0\packages\_home\go 2> nul
+
+set GOROOT=%~dp0\packages\go\.install
+set GOPATH=%~dp0\packages\go\.packages;%~dp0\packages\_home\go
+set GOBIN=%~dp0\packages\go\.packages\bin
 
 set PATH=%PATH%;%GOBIN%;%GOROOT%\bin
 
@@ -59,13 +62,22 @@ go get -u github.com/tpng/gopkgs
 
 go get -u github.com/derekparker/delve/cmd/dlv
 
-:: Some default packages
+echo --------------------------------
+echo Cleaning tool source directories
+echo --------------------------------
+
+rmdir /s /q %~dp0\packages\go\.packages\src
+
+echo ---------------------------
+echo Installing default packages
+echo ---------------------------
+
 go get -u google.golang.org/grpc
 go get -u github.com/gopherjs/gopherjs
 
-echo ----------------------
-echo Installing Go packages
-echo ----------------------
+echo ------------------------
+echo Installing Atom packages
+echo ------------------------
 
 SET PACKAGE_LIST=go-plus go-signature-statusbar go-debug
 ::SET PACKAGE_LIST=go-plus hyperclick go-signature-statusbar go-debug
@@ -80,7 +92,7 @@ echo ----------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part4-Go-1.11.beta1-64bit.7z -r .\packages\go .\packages\_home -x!atom\Data -x!_home\.vimrc -x!_home\.cargo
+%PACK% .\packages\AtomPortable-Part4-Go-1.11.beta3-64bit.7z -r .\packages\go .\packages\_home -x!atom\Data -x!_home\.vimrc
 
 set MY_TEMP=.\packages\_tmp\atom\Data\AtomProfile\packages
 set PACKAGES=.\packages\atom\Data\AtomProfile\packages
@@ -90,7 +102,7 @@ FOR %%G IN (%PACKAGE_LIST%) DO (
 	move %PACKAGES%\%%G %MY_TEMP% > nul
 )
 
-%PACK% .\packages\AtomPortable-Part4-Go-1.11.beta1-64bit.7z -r .\packages\_tmp\atom
+%PACK% .\packages\AtomPortable-Part4-Go-1.11.beta3-64bit.7z -r .\packages\_tmp\atom
 
 FOR %%G IN (%PACKAGE_LIST%) DO (
 	move %MY_TEMP%\%%G %PACKAGES% > nul

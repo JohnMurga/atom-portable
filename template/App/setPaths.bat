@@ -14,9 +14,9 @@ set NPM_CONFIG_userconfig=%HOME%\.npmrc
 set NPM_CONFIG_init-module=%HOME%\.npm-init.js
 set NPM_CONFIG_cache=%HOME%\npm-cache
 
-set GOROOT=%PAL_AppDir%\..\..\go
-set GOPATH=%PAL_AppDir%\..\..\_home\go
-set GOBIN=%GOPATH%\bin
+set GOROOT=%PAL_AppDir%\..\..\go\.install
+set GOPATH=%PAL_AppDir%\..\..\go\.packages;%PAL_AppDir%\..\..\_home\go
+set GOBIN=%PAL_AppDir%\..\..\go\.packages\bin
 
 set CARGO_HOME=%PAL_AppDir%\..\..\rust\.cargo
 set RUSTUP_HOME=%PAL_AppDir%\..\..\rust\.rustup
