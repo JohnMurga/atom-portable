@@ -9,4 +9,5 @@ set PATH=!PATH:%PAL_AppDir%\..\..\git\usr\bin;%PAL_AppDir%\..\..\git\mingw32\bin
 cd /D %HOME%
 set RUN_DOS=true
 
-cmd /c "" %~dp0\ConEmu.bat
+:: cmd /c "" %~dp0\ConEmu.bat
+%~dp0\Console.bat

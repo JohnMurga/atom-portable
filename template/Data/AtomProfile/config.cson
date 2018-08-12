@@ -91,7 +91,7 @@
     recentFiles: [
     ]
   "open-terminal-here":
-    command: "ConEmu.bat"
+    command: "Bash.bat"
   pigments:
     excludedGrammars: [
       "text.plain source.gfm"
