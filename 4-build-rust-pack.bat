@@ -52,6 +52,13 @@ FOR %%G IN (%PACKAGE_LIST%) DO (
 	call apm --color false install %%G
 )
 
+echo --------------------------
+echo Cleaning Cargo directories
+echo --------------------------
+
+rmdir /s /q .\packages\rust\.cargo\registry
+rmdir /s /q .\packages\rust\.cargo\git
+
 echo ------------------------
 echo Creating Rust Addon pack
 echo ------------------------
