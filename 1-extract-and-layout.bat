@@ -20,7 +20,7 @@ rmdir /s /q %~dp0\tools\7Zip\File 2> nul
 
 msiexec /a %~dp0\downloads\Meld.msi /qb TARGETDIR=%~dp0\packages\meld /quiet
 
-%UN7ZIP% %~dp0\downloads\ConEmu.7z -o.\packages\atom\App\ConEmu > nul
+:: %UN7ZIP% %~dp0\downloads\ConEmu.7z -o.\packages\atom\App\ConEmu > nul
 %UN7ZIP% %~dp0\downloads\Atom-windows.zip -o.\packages\atom\App > nul
 %UN7ZIP% %~dp0\downloads\PortableGit.7z -o.\packages\git > nul
 %UN7ZIP% %~dp0\downloads\Fossil.zip -o.\packages\git\usr\bin > nul
