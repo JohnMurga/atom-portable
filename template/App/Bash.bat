@@ -4,4 +4,8 @@
 call %~dp0\setPaths.bat
 cd /D %HOME%
 
-cmd /c "" %~dp0\ConEmu.bat
+:: Remove ConEmu biaries for now
+:: cmd /c "" %~dp0\ConEmu.bat
+
+:: Execute MinTTY instead
+start "" mintty --title "Bash window" --size 140,40 %~dp0\Console.bat
