@@ -13,17 +13,8 @@ echo "Transparency=low" > ./packages/git/etc/minttyrc
 echo "CursorType=block" >> ./packages/git/etc/minttyrc
 echo ""
 
-echo "Tweaking profile for TMux"
-echo "if [[ \"\$ConEmuHWND\" == \"\" ]]" >> ./packages/git/etc/profile
-echo "then" >> ./packages/git/etc/profile
-echo "  export TERM=xterm-256color" >> ./packages/git/etc/profile
-echo "fi" >> ./packages/git/etc/profile
-echo ""
-
-echo "Tweaking Bash history"
-echo "export HISTTIMEFORMAT=\"%F %T \"" >> ./packages/git/etc/profile
-echo "export PROMPT_COMMAND=\"\${PROMPT_COMMAND:+\$PROMPT_COMMAND$'\\n'}history -a; history -c; history -r\"" >> ./packages/git/etc/profile
-echo ""
+echo "Tweaking default profile"
+cat ./profile-tweaks >> ./packages/git/etc/profile
 
 echo "Deleting some of the larger unreferenced image files in packages"
 cd packages/Atom/Data/AtomProfile

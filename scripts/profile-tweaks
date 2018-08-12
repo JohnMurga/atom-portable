@@ -1,0 +1,29 @@
+# ---------
+# My tweaks
+#----------
+
+# Accelerate Git on the prompt
+fast_git_ps1 ()
+{
+    printf -- "$(git branch 2>/dev/null | grep -e '\* ' | sed 's/^..\(.*\)/ (\1) /')"
+}
+
+PS1='\[\033]0;$MSYSTEM:\w\007
+\033[32m\]\u@\h \[\033[33m\w\033[34m\]$(fast_git_ps1)
+\033[0m\]$ '
+
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+
+# After each command, append to the history file and reread it
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+# Tweaking profile for TMux
+if [[ "$ConEmuHWND" == "" ]]
+then
+    export TERM=xterm-256color
+fi
+
+# -------------
+# End My tweaks
+#--------------
