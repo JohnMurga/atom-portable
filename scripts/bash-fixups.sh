@@ -14,7 +14,7 @@ echo "CursorType=block" >> ./packages/git/etc/minttyrc
 echo ""
 
 echo "Tweaking default profile"
-cat ./profile-tweaks >> ./packages/git/etc/profile
+cat ./scripts/profile-tweaks >> ./packages/git/etc/profile
 
 echo "Deleting some of the larger unreferenced image files in packages"
 cd packages/Atom/Data/AtomProfile
