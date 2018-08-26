@@ -29,15 +29,17 @@ echo -------------------------
 echo Getting Rust distribution
 echo -------------------------
 
+set CHOSEN_TOOLCHAIN=stable-i686-pc-windows-gnu
+
 set CARGO_HOME=%~dp0\packages\rust\.cargo
 set RUSTUP_HOME=%~dp0\packages\rust\.rustup
-set PATH=%CARGO_HOME%\bin;%RUSTUP_HOME%\toolchains\nightly-i686-pc-windows-gnu\bin;%PATH%
+set PATH=%CARGO_HOME%\bin;%RUSTUP_HOME%\toolchains\%CHOSEN_TOOLCHAIN%\bin;%PATH%
 
-.\\downloads\\rustup.exe -v default nightly-i686-pc-windows-gnu
+.\\downloads\\rustup.exe -v default %CHOSEN_TOOLCHAIN%
 .\\downloads\\rustup.exe -v component add rust-src
 .\\downloads\\rustup.exe -v target add wasm32-unknown-unknown
 .\\downloads\\rustup.exe show
-cargo install racer
+cargo install --version 2.0.14 racer
 cargo install -f cargo-web
 cargo install --git https://github.com/alexcrichton/wasm-gc
 copy .\\downloads\\rustup.exe %CARGO_HOME%\bin
@@ -65,7 +67,7 @@ echo ------------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part3-Rust-Nightly.7z -r .\packages\rust
+%PACK% .\packages\AtomPortable-Part3-Rust-%CHOSEN_TOOLCHAIN%.7z -r .\packages\rust
 
 set MY_TEMP=.\packages\_tmp\atom\Data\AtomProfile\packages
 set PACKAGES=.\packages\atom\Data\AtomProfile\packages
@@ -75,7 +77,7 @@ FOR %%G IN (%PACKAGE_LIST%) DO (
 	move %PACKAGES%\%%G %MY_TEMP% > nul
 )
 
-%PACK% .\packages\AtomPortable-Part3-Rust-Nightly.7z -r .\packages\_tmp\atom
+%PACK% .\packages\AtomPortable-Part3-Rust-%CHOSEN_TOOLCHAIN%.7z -r .\packages\_tmp\atom
 
 FOR %%G IN (%PACKAGE_LIST%) DO (
 	move %MY_TEMP%\%%G %PACKAGES% > nul
