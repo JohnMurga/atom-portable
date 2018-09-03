@@ -58,6 +58,8 @@
   "isotope-ui":
     backgroundGradient: true
     minimalMode: true
+  "line-ending-selector":
+    defaultLineEnding: "LF"
   linter:
     lintOnChangeInterval: 750
   "linter-eslint":
@@ -73,7 +75,9 @@
   "linter-luacheck": {}
   "linter-pylama":
     ignoreErrorsAndWarnings: "D203,D212,D213,D404,E501"
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelHeight: 128
+    showPanel: true
   "linter-write-good":
     additionalArgs: "--no-passive"
     nodePath: "node"
