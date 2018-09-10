@@ -44,7 +44,7 @@ if ( /^win/.test( process.platform ) ) {
 
     // Fix for racer package config
     atom.config.set("racer.racerBinPath", process.env.CARGO_HOME + "\\bin\\racer.exe");
-    atom.config.set("racer.rustSrcPath", process.env.RUSTUP_HOME + "\\toolchains\\nightly-i686-pc-windows-gnu\\lib\\rustlib\\src\\rust\\src");
+    atom.config.set("racer.rustSrcPath", process.env.RUSTUP_HOME + "\\toolchains\\stable-i686-pc-windows-gnu\\lib\\rustlib\\src\\rust\\src");
 }
 `
 # Fix for when spell-check dictionaries are not picked up
