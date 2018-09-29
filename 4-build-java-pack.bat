@@ -9,7 +9,6 @@ set WGET=cscript /nologo tools\wget.js
 
 IF NOT EXIST ".\\downloads\\jdk.zip" (
     %WGET% "https://github.com/ojdkbuild/ojdkbuild/releases/download/1.8.0.181-1/java-1.8.0-openjdk-1.8.0.181-1.b13.ojdkbuild.windows.x86_64.zip" ".\\downloads\\jdk.zip"
-    ::    %WGET% "https://download.java.net/java/early_access/jdk11/28/GPL/openjdk-11+28_windows-x64_bin.zip" ".\\downloads\\jdk.zip"
 ) else (
     echo JDK Download already present
 )
