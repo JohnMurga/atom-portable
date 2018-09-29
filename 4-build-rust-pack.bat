@@ -48,7 +48,7 @@ echo ------------------------
 echo Installing Rust packages
 echo ------------------------
 
-SET PACKAGE_LIST=racer
+SET PACKAGE_LIST=racer linter-rust
 
 FOR %%G IN (%PACKAGE_LIST%) DO (
 	call apm --color false install %%G

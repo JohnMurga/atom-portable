@@ -29,7 +29,6 @@ flexible-ui
 intentions
 isotope-ui
 git-history
-git-plus
 gruvbox-plus-syntax
 highlight-column
 highlight-selected
@@ -51,7 +50,6 @@ linter-gcc
 linter-htmlhint
 linter-luacheck
 linter-ruby
-linter-rust
 linter-tslint
 linter-write-good
 local-history
