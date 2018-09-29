@@ -46,6 +46,8 @@ set MYPATH=%MYPATH%;%GOROOT%\bin;%GOBIN%
 set MYPATH=%MYPATH%;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
 set MYPATH=%MYPATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\android\android-studio\gradle\gradle-3.2\bin
+set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\nim\bin
+set MYPATH=%MYPATH%;%HOME%\.nimble\bin
 
 set PATH=%MYPATH%;%PATH%
 
