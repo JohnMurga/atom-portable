@@ -33,7 +33,7 @@
     ]
     telemetryConsent: "no"
     themes: [
-      "isotope-ui"
+      "city-lights-ui"
       "atom-material-syntax-dark"
     ]
     uriHandlerRegistration: "never"

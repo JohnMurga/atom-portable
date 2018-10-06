@@ -14,6 +14,7 @@ autocomplete-emojis
 autocomplete-en-en
 autocomplete-project-paths
 busy-signal
+city-lights-ui
 clipboard-plus
 code-peek
 color-picker
@@ -25,7 +26,6 @@ escape-utils
 expand-region
 file-icons
 find-selection
-flexible-ui
 intentions
 isotope-ui
 git-history
