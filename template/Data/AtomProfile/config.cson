@@ -21,6 +21,8 @@
     enableUnicodeEmojis: false
   "autocomplete-plus":
     autoActivationDelay: 750
+  "city-lights-ui":
+    fontSize: 12
   "clang-format":
     formatCOnSave: false
     formatCPlusPlusOnSave: false
@@ -44,6 +46,7 @@
     fontSize: 12
     invisibles: {}
     lineHeight: 1.4
+    preferredLineLength: 120
     showIndentGuide: true
     showInvisibles: true
     tabLength: 4
