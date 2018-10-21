@@ -16,4 +16,5 @@ if not "%~1"=="" goto loop
 
 call %SCRIPT_HOME%\setPaths.bat
 
-start "" %SCRIPT_HOME%\ConEmu\ConEmu.exe /loadcfgfile %SCRIPT_HOME%\ConEmu.xml /cmd %SCRIPT_HOME%\..\..\git\usr\bin\vim.exe %BUFFER%
+:: start "" %SCRIPT_HOME%\ConEmu\ConEmu.exe /loadcfgfile %SCRIPT_HOME%\ConEmu.xml /cmd %SCRIPT_HOME%\..\..\git\usr\bin\vim.exe %BUFFER%
+mintty --title "Vim window" --size 140,40 %SCRIPT_HOME%\..\..\git\usr\bin\vim.exe %BUFFER%
