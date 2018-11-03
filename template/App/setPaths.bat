@@ -4,7 +4,12 @@
 set PAL_DataDir=%~dp0\..\Data
 set PAL_AppDir=%~dp0\..\App
 
-:: Taken from the Launcher.ini
+:: Done before as it sets "Home"
+if exist "%PAL_AppDir%\..\..\python\scripts\env.bat" (
+    call %PAL_AppDir%\..\..\python\scripts\env.bat
+)
+
+:: Make sure all environment is set
 set ATOM_HOME=%PAL_DataDir%\AtomProfile
 
 set HOME=%PAL_AppDir%\..\..\_home
@@ -38,7 +43,6 @@ set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\cmd
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\usr\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\git\mingw32\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\meld
-set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\python
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\ruby\bin
 set MYPATH=%MYPATH%;%PAL_AppDir%\..\..\gcc\bin
 set MYPATH=%MYPATH%;%CARGO_HOME%\bin;%RUSTUP_HOME%\toolchains\stable-i686-pc-windows-gnu\bin

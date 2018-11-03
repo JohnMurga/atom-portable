@@ -6,7 +6,7 @@ strip ../Shortcuts.exe
 
 echo "Building launchers"
 
-gcc --static launcher.c -o ../Atom.exe -mwindows -D_PROCESS_TO_EXECUTE_="\"Atom\\\Atom.Portable.exe\""
+gcc --static launcher.c -o ../Atom.exe -mwindows -D_PROCESS_TO_EXECUTE_="\"Atom\\\App\\\Atom.bat\""
 strip ../Atom.exe
 ../bin/rcedit.exe ../Atom.exe --set-icon atom.ico
 
