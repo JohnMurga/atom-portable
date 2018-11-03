@@ -5,10 +5,14 @@ echo ---------------------------
 echo Downloading Python packages
 echo ---------------------------
 
-set WGET=cscript /nologo tools\wget.js
+set CURL=.\packages\Git\mingw32\bin\curl.exe -L
 
-IF NOT EXIST ".\\downloads\\python.msi" (
-    %WGET% "https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi" ".\\downloads\\python.msi"
+set PYTHON_VERSION=3.6.6
+
+
+IF NOT EXIST ".\\downloads\\python.7z" (
+::    %CURL% "http://download.sourceforge.net/project/winpython/WinPython_2.7/2.7.13.1/WinPython-32bit-2.7.13.1Zero.exe" -o ".\\downloads\\python.7z"
+    %CURL% "http://download.sourceforge.net/project/winpython/WinPython_3.6/3.6.6.2/WinPython32-3.6.6.2Zero.exe" -o ".\\downloads\\python.7z"
 ) else (
     echo Python Download already present
 )
@@ -19,7 +23,18 @@ echo ---------------------------
 
 rmdir /S /Q .\packages\python 2> nul
 
-msiexec /a %~dp0\downloads\python.msi /qb TARGETDIR=%~dp0\packages\python /quiet
+set UN7ZIP=%~dp0\tools\7Zip\7z.exe x -y
+
+%UN7ZIP% %~dp0\downloads\python.7z -o.\packages\python > nul
+
+echo -----------
+echo Cleaning up
+echo -----------
+
+cd .\packages\python
+rmdir /s /q $PLUGINSDIR t 2> nul
+del /q "WinPython Control Panel.exe" Qt*.* Spyder*.* Jupyter*.* IPython*.* Pyzo.exe 2> nul
+cd ..\..
 
 echo -------------------
 echo Setting environment
@@ -48,7 +63,7 @@ echo Creating Python Addon pack
 echo --------------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
-set ARCHIVE=.\packages\AtomPortable-Part4-Python-2.7.15.7z
+set ARCHIVE=.\packages\AtomPortable-Part4-Python-%PYTHON_VERSION%.7z
 
 %PACK% %ARCHIVE% -r .\packages\python -x!atom\Data -x!_home\.vimrc -x!gcc
 
