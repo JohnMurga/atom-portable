@@ -9,7 +9,7 @@ class HighlightColumnView extends HTMLDivElement
     this
 
   attachToLines: ->
-    lines = @editorElement.rootElement?.querySelector?('.lines')
+    lines = @editorElement.querySelector?('.lines')
     lines?.appendChild(@)
 
   handleEvents: ->
@@ -89,7 +89,7 @@ class HighlightColumnView extends HTMLDivElement
             rect = @editorElement.pixelRectForScreenRange(screenRange)
             range = @editorElement.pixelRangeForScreenRange(screenRange)
         catch error
-            console.error error
+            # console.error error
 
         if !rect or !range
             rect = null
