@@ -18,25 +18,25 @@ echo Performing BASH fixups
 echo Copying launchers
 copy .\tools\Launchers\*.exe .\packages
 
-set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
+set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -m0=lzma2 -mmt=3 -mlc=4 -myx=9 -mmc=65536 -mfb=273 -md=128m -ms=on
 
 echo Creating .\packages\AtomPortable-Part1-Core.7z ... PLEASE WAIT
 del .\packages\AtomPortable-Part1-Core.7z 2> nul
-%PACK% .\packages\AtomPortable-Part1-Core.7z .\packages\Atom.exe -x!atom\App\Atom\atom.exe > nul
-%PACK% .\packages\AtomPortable-Part1-Core.7z -r .\packages\Atom
+%PACK% .\packages\AtomPortable-Part1-Core.7z .\packages\Atom.exe > nul
+%PACK% .\packages\AtomPortable-Part1-Core.7z .\packages\Atom
 
 echo Creating .\packages\AtomPortable-Part2-Addons.7z ... PLEASE WAIT
 del .\packages\AtomPortable-Part2-Addons.7z 2> nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\_home > nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Bash.exe > nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Meld.exe > nul
-%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Vim.exe -x!git\usr\bin\vim.exe > nul
-%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\TMux.exe -x!git\usr\bin\tmux.exe > nul
+%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Vim.exe > nul
+%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\TMux.exe > nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Shortcuts.exe > nul
-%PACK% .\packages\AtomPortable-Part2-Addons.7z -r .\packages\git .\packages\meld .\packages\nodejs -x!atom\App 
+%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\git .\packages\meld -x!atom\App 
 
 :: ** For use on 8GB+ machines with and recent versions of 64Bit 7Zip **
-:: %~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=580m -ms=on -r
+:: %~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma2 -mlc=4 -myx=9 -mmc=65536 -mfb=273 -md=580m -ms=on -r
 
 :: ** For creating the tightest possible ZIP files **
 :: echo Creating smallest possible .\packages\AtomPortable.zip ...
