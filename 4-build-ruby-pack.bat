@@ -8,7 +8,7 @@ echo -------------------------
 set WGET=cscript /nologo tools\wget.js
 
 IF NOT EXIST ".\\downloads\\ruby.7z" (
-    %WGET% "https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.1-2/rubyinstaller-2.5.1-2-x86.7z" ".\\downloads\\ruby.7z"
+    %WGET% "https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.3-1/rubyinstaller-2.5.3-1-x86.7z" ".\\downloads\\ruby.7z"
 ) else (
     echo Ruby Download already present
 )
@@ -32,4 +32,4 @@ echo ------------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part3-Ruby-2.5.1-2.7z -r .\packages\ruby
+%PACK% .\packages\AtomPortable-Part3-Ruby-2.5.3-1.7z -r .\packages\ruby

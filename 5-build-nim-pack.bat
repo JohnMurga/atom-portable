@@ -8,7 +8,7 @@ echo -----------------------
 set WGET=cscript /nologo tools\wget.js
 
 IF NOT EXIST ".\\downloads\\nim.zip" (
-    %WGET% "https://nim-lang.org/download/nim-0.19.0_x32.zip" ".\\downloads\\nim.zip"
+    %WGET% "https://nim-lang.org/download/nim-0.19.2_x32.zip" ".\\downloads\\nim.zip"
 ) else (
     echo Nim Download already present
 )
@@ -40,7 +40,7 @@ echo -------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part5-Nim-0.19.7z -r .\packages\nim -x!atom\Data -x!_home\.vimrc -x!git
+%PACK% .\packages\AtomPortable-Part5-Nim-0.19.2.7z -r .\packages\nim -x!atom\Data -x!_home\.vimrc -x!git
 
 set MY_TEMP=.\packages\_tmp\atom\Data\AtomProfile\packages
 set PACKAGES=.\packages\atom\Data\AtomProfile\packages
@@ -50,7 +50,7 @@ FOR %%G IN (%PACKAGE_LIST%) DO (
 	move %PACKAGES%\%%G %MY_TEMP% > nul
 )
 
-%PACK% .\packages\AtomPortable-Part5-Nim-0.19.7z -r .\packages\_tmp\atom
+%PACK% .\packages\AtomPortable-Part5-Nim-0.19.2.7z -r .\packages\_tmp\atom
 
 FOR %%G IN (%PACKAGE_LIST%) DO (
 	move %MY_TEMP%\%%G %PACKAGES% > nul
