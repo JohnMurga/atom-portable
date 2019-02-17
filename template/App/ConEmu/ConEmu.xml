@@ -359,7 +359,7 @@
 			<value name="ConsoleFontWidth" type="long" data="3"/>
 			<value name="ConsoleFontHeight" type="long" data="5"/>
 			<value name="DynamicBufferHeight" type="hex" data="01"/>
-			<value name="DefaultBufferHeight" type="long" data="32766"/>
+			<value name="DefaultBufferHeight" type="long" data="2800"/>
 			<value name="AutoBufferHeight" type="hex" data="01"/>
 			<value name="UseScrollLock" type="hex" data="01"/>
 			<value name="ComSpec.Type" type="hex" data="00"/>
