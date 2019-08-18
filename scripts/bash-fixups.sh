@@ -2,6 +2,9 @@
 # Copyright 2014-2016 John de Murga - Licensed under the GPLv2
 # 
 
+echo "Renaming if beta"
+mv ./packages/atom/App/Atom/atom*.exe ./packages/atom/App/Atom/atom.exe
+
 echo "Tweaking .vimrc markdown config"
 cp ./downloads/.vimrc ./packages/_home/.vimrc
 echo "" >> ./packages/_home/.vimrc
