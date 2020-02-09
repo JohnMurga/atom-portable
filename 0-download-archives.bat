@@ -20,7 +20,8 @@ set WGET=cscript /nologo tools\wget.js
 %WGET% "http://repo.msys2.org/msys/i686/xz-5.2.4-1-i686.pkg.tar.xz" ".\\downloads\\xz.tar.xz"
 %WGET% "https://mirrors.ustc.edu.cn/gnome/binaries/win32/meld/3.20/Meld-3.20.0-mingw.msi" ".\\downloads\\Meld.msi"
 %WGET% "https://www.fossil-scm.org/home/uv/fossil-w32-2.9.zip" ".\\downloads\\Fossil.zip"
-%WGET% "https://github.com/Maximus5/ConEmu/releases/download/v19.07.14/ConEmuPack.190714.7z" ".\\downloads\\ConEmu.7z"
-%WGET% "https://github.com/atom/atom/releases/download/v1.41.0-beta0/atom-windows.zip" ".\\downloads\\Atom-windows.zip"
-%WGET% "https://github.com/git-for-windows/git/releases/download/v2.23.0-rc2.windows.1/PortableGit-2.23.0.rc2.windows.1-32-bit.7z.exe" "downloads\\PortableGit.7z"
+%WGET% "https://github.com/Maximus5/ConEmu/releases/download/v19.10.12/ConEmuPack.191012.7z" ".\\downloads\\ConEmu.7z"
+%WGET% "https://github.com/atom/atom/releases/download/v1.43.0/atom-windows.zip" ".\\downloads\\Atom-windows.zip"
+%WGET% "https://github.com/git-for-windows/git/releases/download/v2.25.0.windows.1/PortableGit-2.25.0-32-bit.7z.exe" "downloads\\PortableGit.7z"
+:: https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-4.2.2-win32-static.zip
 %WGET% "https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim" ".\\downloads\\.vimrc"
