@@ -32,6 +32,7 @@ git-history
 gruvbox-plus-syntax
 highlight-column
 highlight-selected
+hyperclick
 johns-work-arounds
 language-awk
 language-batchfile

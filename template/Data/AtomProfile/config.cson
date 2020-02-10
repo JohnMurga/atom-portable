@@ -66,8 +66,10 @@
   linter:
     lintOnChangeInterval: 750
   "linter-eslint":
-    disableWhenNoEslintConfig: false
-    eslintrcPath: "${ATOM_HOME}\\\\.eslintrc"
+    disabling:
+      disableWhenNoEslintConfig: false
+    global:
+      eslintrcPath: "${ATOM_HOME}\\\\.eslintrc"
   "linter-gcc":
     execPath: "g++"
   "linter-jscs":
@@ -79,7 +81,7 @@
   "linter-pylama":
     ignoreErrorsAndWarnings: "D203,D212,D213,D404,E501"
   "linter-ui-default":
-    panelHeight: 128
+    panelHeight: 200
     showPanel: true
   "linter-write-good":
     additionalArgs: "--no-passive"
