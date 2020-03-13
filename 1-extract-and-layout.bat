@@ -35,6 +35,25 @@ mkdir .\packages\_home
 %UN7ZIP% -so %~dp0\downloads\xz.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
 del .\packages\git\.* > nul
 
+%UN7ZIP%  -so %~dp0\downloads\ImageMagick.tar.gz  | %UN7ZIP% -si -ttar -o.\packages\extract_tmp > nul
+move packages\extract_tmp\ImageMagick* packages\extract_tmp\tmp_source > nul
+xcopy packages\extract_tmp\tmp_source packages\git\usr /E/H > nul
+rmdir /s /q packages\extract_tmp 2> nul
+
+%UN7ZIP%  %~dp0\downloads\CMake.zip -o.\packages\extract_tmp > nul
+move packages\extract_tmp\cmake-* packages\extract_tmp\tmp_source > nul
+xcopy packages\extract_tmp\tmp_source packages\git\usr /E/H > nul
+rmdir /s /q packages\extract_tmp 2> nul
+
+%UN7ZIP%  %~dp0\downloads\ffmpeg.zip -o.\packages\extract_tmp > nul
+move packages\extract_tmp\ffmpeg-* packages\extract_tmp\tmp_source > nul
+xcopy packages\extract_tmp\tmp_source packages\git\usr /E/H > nul
+rmdir /s /q packages\extract_tmp 2> nul
+
+%UN7ZIP%  %~dp0\downloads\graphviz.zip -o.\packages\extract_tmp > nul
+xcopy packages\extract_tmp\release packages\git\usr /E/H > nul
+rmdir /s /q packages\extract_tmp 2> nul
+
 move .\packages\atom\App\Atom* .\packages\atom\App\Atom > nul 2> nul
 
 set PATH=%PATH%;%~dp0\packages\atom\App\Atom\resources\app\apm\bin
