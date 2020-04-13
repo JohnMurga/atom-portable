@@ -25,3 +25,7 @@ strip ../Bash.exe
 gcc --static launcher.c -o ../TMux.exe -mwindows -D_PROCESS_TO_EXECUTE_="\"Atom\\\App\\\TMux.bat\""
 strip ../TMux.exe
 ../bin/rcedit.exe ../TMux.exe --set-icon TMux.ico
+
+gcc --static launcher.c -o ../VsCodium.exe -mwindows -D_PROCESS_TO_EXECUTE_="\"Atom\\\App\\\VsCodium.bat\""
+strip ../VsCodium.exe
+../bin/rcedit.exe ../VsCodium.exe --set-icon code.ico

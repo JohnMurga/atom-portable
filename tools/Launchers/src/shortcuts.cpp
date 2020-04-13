@@ -86,6 +86,8 @@ void createShortcuts() {
 
     doShortCut(L"Atom", basePath, desktopPath);
     doShortCut(L"Vim", basePath, sendToPath);
+    doShortCut(L"VsCodium", basePath, desktopPath);
+    doShortCut(L"VsCodium", basePath, sendToPath);
     doShortCut(L"Bash", basePath, desktopPath);
     doShortCut(L"Meld", basePath, sendToPath);
     doShortCut(L"TMux", basePath, desktopPath);
