@@ -29,5 +29,5 @@ set WGET=cscript /nologo tools\wget.js
 %WGET% "https://github.com/Maximus5/ConEmu/releases/download/v19.10.12/ConEmuPack.191012.7z" ".\\downloads\\ConEmu.7z"
 %WGET% "https://github.com/VSCodium/vscodium/releases/download/1.44.0/VSCodium-win32-ia32-1.44.0.zip ".\\downloads\\VsCodium.zip"
 %WGET% "https://github.com/atom/atom/releases/download/v1.46.0-beta0/atom-windows.zip" ".\\downloads\\Atom-windows.zip"
-%WGET% "https://github.com/git-for-windows/git/releases/download/v2.26.0.windows.1/PortableGit-2.26.0-32-bit.7z.exe" "downloads\\PortableGit.7z"
+%WGET% "https://github.com/git-for-windows/git/releases/download/v2.26.1.windows.1/PortableGit-2.26.1-32-bit.7z.exe" "downloads\\PortableGit.7z"
 %WGET% "https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim" ".\\downloads\\.vimrc"
