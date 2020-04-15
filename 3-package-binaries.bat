@@ -31,6 +31,7 @@ del .\packages\AtomPortable-Part2-Addons.7z 2> nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Bash.exe > nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Meld.exe > nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Vim.exe > nul
+%PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\VsCodium.exe > nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\TMux.exe > nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\Shortcuts.exe > nul
 %PACK% .\packages\AtomPortable-Part2-Addons.7z .\packages\git .\packages\meld -x!atom\App 
