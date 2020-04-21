@@ -12,7 +12,7 @@ set PYTHON_VERSION=3.6.6
 
 IF NOT EXIST ".\\downloads\\python.7z" (
 ::    %CURL% "http://download.sourceforge.net/project/winpython/WinPython_2.7/2.7.13.1/WinPython-32bit-2.7.13.1Zero.exe" -o ".\\downloads\\python.7z"
-    %CURL% "http://download.sourceforge.net/project/winpython/WinPython_3.6/3.6.6.2/WinPython32-3.6.6.2Zero.exe" -o ".\\downloads\\python.7z"
+    %CURL% "https://github.com/winpython/winpython/releases/download/2.3.20200319/Winpython32-3.7.7.0dot.exe" -o ".\\downloads\\python.7z"
 ) else (
     echo Python Download already present
 )
@@ -25,16 +25,13 @@ rmdir /S /Q .\packages\python 2> nul
 
 set UN7ZIP=%~dp0\tools\7Zip\7z.exe x -y
 
-%UN7ZIP% %~dp0\downloads\python.7z -o.\packages\python > nul
+%UN7ZIP% %~dp0\downloads\python.7z -o.\packages > nul
 
 echo -----------
 echo Cleaning up
 echo -----------
 
-cd .\packages\python
-rmdir /s /q $PLUGINSDIR t 2> nul
-del /q "WinPython Control Panel.exe" Qt*.* Spyder*.* Jupyter*.* IPython*.* Pyzo.exe 2> nul
-cd ..\..
+move .\packages\WPy* .\packages\python
 
 echo -------------------
 echo Setting environment
@@ -52,7 +49,10 @@ echo --------------------------
 echo Installing Python packages
 echo --------------------------
 
-SET PACKAGE_LIST=autocomplete-python-jedi linter-pylama
+call .\packages\python\scripts\env.bat
+pip install "python-language-server[all]"
+
+SET PACKAGE_LIST=atom-ide-ui ide-python
 
 FOR %%G IN (%PACKAGE_LIST%) DO (
 	call apm --color false install %%G

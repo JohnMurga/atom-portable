@@ -25,6 +25,14 @@ set PATH=%PATH%;%ATOM_HOME%\..\..\App\..\..\git\bin
 set PATH=%PATH%;%ATOM_HOME%\..\..\App\..\..\git\cmd
 set PATH=%PATH%;%ATOM_HOME%\..\..\App\..\..\git\usr\bin
 
+set PATH=%PATH%;%ATOM_HOME%\..\..\App\..\..\gcc\bin
+:: Check for GCC ?
+where gcc >nul 2>nul
+if %ERRORLEVEL% NEQ 0 (
+    echo GCC wasn't found and is required for building cargo-web
+    exit
+)
+
 echo -------------------------
 echo Getting Rust distribution
 echo -------------------------
@@ -35,20 +43,27 @@ set CARGO_HOME=%~dp0\packages\rust\.cargo
 set RUSTUP_HOME=%~dp0\packages\rust\.rustup
 set PATH=%CARGO_HOME%\bin;%RUSTUP_HOME%\toolchains\%CHOSEN_TOOLCHAIN%\bin;%PATH%
 
-.\\downloads\\rustup.exe -v default %CHOSEN_TOOLCHAIN%
-.\\downloads\\rustup.exe -v component add rust-src
-.\\downloads\\rustup.exe -v target add wasm32-unknown-unknown
-.\\downloads\\rustup.exe show
-cargo install --version 2.0.14 racer
+md %CARGO_HOME%\bin
+copy .\\downloads\\rustup.exe %CARGO_HOME%\bin
+
+rustup -v default %CHOSEN_TOOLCHAIN%
+rustup -v component add rust-src
+rustup -v target add wasm32-unknown-unknown
+rustup show
+
+:: R
+:: rustup -v toolchain install nightly
+:: cargo +nightly install rls
+:: rustup -v toolchain remove nightly
+
 cargo install -f cargo-web
 cargo install --git https://github.com/alexcrichton/wasm-gc
-copy .\\downloads\\rustup.exe %CARGO_HOME%\bin
 
 echo ------------------------
 echo Installing Rust packages
 echo ------------------------
 
-SET PACKAGE_LIST=racer linter-rust
+SET PACKAGE_LIST=ide-rust atom-ide-ui
 
 FOR %%G IN (%PACKAGE_LIST%) DO (
 	call apm --color false install %%G
