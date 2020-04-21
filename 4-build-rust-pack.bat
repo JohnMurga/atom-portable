@@ -48,15 +48,11 @@ copy .\\downloads\\rustup.exe %CARGO_HOME%\bin
 
 rustup -v default %CHOSEN_TOOLCHAIN%
 rustup -v component add rust-src
+rustup -v component add rust-analysis
+rustup -v component add rls
 rustup -v target add wasm32-unknown-unknown
 rustup show
 
-:: R
-:: rustup -v toolchain install nightly
-:: cargo +nightly install rls
-:: rustup -v toolchain remove nightly
-
-cargo install rls
 cargo install cargo-web
 cargo install --git https://github.com/alexcrichton/wasm-gc
 
