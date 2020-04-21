@@ -8,7 +8,7 @@ echo -----------------------
 set WGET=cscript /nologo tools\wget.js
 
 IF NOT EXIST ".\\downloads\\nim.zip" (
-    %WGET% "https://nim-lang.org/download/nim-0.19.2_x32.zip" ".\\downloads\\nim.zip"
+    %WGET% "https://nim-lang.org/download/nim-1.2.0_x32.zip" ".\\downloads\\nim.zip"
 ) else (
     echo Nim Download already present
 )

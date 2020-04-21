@@ -8,7 +8,7 @@ echo -------------------------
 set WGET=cscript /nologo tools\wget.js
 
 IF NOT EXIST ".\\downloads\\ruby.7z" (
-    %WGET% "https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.3-1/rubyinstaller-2.5.3-1-x86.7z" ".\\downloads\\ruby.7z"
+    %WGET% "https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.1-1/rubyinstaller-2.7.1-1-x86.7z" ".\\downloads\\ruby.7z"
 ) else (
     echo Ruby Download already present
 )
