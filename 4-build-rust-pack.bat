@@ -56,7 +56,8 @@ rustup show
 :: cargo +nightly install rls
 :: rustup -v toolchain remove nightly
 
-cargo install -f cargo-web
+cargo install rls
+cargo install cargo-web
 cargo install --git https://github.com/alexcrichton/wasm-gc
 
 echo ------------------------
