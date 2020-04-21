@@ -8,7 +8,7 @@ echo -----------------------
 set WGET=cscript /nologo tools\wget.js
 
 IF NOT EXIST ".\\downloads\\go.zip" (
-    %WGET% "https://dl.google.com/go/go1.11.4.windows-amd64.zip" ".\\downloads\\go.zip"
+    %WGET% "https://dl.google.com/go/go1.14.2.windows-amd64.zip" ".\\downloads\\go.zip"
 ) else (
     echo Go Download already present
 )
@@ -51,14 +51,17 @@ set PATH=%PATH%;%GOBIN%;%GOROOT%\bin
 go get -u golang.org/x/tools/cmd/goimports
 go get -u golang.org/x/tools/cmd/gorename
 go get -u github.com/sqs/goreturns
-go get -u github.com/nsf/gocode
+go get -u github.com/mdempsky/gocode
 go get -u github.com/alecthomas/gometalinter
+go get -u github.com/mgechev/revive
+go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
 go get -u github.com/zmb3/gogetdoc
 go get -u github.com/zmb3/goaddimport
 go get -u github.com/rogpeppe/godef
 go get -u golang.org/x/tools/cmd/guru
 go get -u github.com/fatih/gomodifytags
 go get -u github.com/tpng/gopkgs
+go get -u github.com/ramya-rao-a/go-outline
 
 go get -u github.com/derekparker/delve/cmd/dlv
 
@@ -92,7 +95,7 @@ echo ----------------------
 
 set PACK=%~dp0\tools\7Zip\7z.exe a -t7z -mx -m0=lzma -mlc=8 -myx=9 -mmc=1000000 -mfb=273 -md=128m -ms=on
 
-%PACK% .\packages\AtomPortable-Part4-Go-1.11.4-64bit.7z -r .\packages\go .\packages\_home -x!atom\Data -x!_home\.vimrc
+%PACK% .\packages\AtomPortable-Part4-Go-1.14.2-64bit.7z -r .\packages\go .\packages\_home -x!atom\Data -x!_home\.vimrc
 
 set MY_TEMP=.\packages\_tmp\atom\Data\AtomProfile\packages
 set PACKAGES=.\packages\atom\Data\AtomProfile\packages
@@ -102,7 +105,7 @@ FOR %%G IN (%PACKAGE_LIST%) DO (
 	move %PACKAGES%\%%G %MY_TEMP% > nul
 )
 
-%PACK% .\packages\AtomPortable-Part4-Go-1.11.4-64bit.7z -r .\packages\_tmp\atom
+%PACK% .\packages\AtomPortable-Part4-Go-1.14.2-64bit.7z -r .\packages\_tmp\atom
 
 FOR %%G IN (%PACKAGE_LIST%) DO (
 	move %MY_TEMP%\%%G %PACKAGES% > nul
