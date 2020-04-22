@@ -7,11 +7,10 @@ echo ---------------------------
 
 set CURL=.\packages\Git\mingw32\bin\curl.exe -L
 
-set PYTHON_VERSION=3.6.6
+set PYTHON_VERSION=3.7.7
 
 
 IF NOT EXIST ".\\downloads\\python.7z" (
-::    %CURL% "http://download.sourceforge.net/project/winpython/WinPython_2.7/2.7.13.1/WinPython-32bit-2.7.13.1Zero.exe" -o ".\\downloads\\python.7z"
     %CURL% "https://github.com/winpython/winpython/releases/download/2.3.20200319/Winpython32-3.7.7.0dot.exe" -o ".\\downloads\\python.7z"
 ) else (
     echo Python Download already present
