@@ -7,6 +7,9 @@
   "atom-format-lua":
     indentSize: 4
     lua51: "lua.exe"
+  "atom-ide-ui":
+    use:
+      "atom-ide-diagnostics-ui": "never"
   "atom-material-ui":
     colors: {}
     fonts: {}
