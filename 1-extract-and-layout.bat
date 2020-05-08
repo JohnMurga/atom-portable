@@ -32,10 +32,13 @@ mkdir .\packages\_home
 %UN7ZIP% -so %~dp0\downloads\Sqlite.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
 %UN7ZIP% -so %~dp0\downloads\libsqlite.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
 %UN7ZIP% -so %~dp0\downloads\libevent.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
-%UN7ZIP% -so %~dp0\downloads\tmux.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
 %UN7ZIP% -so %~dp0\downloads\zsh.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
 %UN7ZIP% -so %~dp0\downloads\RSync.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
 %UN7ZIP% -so %~dp0\downloads\xz.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
+%UN7ZIP% -so %~dp0\downloads\zstd.tar.xz | %UN7ZIP% -si -ttar -o.\packages\git > nul
+
+.\packages\git\usr\bin\zstdcat.exe %~dp0\downloads\tmux.tar.zst | %UN7ZIP% -si -ttar -o.\packages\git > nul
+
 del .\packages\git\.* > nul
 
 %UN7ZIP%  %~dp0\downloads\CMake.zip -o.\packages\extract_tmp > nul
@@ -51,7 +54,7 @@ rmdir /s /q .\packages\extract_tmp 2> nul
 xcopy .\packages\extract_tmp .\packages\git\usr\bin /e /i > nul
 rmdir /s /q .\packages\extract_tmp 2> nul
 
-copy %~dp0\downloads\youtube-dl.exe .\packages\git\usr\bin
+copy %~dp0\downloads\youtube-dl.exe .\packages\git\usr\bin > nul
 
 move .\packages\atom\App\Atom* .\packages\atom\App\Atom > nul 2> nul
 
