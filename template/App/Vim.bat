@@ -14,6 +14,10 @@ shift
 
 if not "%~1"=="" goto loop
 
+if "%BUFFER%"==" \\=\\\\" (
+    set BUFFER=
+)
+
 call %SCRIPT_HOME%\setPaths.bat
 
 :: start "" %SCRIPT_HOME%\ConEmu\ConEmu.exe /loadcfgfile %SCRIPT_HOME%\ConEmu.xml /cmd %SCRIPT_HOME%\..\..\git\usr\bin\vim.exe %BUFFER%
